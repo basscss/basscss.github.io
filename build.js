@@ -16,7 +16,7 @@ data.src = path.join(__dirname, './templates');
 data.layout = fs.readFileSync(path.join(__dirname, './templates/layouts/base.html'), 'utf8');
 data.title = _.capitalize(data.name);
 data.baseurl = '//basscss.com';
-data.stylesheet = 'http://d2v52k3cl9vedd.cloudfront.net/bassdock/1.3.5/bassdock.min.css';
+data.stylesheet = 'http://d2v52k3cl9vedd.cloudfront.net/bassdock/1.3.6/bassdock.min.css';
 
 data.asset_path = 'http://d2v52k3cl9vedd.cloudfront.net/basscss/';
 
@@ -40,6 +40,7 @@ data.partials['module-section'] = fs.readFileSync('./templates/partials/module-s
 data.partials['module-header'] = fs.readFileSync('./templates/partials/module-header.html', 'utf8');
 data.partials['module-footer'] = fs.readFileSync('./templates/partials/module-footer.html', 'utf8');
 data.partials['share-buttons'] = fs.readFileSync('./templates/partials/share-buttons.html', 'utf8');
+data.partials['routes'] = fs.readFileSync('./templates/partials/routes.html', 'utf8');
 
 
 Object.keys(helpers).forEach(function(key) {
@@ -48,11 +49,17 @@ Object.keys(helpers).forEach(function(key) {
 
 var pages = autobass(data);
 
+// This also affects pre tags
+//function removeWhiteSpace(str) {
+//  return str.replace(/\n/g, '').replace(/\s+/g, ' ')
+//};
+
 function writePage(page) {
   var pagePath = path.join(__dirname, page.path);
   var filename = page.filename || 'index.html';
+  var html = page.body;
   fs.ensureDirSync(pagePath);
-  fs.writeFileSync(pagePath + '/' + filename, page.body);
+  fs.writeFileSync(pagePath + '/' + filename, html);
   console.log((pagePath + ' written'));
   if (page.routes) {
     page.routes.forEach(writePage);
@@ -61,5 +68,17 @@ function writePage(page) {
 
 pages.forEach(writePage);
 
+
+// 404 page
+var errorPageBody = _.template(fs.readFileSync('templates/404.html', 'utf8'))(data);
+var errorPage = _.template(data.layout)(_.assign(data, {
+  page: {
+    title: '404',
+    breadcrumbs: [],
+  },
+  body: errorPageBody
+}));
+
+writePage({ path: '/', filename: '404.html', body: errorPage });
 
 
