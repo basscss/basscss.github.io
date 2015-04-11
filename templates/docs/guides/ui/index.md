@@ -549,7 +549,7 @@ To create headers and footers, set padding on nested divs then use color styles 
 ```html
 <div class="md-col-6">
   <div class="p2 bg-white border rounded">
-    <img src="/docs/images/placeholder.svg" class="mb2" />
+    <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" class="mb2" />
     <h1 class="h2 mt0">Bacon with Image</h1>
     <p class="mb0">Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.</p>
   </div>

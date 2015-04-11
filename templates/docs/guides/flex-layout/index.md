@@ -131,7 +131,7 @@ is a classic OOCSS solution for setting a fluid column next to an image. To ache
 <div class="p2">
   <h2>Media Object</h2>
   <div class="flex mb2">
-    <img src="/docs/images/placeholder-square.svg"
+    <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
       width="96" height="96"
       class="flex-none mr2" />
     <div class="flex-auto">
@@ -140,7 +140,7 @@ is a classic OOCSS solution for setting a fluid column next to an image. To ache
   </div>
   <h2>Centered Media Object (aka Flag Object)</h2>
   <div class="flex flex-center mb2">
-    <img src="/docs/images/placeholder-square.svg"
+    <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
       width="96" height="96"
       class="flex-none mr2" />
     <div class="flex-auto">
@@ -149,13 +149,13 @@ is a classic OOCSS solution for setting a fluid column next to an image. To ache
   </div>
   <h2>Double-Sided Media Object</h2>
   <div class="flex flex-center mb2">
-    <img src="/docs/images/placeholder-square.svg"
+    <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
       width="96" height="96"
       class="flex-none mr2" />
     <div class="flex-auto">
       <p class="m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, ut obcaecati, laudantium nobis.</p>
     </div>
-    <img src="/docs/images/placeholder-square.svg"
+    <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
       width="96" height="96"
       class="flex-none ml2" />
   </div>
@@ -285,19 +285,19 @@ To stagger content differently than its source order in HTML, use the `.flex-fir
 <div class="center flex-auto p2">
   <p>Resize the viewport to see the effect.</p>
   <div class="sm-flex flex-center">
-    <img src="/docs/images/placeholder.svg" width="256" width="192" class="flex-last m2" />
+    <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="192" width="192" class="flex-last m2" />
     <div class="flex-auto p2 border border-blue">.flex-auto</div>
   </div>
   <div class="sm-flex flex-center">
-    <img src="/docs/images/placeholder.svg" width="256" width="192" class="m2" />
+    <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="192" width="192" class="m2" />
     <div class="flex-auto p2 border border-blue">.flex-auto</div>
   </div>
   <div class="sm-flex flex-center">
-    <img src="/docs/images/placeholder.svg" width="256" width="192" class="flex-last m2" />
+    <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="192" width="192" class="flex-last m2" />
     <div class="flex-auto p2 border border-blue">.flex-auto</div>
   </div>
   <div class="sm-flex flex-center">
-    <img src="/docs/images/placeholder.svg" width="256" width="192" class="m2" />
+    <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="192" width="192" class="m2" />
     <div class="flex-auto p2 border border-blue">.flex-auto</div>
   </div>
 </div>
@@ -340,74 +340,74 @@ This method also works well when the number of items changes dynamically.
   <div class="flex flex-wrap mxn2">
     <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
       <div class="p1 border rounded">
-        <img src="/docs/images/placeholder-square.svg" width="256" height="auto" />
+        <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
     <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
       <div class="p1 border rounded">
-        <img src="/docs/images/placeholder-square.svg" width="256" height="auto" />
+        <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
         <p class="m0">Card that is taller than the others</p>
       </div>
     </div>
     <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
       <div class="p1 border rounded">
-        <img src="/docs/images/placeholder-square.svg" width="256" height="auto" />
+        <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
     <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
       <div class="p1 border rounded">
-        <img src="/docs/images/placeholder-square.svg" width="256" height="auto" />
+        <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
     <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
       <div class="p1 border rounded">
-        <img src="/docs/images/placeholder-square.svg" width="256" height="auto" />
+        <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
     <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
       <div class="p1 border rounded">
-        <img src="/docs/images/placeholder-square.svg" width="256" height="auto" />
+        <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
     <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
       <div class="p1 border rounded">
-        <img src="/docs/images/placeholder-square.svg" width="256" height="auto" />
+        <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
     <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
       <div class="p1 border rounded">
-        <img src="/docs/images/placeholder-square.svg" width="256" height="auto" />
+        <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
     <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
       <div class="p1 border rounded">
-        <img src="/docs/images/placeholder-square.svg" width="256" height="auto" />
+        <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
     <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
       <div class="p1 border rounded">
-        <img src="/docs/images/placeholder-square.svg" width="256" height="auto" />
+        <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
     <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
       <div class="p1 border rounded">
-        <img src="/docs/images/placeholder-square.svg" width="256" height="auto" />
+        <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
     <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
       <div class="p1 border rounded">
-        <img src="/docs/images/placeholder-square.svg" width="256" height="auto" />
+        <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
