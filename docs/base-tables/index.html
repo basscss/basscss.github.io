@@ -37,7 +37,7 @@
     <div class="sm-flex flex-baseline flex-wrap mxn1">
       <div class="bold px1">
         basscss-base-tables
-        <span class="h5">v0.1.4</span>
+        <span class="h5">v1.0.0</span>
       </div>
       <div class="flex-auto"></div>
       <a href="//npmjs.com/package/basscss-base-tables" class="h6 caps ml1 mr1 button button-small button-link">npm</a>
@@ -110,68 +110,55 @@ including text-alignment, width, padding, border-collapse, and border-spacing.</
       <h2 class="flex-auto">CSS Source</h2>
       <!--
       <div class="h5 bold">
-        607 B
-        (285 B Gzipped)
+        333 B
+        (193 B Gzipped)
       </div>
       -->
     </div>
     <div id="basscss-base-tables-stats" class="bold caps sm-flex flex-center flex-wrap mb3 mxn2">
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          6 Rules
+          5 Rules
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          7 Selectors
+          6 Selectors
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          18 Declarations
+          10 Declarations
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          17 Properties
+          9 Properties
         </div>
       </div>
     </div>
-    <pre id="basscss-base-tables-css-source">/* Basscss Base Tables */
+    <pre id="basscss-base-tables-css-source"><span class="hljs-tag">table</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">border-collapse</span>:<span class="hljs-value"> separate</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-spacing</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">max-width</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+}</span>
 
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-  max-width: 100%;
-  width: 100%;
-}
+<span class="hljs-tag">th</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">text-align</span>:<span class="hljs-value"> left</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">font-weight</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--table-header-font-weight)</span></span>;
+}</span>
 
-th {
-  text-align: left;
-  font-weight: var(--table-header-font-weight);
-}
+<span class="hljs-tag">th</span>,
+<span class="hljs-tag">td</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--table-cell-padding-y) <span class="hljs-function">var</span>(--table-cell-padding-x)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">line-height</span>:<span class="hljs-value"> inherit</span></span>;
+}</span>
 
-th,
-td {
-  padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
-  line-height: inherit;
-}
-
-th { vertical-align: bottom }
+<span class="hljs-tag">th</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">vertical-align</span>:<span class="hljs-value"> bottom }
 td { vertical-align: top }
 
-:root {
-  --bold-font-weight: bold;
-  --space-1: .5rem;
-  --space-2: 1rem;
-  --space-3: 2rem;
-  --space-4: 4rem;
-  --table-header-font-weight: var(--bold-font-weight);
-  --table-cell-padding-x: var(--space-2);
-  --table-cell-padding-y: .25rem;
-}
-
-</pre>
+</span></span></span></pre>
   
 </footer>
 

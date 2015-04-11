@@ -37,7 +37,7 @@
     <div class="sm-flex flex-baseline flex-wrap mxn1">
       <div class="bold px1">
         basscss-button-sizes
-        <span class="h5">v1.0.4</span>
+        <span class="h5">v1.0.5</span>
       </div>
       <div class="flex-auto"></div>
       <a href="//npmjs.com/package/basscss-button-sizes" class="h6 caps ml1 mr1 button button-small button-link">npm</a>
@@ -90,55 +90,45 @@ use button size extensions.</p>
       <h2 class="flex-auto">CSS Source</h2>
       <!--
       <div class="h5 bold">
-        469 B
-        (191 B Gzipped)
+        293 B
+        (117 B Gzipped)
       </div>
       -->
     </div>
     <div id="basscss-button-sizes-stats" class="bold caps sm-flex flex-center flex-wrap mb3 mxn2">
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          4 Rules
+          3 Rules
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          4 Selectors
+          3 Selectors
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          9 Declarations
+          4 Declarations
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          8 Properties
+          3 Properties
         </div>
       </div>
     </div>
-    <pre id="basscss-button-sizes-css-source">/* Basscss UI Utility Button Sizes */
+    <pre id="basscss-button-sizes-css-source"><span class="hljs-class">.button-small</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--button-small-padding-y) <span class="hljs-function">var</span>(--button-small-padding-x)</span></span>;
+}</span>
 
-.button-small {
-  padding: var(--button-small-padding-y) var(--button-small-padding-x);
-}
+<span class="hljs-class">.button-big</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--button-big-padding-y) <span class="hljs-function">var</span>(--button-big-padding-x)</span></span>;
+}</span>
 
-.button-big {
-  padding: var(--button-big-padding-y) var(--button-big-padding-x);
-}
-
-.button-narrow {
-  padding-left: var(--space-1);
-  padding-right: var(--space-1);
-}
-
-:root {
-  --space-1: .5rem;
-  --button-small-padding-y: .25rem;
-  --button-small-padding-x: .5rem;
-  --button-big-padding-y: 1rem;
-  --button-big-padding-x: 1.25rem;
-}
+<span class="hljs-class">.button-narrow</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--button-narrow-padding-x)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--button-narrow-padding-x)</span></span>;
+}</span>
 
 </pre>
   

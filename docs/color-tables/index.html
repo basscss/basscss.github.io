@@ -37,7 +37,7 @@
     <div class="sm-flex flex-baseline flex-wrap mxn1">
       <div class="bold px1">
         basscss-color-tables
-        <span class="h5">v1.0.0</span>
+        <span class="h5">v1.0.1</span>
       </div>
       <div class="flex-auto"></div>
       <a href="//npmjs.com/package/basscss-color-tables" class="h6 caps ml1 mr1 button button-small button-link">npm</a>
@@ -143,50 +143,42 @@ Border color and width is set with the <code>--border-color</code> and <code>--b
       <h2 class="flex-auto">CSS Source</h2>
       <!--
       <div class="h5 bold">
-        340 B
-        (188 B Gzipped)
+        211 B
+        (126 B Gzipped)
       </div>
       -->
     </div>
     <div id="basscss-color-tables-stats" class="bold caps sm-flex flex-center flex-wrap mb3 mxn2">
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          3 Rules
+          2 Rules
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          4 Selectors
+          3 Selectors
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          7 Declarations
+          4 Declarations
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          7 Properties
+          4 Properties
         </div>
       </div>
     </div>
-    <pre id="basscss-color-tables-css-source">/* Basscss Color Tables */
+    <pre id="basscss-color-tables-css-source"><span class="hljs-class">.table-light</span> <span class="hljs-tag">th</span>,
+<span class="hljs-class">.table-light</span> <span class="hljs-tag">td</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">border-bottom-width</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--border-width)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-bottom-style</span>:<span class="hljs-value"> solid</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-bottom-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--border-color)</span></span>;
+}</span>
 
-.table-light th,
-.table-light td {
-  border-bottom-width: var(--border-width);
-  border-bottom-style: solid;
-  border-bottom-color: var(--border-color);
-}
-
-.table-light tr:last-child td {
-  border-bottom: 0;
-}
-
-:root {
-  --darken-2: rgba(0,0,0,.125);
-  --border-color: var(--darken-2);
-  --border-width: 1px;
+<span class="hljs-class">.table-light</span> <span class="hljs-rule"><span class="hljs-attribute">tr</span>:<span class="hljs-value">last-child td {
+  border-bottom: <span class="hljs-number">0</span></span></span>;
 }
 
 </pre>

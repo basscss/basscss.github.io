@@ -75,7 +75,7 @@ rm -rf .git
 npm install
 npm start</pre><p>This will start a server at <code>http://localhost:8000</code> and watch the <code>/src</code> folder for changes.
 Edit the files in <code>/src/css</code> to customize the compiled stylesheet.</p>
-<h1 id="npm-packages"><a href="#npm-packages">Npm Packages</a></h1><p>All individual Basscss modules are available on npm. For a list of available packages, see the <a href="http://basscss.com/docs/modules">Modules</a> page.</p>
+<h1 id="npm-packages"><a href="#npm-packages">Npm Packages</a></h1><p>All individual Basscss modules are available on npm.</p>
 <h1 id="importing-files"><a href="#importing-files">Importing files</a></h1><p>Basscss uses npm to manage its CSS modules. Cssnext automatically inlines files with the following syntax.
 If you’re using Rework or Myth, be sure to use the <code>rework-npm</code> plugin to correctly import files.</p>
 <p>To import modules that have been installed through npm, use the following syntax:</p>
@@ -84,7 +84,7 @@ If you’re using Rework or Myth, be sure to use the <code>rework-npm</code> plu
 <pre><span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">'./custom-buttons'</span></span>;</pre><p>Import custom properties (variables) last. Just as with other CSS declarations, whatever is last in the source code is used.</p>
 <pre><span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">'basscss-utility-layout'</span></span>;
 <span class="hljs-at_rule">@<span class="hljs-keyword">import</span> <span class="hljs-string">'./variables'</span></span>;</pre><h1 id="sass"><a href="#sass">Sass</a></h1><p>Although Basscss is written in spec-compliant CSS4,
-you can also incorporate it into an existing Sass project with the <a href="https://github.com/jxnblk/css-scss">css-to-scss</a> compiled partials in the <code>basscss-sass</code> repo. Be sure to include the variables file <code>basscss-sass/defaults</code> before all other partials.</p>
+you can also incorporate it into an existing Sass project with the <a href="https://github.com/jxnblk/css-scss">css-to-scss</a> transpiled partials in the <a href="https://github.com/basscss/basscss-sass"><code>basscss-sass</code></a> repo. Be sure to include the variables file <code>basscss-sass/defaults</code> before all other partials.</p>
 <pre><span class="hljs-at_rule">@<span class="hljs-keyword">import</span>: <span class="hljs-string">'basscss-sass/defaults'</span>;</span>
 <span class="hljs-at_rule">@<span class="hljs-keyword">import</span>: <span class="hljs-string">'basscss-sass/utility-layout'</span>;</span></pre><p>To override the default values, include your own variable definitions before Basscss.</p>
 <pre><span class="hljs-comment">// Custom variables</span>

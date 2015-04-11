@@ -37,7 +37,7 @@
     <div class="sm-flex flex-baseline flex-wrap mxn1">
       <div class="bold px1">
         basscss-colors
-        <span class="h5">v1.0.8</span>
+        <span class="h5">v1.0.9</span>
       </div>
       <div class="flex-auto"></div>
       <a href="//npmjs.com/package/basscss-colors" class="h6 caps ml1 mr1 button button-small button-link">npm</a>
@@ -224,168 +224,106 @@ The color values used in this module are from <a href="http://clrs.cc/">mrmrs/co
       <h2 class="flex-auto">CSS Source</h2>
       <!--
       <div class="h5 bold">
-        3.28 kB
-        (897 B Gzipped)
+        2.57 kB
+        (578 B Gzipped)
       </div>
       -->
     </div>
     <div id="basscss-colors-stats" class="bold caps sm-flex flex-center flex-wrap mb3 mxn2">
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          62 Rules
+          60 Rules
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          68 Selectors
+          66 Selectors
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          82 Declarations
+          60 Declarations
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          25 Properties
+          4 Properties
         </div>
       </div>
     </div>
-    <pre id="basscss-colors-css-source">/* Basscss Colors */
+    <pre id="basscss-colors-css-source"><span class="hljs-class">.black</span>, <span class="hljs-class">.dark-gray</span>   <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--black) }
+.gray, .mid-gray     { color: <span class="hljs-function">var</span>(--gray) }
+.silver, .light-gray { color: <span class="hljs-function">var</span>(--silver) }
+.white { color: <span class="hljs-function">var</span>(--white) }
+
+.aqua  { color: <span class="hljs-function">var</span>(--aqua) }
+.blue  { color: <span class="hljs-function">var</span>(--blue) }
+.navy  { color: <span class="hljs-function">var</span>(--navy) }
+.teal  { color: <span class="hljs-function">var</span>(--teal) }
+.green { color: <span class="hljs-function">var</span>(--green) }
+.olive { color: <span class="hljs-function">var</span>(--olive) }
+.lime  { color: <span class="hljs-function">var</span>(--lime) }
+
+.yellow  { color: <span class="hljs-function">var</span>(--yellow) }
+.orange  { color: <span class="hljs-function">var</span>(--orange) }
+.red     { color: <span class="hljs-function">var</span>(--red) }
+.fuchsia { color: <span class="hljs-function">var</span>(--fuchsia) }
+.purple  { color: <span class="hljs-function">var</span>(--purple) }
+.maroon  { color: <span class="hljs-function">var</span>(--maroon) }
+
+.bg-black, .bg-dark-gray   { background-color: <span class="hljs-function">var</span>(--black) }
+.bg-gray, .bg-mid-gray     { background-color: <span class="hljs-function">var</span>(--gray) }
+.bg-silver, .bg-light-gray { background-color: <span class="hljs-function">var</span>(--silver) }
+.bg-white  { background-color: <span class="hljs-function">var</span>(--white) }
+
+.bg-aqua  { background-color: <span class="hljs-function">var</span>(--aqua) }
+.bg-blue  { background-color: <span class="hljs-function">var</span>(--blue) }
+.bg-navy  { background-color: <span class="hljs-function">var</span>(--navy) }
+.bg-teal  { background-color: <span class="hljs-function">var</span>(--teal) }
+.bg-green { background-color: <span class="hljs-function">var</span>(--green) }
+.bg-olive { background-color: <span class="hljs-function">var</span>(--olive) }
+.bg-lime  { background-color: <span class="hljs-function">var</span>(--lime) }
+
+.bg-yellow  { background-color: <span class="hljs-function">var</span>(--yellow) }
+.bg-orange  { background-color: <span class="hljs-function">var</span>(--orange) }
+.bg-red     { background-color: <span class="hljs-function">var</span>(--red) }
+.bg-fuchsia { background-color: <span class="hljs-function">var</span>(--fuchsia) }
+.bg-purple  { background-color: <span class="hljs-function">var</span>(--purple) }
+.bg-maroon  { background-color: <span class="hljs-function">var</span>(--maroon) }
+
+.bg-darken-<span class="hljs-number">1</span> { background-color: <span class="hljs-function">var</span>(--darken-<span class="hljs-number">1</span>) }
+.bg-darken-<span class="hljs-number">2</span> { background-color: <span class="hljs-function">var</span>(--darken-<span class="hljs-number">2</span>) }
+.bg-darken-<span class="hljs-number">3</span> { background-color: <span class="hljs-function">var</span>(--darken-<span class="hljs-number">3</span>) }
+.bg-darken-<span class="hljs-number">4</span> { background-color: <span class="hljs-function">var</span>(--darken-<span class="hljs-number">4</span>) }
+
+.border-aqua  { border-color: <span class="hljs-function">var</span>(--aqua) }
+.border-blue  { border-color: <span class="hljs-function">var</span>(--blue) }
+.border-navy  { border-color: <span class="hljs-function">var</span>(--navy) }
+.border-teal  { border-color: <span class="hljs-function">var</span>(--teal) }
+.border-green { border-color: <span class="hljs-function">var</span>(--green) }
+.border-olive { border-color: <span class="hljs-function">var</span>(--olive) }
+.border-lime  { border-color: <span class="hljs-function">var</span>(--lime) }
+
+.border-yellow  { border-color: <span class="hljs-function">var</span>(--yellow) }
+.border-orange  { border-color: <span class="hljs-function">var</span>(--orange) }
+.border-red     { border-color: <span class="hljs-function">var</span>(--red) }
+.border-fuchsia { border-color: <span class="hljs-function">var</span>(--fuchsia) }
+.border-purple  { border-color: <span class="hljs-function">var</span>(--purple) }
+.border-maroon  { border-color: <span class="hljs-function">var</span>(--maroon) }
+
+.border-black  { border-color: <span class="hljs-function">var</span>(--black) }
+.border-gray   { border-color: <span class="hljs-function">var</span>(--gray) }
+.border-silver { border-color: <span class="hljs-function">var</span>(--silver) }
+.border-white  { border-color: <span class="hljs-function">var</span>(--white) }
+
+.border-darken-<span class="hljs-number">1</span> { border-color: <span class="hljs-function">var</span>(--darken-<span class="hljs-number">1</span>) }
+.border-darken-<span class="hljs-number">2</span> { border-color: <span class="hljs-function">var</span>(--darken-<span class="hljs-number">2</span>) }
+.border-darken-<span class="hljs-number">3</span> { border-color: <span class="hljs-function">var</span>(--darken-<span class="hljs-number">3</span>) }
+.border-darken-<span class="hljs-number">4</span> { border-color: <span class="hljs-function">var</span>(--darken-<span class="hljs-number">4</span>) }
+.muted { opacity: .<span class="hljs-number">5</span> }
 
 
-/* Color */
-
-.black, .dark-gray   { color: var(--black) }
-.gray, .mid-gray     { color: var(--gray) }
-.silver, .light-gray { color: var(--silver) }
-.white { color: var(--white) }
-
-.aqua  { color: var(--aqua) }
-.blue  { color: var(--blue) }
-.navy  { color: var(--navy) }
-.teal  { color: var(--teal) }
-.green { color: var(--green) }
-.olive { color: var(--olive) }
-.lime  { color: var(--lime) }
-
-.yellow  { color: var(--yellow) }
-.orange  { color: var(--orange) }
-.red     { color: var(--red) }
-.fuchsia { color: var(--fuchsia) }
-.purple  { color: var(--purple) }
-.maroon  { color: var(--maroon) }
-
-
-/* Background Color */
-
-.bg-black, .bg-dark-gray   { background-color: var(--black) }
-.bg-gray, .bg-mid-gray     { background-color: var(--gray) }
-.bg-silver, .bg-light-gray { background-color: var(--silver) }
-.bg-white  { background-color: var(--white) }
-
-.bg-aqua  { background-color: var(--aqua) }
-.bg-blue  { background-color: var(--blue) }
-.bg-navy  { background-color: var(--navy) }
-.bg-teal  { background-color: var(--teal) }
-.bg-green { background-color: var(--green) }
-.bg-olive { background-color: var(--olive) }
-.bg-lime  { background-color: var(--lime) }
-
-.bg-yellow  { background-color: var(--yellow) }
-.bg-orange  { background-color: var(--orange) }
-.bg-red     { background-color: var(--red) }
-.bg-fuchsia { background-color: var(--fuchsia) }
-.bg-purple  { background-color: var(--purple) }
-.bg-maroon  { background-color: var(--maroon) }
-
-.bg-darken-1 { background-color: var(--darken-1) }
-.bg-darken-2 { background-color: var(--darken-2) }
-.bg-darken-3 { background-color: var(--darken-3) }
-.bg-darken-4 { background-color: var(--darken-4) }
-
-
-/* Border Color */
-
-.border-aqua  { border-color: var(--aqua) }
-.border-blue  { border-color: var(--blue) }
-.border-navy  { border-color: var(--navy) }
-.border-teal  { border-color: var(--teal) }
-.border-green { border-color: var(--green) }
-.border-olive { border-color: var(--olive) }
-.border-lime  { border-color: var(--lime) }
-
-.border-yellow  { border-color: var(--yellow) }
-.border-orange  { border-color: var(--orange) }
-.border-red     { border-color: var(--red) }
-.border-fuchsia { border-color: var(--fuchsia) }
-.border-purple  { border-color: var(--purple) }
-.border-maroon  { border-color: var(--maroon) }
-
-.border-black  { border-color: var(--black) }
-.border-gray   { border-color: var(--gray) }
-.border-silver { border-color: var(--silver) }
-.border-white  { border-color: var(--white) }
-
-.border-darken-1 { border-color: var(--darken-1) }
-.border-darken-2 { border-color: var(--darken-2) }
-.border-darken-3 { border-color: var(--darken-3) }
-.border-darken-4 { border-color: var(--darken-4) }
-
-/* Opacity */
-.muted { opacity: .5 }
-
-/*
-
-   COLOR VARIABLES
-
-   - Cool
-   - Warm
-   - Gray Scale
-
-*/
-
-:root {
-
-  /* Cool */
-
-  --aqua:   #7fdbff;
-  --blue:   #0074d9;
-  --navy:   #001f3f;
-  --teal:   #39cccc;
-  --green:  #2ecc40;
-  --olive:  #3d9970;
-  --lime:   #01ff70;
-
-
-  /* Warm */
-
-  --yellow: #ffdc00;
-  --orange: #ff851b;
-  --red:    #ff4136;
-  --fuchsia:#f012be;
-  --purple: #b10dc9;
-  --maroon: #85144b;
-
-
-  /* Gray scale */
-
-  --white:  #fff;
-  --silver: #ddd;
-  --gray:   #aaa;
-  --black:  #111;
-
-}
-
-:root {
-  --black: #222;
-  --darken-1: rgba(0,0,0,.0625);
-  --darken-2: rgba(0,0,0,.125);
-  --darken-3: rgba(0,0,0,.25);
-  --darken-4: rgba(0,0,0,.5);
-}
-
-</pre>
+</span></span></span></pre>
   
 </footer>
 

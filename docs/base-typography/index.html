@@ -37,7 +37,7 @@
     <div class="sm-flex flex-baseline flex-wrap mxn1">
       <div class="bold px1">
         basscss-base-typography
-        <span class="h5">v1.0.0</span>
+        <span class="h5">v1.0.1</span>
       </div>
       <div class="flex-auto"></div>
       <a href="//npmjs.com/package/basscss-base-typography" class="h6 caps ml1 mr1 button button-small button-link">npm</a>
@@ -174,115 +174,93 @@ Blockquotes and hr have default margin and padding set.</p>
       <h2 class="flex-auto">CSS Source</h2>
       <!--
       <div class="h5 bold">
-        1.59 kB
-        (557 B Gzipped)
+        1.11 kB
+        (379 B Gzipped)
       </div>
       -->
     </div>
     <div id="basscss-base-typography-stats" class="bold caps sm-flex flex-center flex-wrap mb3 mxn2">
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          16 Rules
+          15 Rules
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          33 Selectors
+          32 Selectors
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          50 Declarations
+          33 Declarations
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          27 Properties
+          12 Properties
         </div>
       </div>
     </div>
-    <pre id="basscss-base-typography-css-source">/* Basscss Base Typography */
+    <pre id="basscss-base-typography-css-source"><span class="hljs-tag">body</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--font-family)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">line-height</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--line-height)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+}</span>
 
-body {
-  font-family: var(--font-family);
-  line-height: var(--line-height);
-  font-size: 100%;
-}
+<span class="hljs-tag">h1</span>, <span class="hljs-tag">h2</span>, <span class="hljs-tag">h3</span>, <span class="hljs-tag">h4</span>, <span class="hljs-tag">h5</span>, <span class="hljs-tag">h6</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--heading-font-family)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">font-weight</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--heading-font-weight)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">line-height</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--heading-line-height)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value"> <span class="hljs-number">1em</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> .<span class="hljs-number">5em</span></span></span>;
+}</span>
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--heading-font-family);
-  font-weight: var(--heading-font-weight);
-  line-height: var(--heading-line-height);
-  margin-top: 1em;
-  margin-bottom: .5em;
-}
+<span class="hljs-tag">p</span>, <span class="hljs-tag">dl</span>, <span class="hljs-tag">ol</span>, <span class="hljs-tag">ul</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--h4)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>)</span></span>;
+}</span>
 
-p, dl, ol, ul {
-  font-size: var(--h4);
-  margin-top: 0;
-  margin-bottom: var(--space-2);
-}
+<span class="hljs-tag">pre</span>, <span class="hljs-tag">code</span>, <span class="hljs-tag">samp</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--monospace-font-family)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> inherit</span></span>;
+}</span>
 
-pre, code, samp {
-  font-family: var(--monospace-font-family);
-  font-size: inherit;
-}
+<span class="hljs-tag">pre</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">overflow-x</span>:<span class="hljs-value"> scroll</span></span>;
+}</span>
 
-pre {
-  margin-top: 0;
-  margin-bottom: var(--space-2);
-  overflow-x: scroll;
-}
+<span class="hljs-tag">hr</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>)</span></span>;
+}</span>
 
-hr {
-  margin-top: var(--space-3);
-  margin-bottom: var(--space-3);
-}
+<span class="hljs-tag">blockquote</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>)</span></span>;
+}</span>
+  <span class="hljs-tag">blockquote</span>,
+  <span class="hljs-tag">blockquote</span> <span class="hljs-tag">p</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--h3)</span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">font-style</span>:<span class="hljs-value"> italic</span></span>;
+  }</span>
 
-blockquote {
-  margin-top: var(--space-3);
-  margin-bottom: var(--space-3);
-  margin-left: 0;
-  padding-left: var(--space-2);
-  padding-right: var(--space-2);
-}
-  blockquote,
-  blockquote p {
-    font-size: var(--h3);
-    font-style: italic;
-  }
-
-h1, .h1 { font-size: var(--h1) }
-h2, .h2 { font-size: var(--h2) }
-h3, .h3 { font-size: var(--h3) }
-h4, .h4 { font-size: var(--h4) }
-h5, .h5 { font-size: var(--h5) }
-h6, .h6 { font-size: var(--h6) }
+<span class="hljs-tag">h1</span>, <span class="hljs-class">.h1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--h1) }
+h2, .h2 { font-size: <span class="hljs-function">var</span>(--h2) }
+h3, .h3 { font-size: <span class="hljs-function">var</span>(--h3) }
+h4, .h4 { font-size: <span class="hljs-function">var</span>(--h4) }
+h5, .h5 { font-size: <span class="hljs-function">var</span>(--h5) }
+h6, .h6 { font-size: <span class="hljs-function">var</span>(--h6) }
 
 .list-reset {
-  list-style: none;
-  padding-left: 0;
-}
-
-:root {
-  --font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  --line-height: 1.5;
-  --heading-font-family: var(--font-family);
-  --heading-font-weight: bold;
-  --heading-line-height: 1.25;
-  --monospace-font-family: 'Source Code Pro', Consolas, monospace;
-  --h1: 2rem;
-  --h2: 1.5rem;
-  --h3: 1.25rem;
-  --h4: 1rem;
-  --h5: .875rem;
-  --h6: .75rem;
-  --bold-font-weight: bold;
-  --space-1: .5rem;
-  --space-2: 1rem;
-  --space-3: 2rem;
-  --space-4: 4rem;
-}
+  list-style: none</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+}</span>
 
 </pre>
   

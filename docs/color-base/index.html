@@ -37,7 +37,7 @@
     <div class="sm-flex flex-baseline flex-wrap mxn1">
       <div class="bold px1">
         basscss-color-base
-        <span class="h5">v1.3.1</span>
+        <span class="h5">v1.3.2</span>
       </div>
       <div class="flex-auto"></div>
       <a href="//npmjs.com/package/basscss-color-base" class="h6 caps ml1 mr1 button button-small button-link">npm</a>
@@ -126,145 +126,88 @@ Or set <code>--button-background-color</code> to change the default.</p>
       <h2 class="flex-auto">CSS Source</h2>
       <!--
       <div class="h5 bold">
-        1.84 kB
-        (728 B Gzipped)
+        1.01 kB
+        (380 B Gzipped)
       </div>
       -->
     </div>
     <div id="basscss-color-base-stats" class="bold caps sm-flex flex-center flex-wrap mb3 mxn2">
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          12 Rules
+          10 Rules
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          15 Selectors
+          13 Selectors
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          50 Declarations
+          23 Declarations
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          40 Properties
+          15 Properties
         </div>
       </div>
     </div>
-    <pre id="basscss-color-base-css-source">/* Basscss Color Base */
+    <pre id="basscss-color-base-css-source"><span class="hljs-tag">body</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--black)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> white</span></span>;
+}</span>
 
-/*
+<span class="hljs-tag">a</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--link-color)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">text-decoration</span>:<span class="hljs-value"> none</span></span>;
+}</span>
 
-   COLOR VARIABLES
-
-   - Cool
-   - Warm
-   - Gray Scale
-
-*/
-
-:root {
-
-  /* Cool */
-
-  --aqua:   #7fdbff;
-  --blue:   #0074d9;
-  --navy:   #001f3f;
-  --teal:   #39cccc;
-  --green:  #2ecc40;
-  --olive:  #3d9970;
-  --lime:   #01ff70;
-
-
-  /* Warm */
-
-  --yellow: #ffdc00;
-  --orange: #ff851b;
-  --red:    #ff4136;
-  --fuchsia:#f012be;
-  --purple: #b10dc9;
-  --maroon: #85144b;
-
-
-  /* Gray scale */
-
-  --white:  #fff;
-  --silver: #ddd;
-  --gray:   #aaa;
-  --black:  #111;
-
+<span class="hljs-rule"><span class="hljs-attribute">a</span>:<span class="hljs-value">hover {
+  text-decoration: underline</span></span>;
 }
 
-body {
-  color: var(--black);
-  background-color: white;
+<span class="hljs-tag">pre</span>, <span class="hljs-tag">code</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--pre-background-color)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-radius</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--border-radius)</span></span>;
+}</span>
+
+<span class="hljs-tag">hr</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">border</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-bottom-style</span>:<span class="hljs-value"> solid</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-bottom-width</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--border-width)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-bottom-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--border-color)</span></span>;
+}</span>
+
+<span class="hljs-class">.button</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> white</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--button-background-color)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-radius</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--border-radius)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">transition-duration</span>:<span class="hljs-value"> .<span class="hljs-number">05s</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">transition-timing-function</span>:<span class="hljs-value"> ease-out</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">transition-property</span>:<span class="hljs-value"> box-shadow, background-color</span></span>;
+}</span>
+
+<span class="hljs-rule"><span class="hljs-attribute">.button</span>:<span class="hljs-value">hover {
+  box-shadow: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">20rem</span> <span class="hljs-function">var</span>(--darken-<span class="hljs-number">1</span>)</span></span>;
 }
 
-a {
-  color: var(--link-color);
-  text-decoration: none;
+<span class="hljs-rule"><span class="hljs-attribute">.button</span>:<span class="hljs-value">focus {
+  outline: none</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--darken-<span class="hljs-number">2</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">box-shadow</span>:<span class="hljs-value"> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-function">var</span>(--darken-<span class="hljs-number">3</span>)</span></span>;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-pre, code {
-  background-color: var(--pre-background-color);
-  border-radius: var(--border-radius);
-}
-
-hr {
-  border: 0;
-  border-bottom-style: solid;
-  border-bottom-width: var(--border-width);
-  border-bottom-color: var(--border-color);
-}
-
-.button {
-  color: white;
-  background-color: var(--button-background-color);
-  border-radius: var(--border-radius);
-  transition-duration: .05s;
-  transition-timing-function: ease-out;
-  transition-property: box-shadow, background-color;
-}
-
-.button:hover {
-  box-shadow: inset 0 0 0 20rem var(--darken-1);
-}
-
-.button:focus {
-  outline: none;
-  border-color: var(--darken-2);
-  box-shadow: 0 0 0 3px var(--darken-3);
-}
-
-.button:active,
+<span class="hljs-rule"><span class="hljs-attribute">.button</span>:<span class="hljs-value">active,
 .button.is-active {
-  box-shadow: inset 0 0 0 20rem var(--darken-2),
-    inset 0 3px 4px 0 var(--darken-3),
-    0 0 1px var(--darken-2);
+  box-shadow: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">20rem</span> <span class="hljs-function">var</span>(--darken-<span class="hljs-number">2</span>),
+    inset <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-number">4px</span> <span class="hljs-number">0</span> <span class="hljs-function">var</span>(--darken-<span class="hljs-number">3</span>),
+    <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-function">var</span>(--darken-<span class="hljs-number">2</span>)</span></span>;
 }
 
-.button:disabled,
+<span class="hljs-rule"><span class="hljs-attribute">.button</span>:<span class="hljs-value">disabled,
 .button.is-disabled {
-  opacity: .5;
-}
-
-:root {
-  --darken-1: rgba(0,0,0,.0625);
-  --darken-2: rgba(0,0,0,.125);
-  --darken-3: rgba(0,0,0,.25);
-  --darken-4: rgba(0,0,0,.5);
-  --border-color: var(--darken-2);
-  --border-width: 1px;
-  --border-radius: 3px;
-  --link-color: var(--blue, blue);
-  --button-background-color: var(--blue, blue);
-  --pre-background-color: transparent;
+  opacity: .<span class="hljs-number">5</span></span></span>;
 }
 
 </pre>

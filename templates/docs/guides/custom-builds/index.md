@@ -29,7 +29,7 @@ Edit the files in `/src/css` to customize the compiled stylesheet.
 
 # Npm Packages
 
-All individual Basscss modules are available on npm. For a list of available packages, see the [Modules](http://basscss.com/docs/modules) page.
+All individual Basscss modules are available on npm.
 
 
 # Importing files
@@ -60,7 +60,7 @@ Import custom properties (variables) last. Just as with other CSS declarations, 
 
 # Sass
 Although Basscss is written in spec-compliant CSS4,
-you can also incorporate it into an existing Sass project with the [css-to-scss](https://github.com/jxnblk/css-scss) compiled partials in the `basscss-sass` repo. Be sure to include the variables file `basscss-sass/defaults` before all other partials.
+you can also incorporate it into an existing Sass project with the [css-to-scss](https://github.com/jxnblk/css-scss) transpiled partials in the [`basscss-sass`](https://github.com/basscss/basscss-sass) repo. Be sure to include the variables file `basscss-sass/defaults` before all other partials.
 
 ```scss
 @import: 'basscss-sass/defaults';

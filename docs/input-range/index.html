@@ -37,7 +37,7 @@
     <div class="sm-flex flex-baseline flex-wrap mxn1">
       <div class="bold px1">
         basscss-input-range
-        <span class="h5">v1.1.4</span>
+        <span class="h5">v1.1.5</span>
       </div>
       <div class="flex-auto"></div>
       <a href="//npmjs.com/package/basscss-input-range" class="h6 caps ml1 mr1 button button-small button-link">npm</a>
@@ -85,125 +85,104 @@
       <h2 class="flex-auto">CSS Source</h2>
       <!--
       <div class="h5 bold">
-        2.43 kB
-        (671 B Gzipped)
+        1.73 kB
+        (491 B Gzipped)
       </div>
       -->
     </div>
     <div id="basscss-input-range-stats" class="bold caps sm-flex flex-center flex-wrap mb3 mxn2">
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          11 Rules
+          10 Rules
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          11 Selectors
+          10 Selectors
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          54 Declarations
+          44 Declarations
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          31 Properties
+          22 Properties
         </div>
       </div>
     </div>
-    <pre id="basscss-input-range-css-source">/* Basscss Input Range */
+    <pre id="basscss-input-range-css-source"><span class="hljs-tag">input</span><span class="hljs-attr_selector">[type=range]</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">vertical-align</span>:<span class="hljs-value"> middle</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> transparent</span></span>;
+}</span>
 
-input[type=range] {
-  vertical-align: middle;
-  background-color: transparent;
+<span class="hljs-class">.range-light</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> inherit</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">-webkit-appearance</span>:<span class="hljs-value"> none</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--form-field-padding-y)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--form-field-padding-y)</span></span>;
+}</span>
+
+<span class="hljs-rule"><span class="hljs-attribute">.range-light</span>:<span class="hljs-value">:-webkit-slider-thumb {
+  -webkit-appearance: none</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> relative</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--range-thumb-width)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--range-thumb-height)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-radius</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--border-radius)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> currentcolor</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">cursor</span>:<span class="hljs-value"> pointer</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--range-thumb-offset)</span></span>;
+}
+<span class="hljs-rule"><span class="hljs-attribute">.range-light</span>:<span class="hljs-value">:-webkit-slider-thumb:before {
+  content: <span class="hljs-string">''</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> block</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> absolute</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-function">calc</span>( -.<span class="hljs-number">5</span> * <span class="hljs-function">var</span>(--range-thumb-pseudo-size) + (.<span class="hljs-number">5</span> * <span class="hljs-function">var</span>(--range-thumb-height)) )</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-function">calc</span>( (-.<span class="hljs-number">5</span> * <span class="hljs-function">var</span>(--range-thumb-pseudo-size)) + (.<span class="hljs-number">5</span> * <span class="hljs-function">var</span>(--range-thumb-width)) )</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--range-thumb-pseudo-size)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--range-thumb-pseudo-size)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">opacity</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
 }
 
-.range-light {
-  color: inherit;
-  -webkit-appearance: none;
-  padding-top: var(--form-field-padding-y);
-  padding-bottom: var(--form-field-padding-y);
+<span class="hljs-rule"><span class="hljs-attribute">.range-light</span>:<span class="hljs-value">:-moz-range-thumb {
+  width: <span class="hljs-function">var</span>(--range-thumb-width)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--range-thumb-height)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-radius</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--border-radius)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-color</span>:<span class="hljs-value"> transparent</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-width</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> currentcolor</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">cursor</span>:<span class="hljs-value"> pointer</span></span>;
 }
 
-.range-light::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  position: relative;
-  width: var(--range-thumb-width);
-  height: var(--range-thumb-height);
-  border-radius: var(--border-radius);
-  background-color: currentcolor;
-  cursor: pointer;
-  margin-top: var(--range-thumb-offset);
+<span class="hljs-rule"><span class="hljs-attribute">.range-light</span>:<span class="hljs-value">:-webkit-slider-runnable-track {
+  height: <span class="hljs-function">var</span>(--range-track-height)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">cursor</span>:<span class="hljs-value"> pointer</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-radius</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--border-radius)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--darken-<span class="hljs-number">3</span>)</span></span>;
 }
 
-/* Touch screen friendly pseudo element */
-.range-light::-webkit-slider-thumb:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: calc( -.5 * var(--range-thumb-pseudo-size) + (.5 * var(--range-thumb-height)) );
-  left: calc( (-.5 * var(--range-thumb-pseudo-size)) + (.5 * var(--range-thumb-width)) );
-  width: var(--range-thumb-pseudo-size);
-  height: var(--range-thumb-pseudo-size);
-  opacity: 0;
+<span class="hljs-rule"><span class="hljs-attribute">.range-light</span>:<span class="hljs-value">:-moz-range-track {
+  height: <span class="hljs-function">var</span>(--range-track-height)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">cursor</span>:<span class="hljs-value"> pointer</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-radius</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--border-radius)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--darken-<span class="hljs-number">3</span>)</span></span>;
 }
 
-.range-light::-moz-range-thumb {
-  width: var(--range-thumb-width);
-  height: var(--range-thumb-height);
-  border-radius: var(--border-radius);
-  border-color: transparent;
-  border-width: 0;
-  background-color: currentcolor;
-  cursor: pointer;
+<span class="hljs-rule"><span class="hljs-attribute">.range-light</span>:<span class="hljs-value">focus {
+  outline: none</span></span>;
 }
 
-.range-light::-webkit-slider-runnable-track {
-  height: var(--range-track-height);
-  cursor: pointer;
-  border-radius: var(--border-radius);
-  background-color: var(--darken-3);
+<span class="hljs-rule"><span class="hljs-attribute">.range-light</span>:<span class="hljs-value">focus::-webkit-slider-thumb {
+  outline: none</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">box-shadow</span>:<span class="hljs-value"> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">2px</span> currentcolor</span></span>;
 }
 
-.range-light::-moz-range-track {
-  height: var(--range-track-height);
-  cursor: pointer;
-  border-radius: var(--border-radius);
-  background-color: var(--darken-3);
-}
-
-.range-light:focus {
-  outline: none;
-}
-
-.range-light:focus::-webkit-slider-thumb {
-  outline: none;
-  border: 0;
-  box-shadow: 0 0 1px 2px currentcolor;
-}
-
-.range-light:focus::-moz-range-thumb {
-  outline: none;
-  border: 0;
-  box-shadow: 0 0 0 3px var(--darken-3);
-}
-
-
-:root {
-
-  --border-radius: var(--border-radius, 3px);
-  --form-field-height: var(--form-field-height, 2.25rem);
-  --form-field-padding-y: var(--form-field-padding-y, .5rem);
-  --form-field-padding-x: var(--form-field-padding-x, .5rem);
-  --darken-3: rgba(0,0,0, .25);
-
-  --range-thumb-width: var(--form-field-padding-x);
-  --range-thumb-height: calc( var(--form-field-height) - (var(--form-field-padding-y) * 2) );
-  --range-track-height: calc( var(--form-field-padding-y) / 2 );
-  --range-thumb-offset: calc( var(--range-thumb-height) / -2 + (var(--range-track-height) / 2) );
-  --range-thumb-pseudo-size: var(--form-field-height);
-
+<span class="hljs-rule"><span class="hljs-attribute">.range-light</span>:<span class="hljs-value">focus::-moz-range-thumb {
+  outline: none</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">box-shadow</span>:<span class="hljs-value"> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-function">var</span>(--darken-<span class="hljs-number">3</span>)</span></span>;
 }
 
 </pre>

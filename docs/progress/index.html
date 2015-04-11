@@ -37,7 +37,7 @@
     <div class="sm-flex flex-baseline flex-wrap mxn1">
       <div class="bold px1">
         basscss-progress
-        <span class="h5">v1.0.4</span>
+        <span class="h5">v1.0.5</span>
       </div>
       <div class="flex-auto"></div>
       <a href="//npmjs.com/package/basscss-progress" class="h6 caps ml1 mr1 button button-small button-link">npm</a>
@@ -85,68 +85,57 @@
       <h2 class="flex-auto">CSS Source</h2>
       <!--
       <div class="h5 bold">
-        783 B
-        (316 B Gzipped)
+        531 B
+        (241 B Gzipped)
       </div>
       -->
     </div>
     <div id="basscss-progress-stats" class="bold caps sm-flex flex-center flex-wrap mb3 mxn2">
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          5 Rules
+          4 Rules
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          5 Selectors
+          4 Selectors
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          18 Declarations
+          14 Declarations
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          13 Properties
+          9 Properties
         </div>
       </div>
     </div>
-    <pre id="basscss-progress-css-source">/* Basscss Progress */
+    <pre id="basscss-progress-css-source"><span class="hljs-class">.progress</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> block</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-function">calc</span>( <span class="hljs-function">var</span>(--form-field-height) / <span class="hljs-number">4</span> )</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--form-field-padding-y) <span class="hljs-number">0</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--darken-<span class="hljs-number">2</span>)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-radius</span>:<span class="hljs-value"> <span class="hljs-number">10000px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">overflow</span>:<span class="hljs-value"> hidden</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">-webkit-appearance</span>:<span class="hljs-value"> none</span></span>;
+}</span>
 
-.progress {
-  display: block;
-  width: 100%;
-  height: calc( var(--form-field-height) / 4 );
-  margin: var(--form-field-padding-y) 0;
-  background-color: var(--darken-2);
-  border: 0;
-  border-radius: 10000px;
-  overflow: hidden;
-  -webkit-appearance: none;
-}
-
-.progress::-webkit-progress-bar {
-  -webkit-appearance: none;
-  background-color: var(--darken-2)
+<span class="hljs-rule"><span class="hljs-attribute">.progress</span>:<span class="hljs-value">:-webkit-progress-bar {
+  -webkit-appearance: none</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--darken-<span class="hljs-number">2</span>)
 }
 
 .progress::-webkit-progress-value {
-  -webkit-appearance: none;
-  background-color: currentColor;
+  -webkit-appearance: none</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> currentColor</span></span>;
 }
 
-.progress::-moz-progress-bar {
-  background-color: currentColor;
-}
-
-:root {
-
-  --form-field-height: var(--form-field-height, 2.25rem);
-  --form-field-padding-y: var(--form-field-padding-y, .5rem);
-  --form-field-padding-x: var(--form-field-padding-x, .5rem);
-  --darken-2: rgba(0,0,0, .125);
-
+<span class="hljs-rule"><span class="hljs-attribute">.progress</span>:<span class="hljs-value">:-moz-progress-bar {
+  background-color: currentColor</span></span>;
 }
 
 </pre>
