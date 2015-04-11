@@ -1,0 +1,40 @@
+{
+  "name": "basscss.github.io",
+  "version": "1.0.0",
+  "description": "Documentation page for Basscss",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test",
+    "build": "node build",
+    "watch:build": "watch 'npm run build' ./templates",
+    "serve": "http-server -p 8000",
+    "start": "npm run watch:build & npm run serve"
+  },
+  "keywords": [
+    "basscss",
+    "css",
+    "oocss",
+    "documentation"
+  ],
+  "author": "Brent Jackson",
+  "license": "MIT",
+  "dependencies": {
+    "basscss": "^6.0.0-beta.2"
+  },
+  "devDependencies": {
+    "autobass": "^2.0.0",
+    "colorable": "^1.0.5",
+    "colors.css": "^2.3.0",
+    "cssstats": "^1.5.1",
+    "filesize": "^3.1.2",
+    "fs-extra": "^0.18.0",
+    "get-module-info": "^1.0.0",
+    "highlight.js": "^8.5.0",
+    "http-server": "^0.8.0",
+    "lodash": "^3.6.0",
+    "marked": "^0.3.3",
+    "marked-example": "^1.0.4",
+    "title-case": "^1.1.0",
+    "watch": "^0.16.0"
+  }
+}
