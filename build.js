@@ -18,10 +18,10 @@ data.title = _.capitalize(data.name);
 data.baseurl = '//basscss.com';
 data.stylesheet = 'http://d2v52k3cl9vedd.cloudfront.net/bassdock/1.3.6/bassdock.min.css';
 
-data.asset_path = 'http://d2v52k3cl9vedd.cloudfront.net/basscss/';
+//data.asset_path = 'http://d2v52k3cl9vedd.cloudfront.net/basscss/';
 
 data.routes = require('./data/routes');
-data.showcase = require('./data/showcase');
+data.showcase = require('showcase/data');
 data.stats = require('./data/stats');
 data.colorCombinations = require('./data/color-combinations');
 

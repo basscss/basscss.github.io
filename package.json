@@ -34,6 +34,7 @@
     "lodash": "^3.6.0",
     "marked": "^0.3.3",
     "marked-example": "^1.0.4",
+    "showcase": "git://github.com/basscss/showcase",
     "title-case": "^1.1.0",
     "watch": "^0.16.0"
   }
