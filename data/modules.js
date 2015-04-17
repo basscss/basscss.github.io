@@ -12,7 +12,7 @@ modules = modules.map(function(name) {
   var title = mod.title.replace(/^Basscss\-/, '');
   mod.title = titleCase(title);
   mod.body = marked(mod.readme, { renderer: renderer });
-  mod.content = true;
+  mod.content = mod.body;
   mod.path = '/' + mod.name.replace(/^basscss\-/,'');
   mod.module = true;
   return mod;

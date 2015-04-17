@@ -81,4 +81,13 @@ var errorPage = _.template(data.layout)(_.assign(data, {
 
 writePage({ path: '/', filename: '404.html', body: errorPage });
 
+// Single page doc
+var docBody = _.template(fs.readFileSync('templates/doc/index.html', 'utf8'))(_.assign(data, {
+  page: {
+    title: 'Basscss',
+    breadcrumbs: [],
+  }
+}));
+writePage({ path: '/doc', body: docBody });
+
 
