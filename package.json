@@ -28,7 +28,7 @@
     "cssstats": "^1.5.1",
     "filesize": "^3.1.2",
     "fs-extra": "^0.18.0",
-    "get-module-info": "^1.1.0",
+    "get-module-info": "^1.2.0",
     "highlight.js": "^8.5.0",
     "http-server": "^0.8.0",
     "lodash": "^3.6.0",
