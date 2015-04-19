@@ -11,11 +11,14 @@
   <% } %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <% if (obj.stylesheet) { %>
-    <link rel="stylesheet" href="<%= stylesheet %>">
+    <!--
+      <link rel="stylesheet" href="<%= stylesheet %>">
+    -->
   <% } %>
   <link rel="icon" href="/favicon.png">
   <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
   <style>
+    <%= obj.css %>
     .touch-scroll { -webkit-overflow-scrolling: touch }
     .docs-show { display: block !important }
   </style>

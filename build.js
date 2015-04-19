@@ -3,6 +3,15 @@ var _ = require('lodash');
 var fs = require('fs-extra');
 var path = require('path');
 var autobass = require('autobass');
+var cssnext = require('cssnext');
+var bassdock = cssnext('@import "bassdock"', {
+  features: {
+    pseudoElements: false,
+    rem: false,
+    colorRgba: false,
+  },
+  compress: true
+});
 
 var helpers = require('./data/helpers');
 var modules = require('./data/modules');
@@ -17,6 +26,7 @@ data.layout = fs.readFileSync(path.join(__dirname, './templates/layouts/base.htm
 data.title = _.capitalize(data.name);
 data.baseurl = '//basscss.com';
 data.stylesheet = 'http://d2v52k3cl9vedd.cloudfront.net/bassdock/1.3.7/bassdock.min.css';
+data.css = bassdock;
 
 //data.asset_path = 'http://d2v52k3cl9vedd.cloudfront.net/basscss/';
 
