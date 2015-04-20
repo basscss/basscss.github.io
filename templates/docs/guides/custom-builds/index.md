@@ -23,7 +23,7 @@ npm install
 npm start
 ```
 
-This will start a server at `http://localhost:8000` and watch the `/src` folder for changes.
+This will start a server at `http://localhost:8080` and watch the `/src` folder for changes.
 Edit the files in `/src/css` to customize the compiled stylesheet.
 
 
