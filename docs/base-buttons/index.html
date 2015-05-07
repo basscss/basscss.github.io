@@ -40,7 +40,7 @@
     <div class="sm-flex flex-baseline flex-wrap mxn1">
       <div class="bold px1">
         basscss-base-buttons
-        <span class="h5">v1.0.12</span>
+        <span class="h5">v1.1.0</span>
       </div>
       <div class="flex-auto"></div>
       <a href="//npmjs.com/package/basscss-base-buttons" class="h6 caps ml1 mr1 button button-link">npm</a>
@@ -97,8 +97,8 @@ All buttons share common padding and height, well suited for tap targets on touc
       <h2 class="flex-auto">CSS Source</h2>
       <!--
       <div class="h5 bold">
-        2.41 kB
-        (947 B Gzipped)
+        2.5 kB
+        (958 B Gzipped)
       </div>
       -->
     </div>
@@ -110,28 +110,28 @@ All buttons share common padding and height, well suited for tap targets on touc
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          11 Selectors
+          13 Selectors
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          73 Declarations
+          75 Declarations
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          63 Properties
+          64 Properties
         </div>
       </div>
     </div>
     <pre id="basscss-base-buttons-css-source"><span class="hljs-tag">button</span>,
 <span class="hljs-class">.button</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--button-font-family)</span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--button-font-size)</span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">font-weight</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--button-font-weight)</span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">text-decoration</span>:<span class="hljs-value"> none</span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">cursor</span>:<span class="hljs-value"> pointer</span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> inline-block</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">box-sizing</span>:<span class="hljs-value"> border-box</span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">line-height</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--button-line-height)</span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--button-padding-y) <span class="hljs-function">var</span>(--button-padding-x)</span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
@@ -141,11 +141,14 @@ All buttons share common padding and height, well suited for tap targets on touc
   <span class="hljs-rule"><span class="hljs-attribute">-webkit-appearance</span>:<span class="hljs-value"> none</span></span>;
 }</span>
 
+<span class="hljs-tag">button</span>,
 <span class="hljs-rule"><span class="hljs-attribute">button</span>:<span class="hljs-value">:after,
 button::before,
+.button,
 .button::after,
 .button::before {
   box-sizing: border-box</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">box-sizing</span>:<span class="hljs-value"> border-box</span></span>;
 }
 
 <span class="hljs-pseudo">::-moz-focus-inner</span> <span class="hljs-rules">{

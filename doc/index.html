@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="http://d2v52k3cl9vedd.cloudfront.net/basscss/6.0.2/basscss.min.css">
+  <link rel="stylesheet" href="http://d2v52k3cl9vedd.cloudfront.net/basscss/6.1.0/basscss.min.css">
   <link rel="icon" href="/favicon.png">
   <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
   <style>
@@ -198,11 +198,10 @@
           </h1>
           <h2 class="h5 m0">
             basscss-base-reset
-            v1.0.0
+            v2.0.1
           </h2>
         </header>
-        <p>This module resets a few basic values for common elements, including margin 0 for the body and button elements,
-font-family inherit for form elements, max-width 100% for images, and max-height 100% for svg.</p>
+        <p>This module resets a few basic values for the body, img and svg elements.</p>
 <p>Note: this reset does <strong>not</strong> set box-sizing to border-box using the universal selector.
 This is meant to discourage declaring widths unnecessarily throughout a stylesheet.
 The base form, grid, and flex-object modules use border-box where widths are used.</p>
@@ -222,7 +221,7 @@ The base form, grid, and flex-object modules use border-box where widths are use
           </h1>
           <h2 class="h5 m0">
             basscss-base-forms
-            v1.1.2
+            v1.2.0
           </h2>
         </header>
         <p>This modules sets structural styles for base form elements, creating a consistent visual rhythm among forms
@@ -330,7 +329,7 @@ Note: the <code>.field-light</code> style is part of <code>basscss-color-forms</
           </h1>
           <h2 class="h5 m0">
             basscss-base-buttons
-            v1.0.12
+            v1.1.0
           </h2>
         </header>
         <p>Base structural styles and resets for buttons are set in this module.
@@ -416,7 +415,7 @@ including text-alignment, width, padding, border-collapse, and border-spacing.</
           </h1>
           <h2 class="h5 m0">
             basscss-base-typography
-            v1.0.1
+            v1.1.0
           </h2>
         </header>
         <p>This module sets default typographic styles for the body, headings, paragraphs, lists, and other elements.</p>
@@ -531,7 +530,7 @@ Blockquotes and hr have default margin and padding set.</p>
           </h1>
           <h2 class="h5 m0">
             basscss-utility-layout
-            v1.0.0
+            v1.1.0
           </h2>
         </header>
         <p>Change the default document flow with these display, float, and other utilities.</p>
@@ -541,10 +540,18 @@ Blockquotes and hr have default margin and padding set.</p>
     <div class="inline">inline</div>
 <div class="inline-block">inline-block</div>
 <a href="#" class="block">block</a>
+<div class="table">
+  <div class="table-cell">table-cell</div>
+  <div class="table-cell">table-cell</div>
+</div>
   </div>
   <pre class="MarkedExample-code m0 p2 bg-darken-1 rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"inline"</span>&gt;</span>inline<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"inline-block"</span>&gt;</span>inline-block<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"block"</span>&gt;</span>block<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"block"</span>&gt;</span>block<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table-cell"</span>&gt;</span>table-cell<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table-cell"</span>&gt;</span>table-cell<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
 </div>
 <h2 id="overflow"><a href="#overflow">Overflow</a></h2><p>To adjust element overflow, use <code>.overflow-hidden</code>, <code>.overflow-scroll</code>, and <code>.overflow-auto</code>. 
 <code>.overflow-hidden</code> can also be used to create a new block formatting context or clear floats.</p>

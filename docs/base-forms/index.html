@@ -40,7 +40,7 @@
     <div class="sm-flex flex-baseline flex-wrap mxn1">
       <div class="bold px1">
         basscss-base-forms
-        <span class="h5">v1.1.2</span>
+        <span class="h5">v1.2.0</span>
       </div>
       <div class="flex-auto"></div>
       <a href="//npmjs.com/package/basscss-base-forms" class="h6 caps ml1 mr1 button button-link">npm</a>
@@ -170,30 +170,30 @@ Note: the <code>.field-light</code> style is part of <code>basscss-color-forms</
       <h2 class="flex-auto">CSS Source</h2>
       <!--
       <div class="h5 bold">
-        2.61 kB
-        (970 B Gzipped)
+        2.78 kB
+        (986 B Gzipped)
       </div>
       -->
     </div>
     <div id="basscss-base-forms-stats" class="bold caps sm-flex flex-center flex-wrap mb3 mxn2">
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          9 Rules
+          10 Rules
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          23 Selectors
+          24 Selectors
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          72 Declarations
+          76 Declarations
         </div>
       </div>
       <div class="sm-col-6 lg-col-3 px2">
         <div class="h6">
-          62 Properties
+          63 Properties
         </div>
       </div>
     </div>
@@ -201,7 +201,9 @@ Note: the <code>.field-light</code> style is part of <code>basscss-color-forms</
 <span class="hljs-tag">select</span>,
 <span class="hljs-tag">textarea</span>,
 <span class="hljs-tag">fieldset</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--form-field-font-family)</span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--form-field-font-size)</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">box-sizing</span>:<span class="hljs-value"> border-box</span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
 }</span>
@@ -218,7 +220,6 @@ Note: the <code>.field-light</code> style is part of <code>basscss-color-forms</
 <span class="hljs-tag">input</span><span class="hljs-attr_selector">[type=time]</span>,
 <span class="hljs-tag">input</span><span class="hljs-attr_selector">[type=url]</span>,
 <span class="hljs-tag">input</span><span class="hljs-attr_selector">[type=week]</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">box-sizing</span>:<span class="hljs-value"> border-box</span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--form-field-height)</span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--form-field-padding-y) <span class="hljs-function">var</span>(--form-field-padding-x)</span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">vertical-align</span>:<span class="hljs-value"> middle</span></span>;
@@ -226,7 +227,6 @@ Note: the <code>.field-light</code> style is part of <code>basscss-color-forms</
 }</span>
 
 <span class="hljs-tag">select</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">box-sizing</span>:<span class="hljs-value"> border-box</span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">line-height</span>:<span class="hljs-value"> <span class="hljs-number">1.75</span></span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--form-field-padding-y) <span class="hljs-function">var</span>(--form-field-padding-x)</span></span>;
 }</span>
@@ -237,7 +237,6 @@ Note: the <code>.field-light</code> style is part of <code>basscss-color-forms</
 }
 
 <span class="hljs-tag">textarea</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">box-sizing</span>:<span class="hljs-value"> border-box</span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">line-height</span>:<span class="hljs-value"> <span class="hljs-number">1.75</span></span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--form-field-padding-y) <span class="hljs-function">var</span>(--form-field-padding-x)</span></span>;
 }</span>

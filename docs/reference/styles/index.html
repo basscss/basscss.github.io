@@ -68,7 +68,7 @@
     <div class="flex flex-center mb1">
       <h2 class="flex-auto m0">
         Base Reset
-        <span class="h5">v1.0.0</span>
+        <span class="h5">v2.0.1</span>
       </h2>
       <a href="/docs/base-reset"
         class="button button-link blue">
@@ -84,26 +84,11 @@
           
             <tr>
               <td class="sm-col-3">
-                body, button
+                body
               </td>
               <td class="sm-col-9">
                 
                 margin: 0;
-                
-              </td>
-            </tr>
-          
-        
-          
-            <tr>
-              <td class="sm-col-3">
-                button, input, select, textarea
-              </td>
-              <td class="sm-col-9">
-                
-                font-family: inherit;
-                
-                font-size: 100%;
                 
               </td>
             </tr>
@@ -143,7 +128,7 @@
     <div class="flex flex-center mb1">
       <h2 class="flex-auto m0">
         Base Forms
-        <span class="h5">v1.1.2</span>
+        <span class="h5">v1.2.0</span>
       </h2>
       <a href="/docs/base-forms"
         class="button button-link blue">
@@ -166,7 +151,11 @@ fieldset
               </td>
               <td class="sm-col-9">
                 
+                font-family: var(--form-field-font-family);
+                
                 font-size: var(--form-field-font-size);
+                
+                box-sizing: border-box;
                 
                 margin-top: 0;
                 
@@ -194,8 +183,6 @@ input[type=week]
               </td>
               <td class="sm-col-9">
                 
-                box-sizing: border-box;
-                
                 height: var(--form-field-height);
                 
                 padding: var(--form-field-padding-y) var(--form-field-padding-x);
@@ -214,8 +201,6 @@ input[type=week]
                 select
               </td>
               <td class="sm-col-9">
-                
-                box-sizing: border-box;
                 
                 line-height: 1.75;
                 
@@ -246,8 +231,6 @@ input[type=week]
                 textarea
               </td>
               <td class="sm-col-9">
-                
-                box-sizing: border-box;
                 
                 line-height: 1.75;
                 
@@ -293,6 +276,8 @@ input[type=week]
         
           
         
+          
+        
       </tbody>
     </table>
   </section>
@@ -301,7 +286,7 @@ input[type=week]
     <div class="flex flex-center mb1">
       <h2 class="flex-auto m0">
         Base Buttons
-        <span class="h5">v1.0.12</span>
+        <span class="h5">v1.1.0</span>
       </h2>
       <a href="/docs/base-buttons"
         class="button button-link blue">
@@ -322,6 +307,8 @@ input[type=week]
               </td>
               <td class="sm-col-9">
                 
+                font-family: var(--button-font-family);
+                
                 font-size: var(--button-font-size);
                 
                 font-weight: var(--button-font-weight);
@@ -331,8 +318,6 @@ input[type=week]
                 cursor: pointer;
                 
                 display: inline-block;
-                
-                box-sizing: border-box;
                 
                 line-height: var(--button-line-height);
                 
@@ -355,12 +340,16 @@ input[type=week]
           
             <tr>
               <td class="sm-col-3">
-                button::after,
+                button,
+button::after,
 button::before,
+.button,
 .button::after,
 .button::before
               </td>
               <td class="sm-col-9">
+                
+                box-sizing: border-box;
                 
                 box-sizing: border-box;
                 
@@ -513,7 +502,7 @@ td
     <div class="flex flex-center mb1">
       <h2 class="flex-auto m0">
         Base Typography
-        <span class="h5">v1.0.1</span>
+        <span class="h5">v1.1.0</span>
       </h2>
       <a href="/docs/base-typography"
         class="button button-link blue">
@@ -537,7 +526,7 @@ td
                 
                 line-height: var(--line-height);
                 
-                font-size: 100%;
+                font-size: var(--body-font-size);
                 
               </td>
             </tr>
@@ -556,9 +545,9 @@ td
                 
                 line-height: var(--heading-line-height);
                 
-                margin-top: 1em;
+                margin-top: var(--heading-margin-top);
                 
-                margin-bottom: .5em;
+                margin-bottom: var(--heading-margin-bottom);
                 
               </td>
             </tr>
@@ -567,15 +556,32 @@ td
           
             <tr>
               <td class="sm-col-3">
-                p, dl, ol, ul
+                p
               </td>
               <td class="sm-col-9">
                 
-                font-size: var(--h4);
+                font-size: var(--paragraph-font-size);
                 
-                margin-top: 0;
+                margin-top: var(--paragraph-margin-top);
                 
-                margin-bottom: var(--space-2);
+                margin-bottom: var(--paragraph-margin-bottom);
+                
+              </td>
+            </tr>
+          
+        
+          
+            <tr>
+              <td class="sm-col-3">
+                dl, ol, ul
+              </td>
+              <td class="sm-col-9">
+                
+                font-size: var(--list-font-size);
+                
+                margin-top: var(--list-margin-top);
+                
+                margin-bottom: var(--list-margin-bottom);
                 
               </td>
             </tr>
@@ -590,7 +596,7 @@ td
                 
                 font-family: var(--monospace-font-family);
                 
-                font-size: inherit;
+                font-size: var(--pre-font-size);
                 
               </td>
             </tr>
@@ -603,9 +609,9 @@ td
               </td>
               <td class="sm-col-9">
                 
-                margin-top: 0;
+                margin-top: var(--pre-margin-top);
                 
-                margin-bottom: var(--space-2);
+                margin-bottom: var(--pre-margin-bottom);
                 
                 overflow-x: scroll;
                 
@@ -635,15 +641,9 @@ td
               </td>
               <td class="sm-col-9">
                 
-                margin-top: var(--space-3);
+                margin: var(--blockquote-margin);
                 
-                margin-bottom: var(--space-3);
-                
-                margin-left: 0;
-                
-                padding-left: var(--space-2);
-                
-                padding-right: var(--space-2);
+                padding: var(--blockquote-padding);
                 
               </td>
             </tr>
@@ -653,13 +653,13 @@ td
             <tr>
               <td class="sm-col-3">
                 blockquote,
-  blockquote p
+blockquote p
               </td>
               <td class="sm-col-9">
                 
-                font-size: var(--h3);
+                font-size: var(--blockquote-font-size);
                 
-                font-style: italic;
+                font-style: var(--blockquote-font-style);
                 
               </td>
             </tr>
@@ -762,6 +762,8 @@ td
         
           
         
+          
+        
       </tbody>
     </table>
   </section>
@@ -770,7 +772,7 @@ td
     <div class="flex flex-center mb1">
       <h2 class="flex-auto m0">
         Utility Layout
-        <span class="h5">v1.0.0</span>
+        <span class="h5">v1.1.0</span>
       </h2>
       <a href="/docs/utility-layout"
         class="button button-link blue">
@@ -817,6 +819,32 @@ td
               <td class="sm-col-9">
                 
                 display: inline-block;
+                
+              </td>
+            </tr>
+          
+        
+          
+            <tr>
+              <td class="sm-col-3">
+                .table
+              </td>
+              <td class="sm-col-9">
+                
+                display: table;
+                
+              </td>
+            </tr>
+          
+        
+          
+            <tr>
+              <td class="sm-col-3">
+                .table-cell
+              </td>
+              <td class="sm-col-9">
+                
+                display: table-cell;
                 
               </td>
             </tr>
