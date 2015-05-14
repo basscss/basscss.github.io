@@ -4,7 +4,10 @@ var fs = require('fs-extra');
 var path = require('path');
 var autobass = require('autobass');
 var cssnext = require('cssnext');
-var bassdock = cssnext('@import "bassdock"', {
+var bassdock = cssnext([
+    '@import "bassdock";',
+    '@import "./site";',
+  ].join('\n'), {
   features: {
     pseudoElements: false,
     rem: false,
@@ -51,6 +54,7 @@ data.partials['module-header'] = fs.readFileSync('./templates/partials/module-he
 data.partials['module-footer'] = fs.readFileSync('./templates/partials/module-footer.html', 'utf8');
 data.partials['share-buttons'] = fs.readFileSync('./templates/partials/share-buttons.html', 'utf8');
 data.partials['routes'] = fs.readFileSync('./templates/partials/routes.html', 'utf8');
+data.partials.ad = fs.readFileSync('./templates/partials/ad.html', 'utf8');
 
 
 Object.keys(helpers).forEach(function(key) {

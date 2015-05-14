@@ -1,0 +1,10 @@
+
+.touch-scroll { -webkit-overflow-scrolling: touch }
+.docs-show { display: block !important }
+
+/* extension for ads */
+.prose > div,
+.prose > section {
+  clear: both;
+}
+
