@@ -78,10 +78,10 @@ module.exports = [
               name: 'Table of Styles',
               path: '/styles'
             },
-            {
-              name: 'stats',
-              path: '/stats'
-            },
+            //{
+            //  name: 'stats',
+            //  path: '/stats'
+            //},
             {
               name: 'color-combinations',
               title: 'Color Combos',

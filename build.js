@@ -34,6 +34,12 @@ data.css = bassdock;
 //data.asset_path = 'http://d2v52k3cl9vedd.cloudfront.net/basscss/';
 
 data.routes = require('./data/routes');
+data.pages = [
+  { title: 'Stats', path: '/stats' },
+  { title: 'Showcase', path: '/showcase' },
+  { title: 'Themes', path: '/themes' },
+  { title: 'Customize', path: '/customize' },
+];
 data.showcase = require('showcase/data');
 data.stats = require('./data/stats');
 data.colorCombinations = require('./data/color-combinations');
