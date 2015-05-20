@@ -19,8 +19,8 @@
   "author": "Brent Jackson",
   "license": "MIT",
   "dependencies": {
-    "basscss": "^6.1.4",
-    "bassdock": "^1.3.9"
+    "basscss": "^6.1.5",
+    "bassdock": "^2.0.1"
   },
   "devDependencies": {
     "autobass": "^2.0.0",
