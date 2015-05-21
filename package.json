@@ -19,7 +19,7 @@
   "author": "Brent Jackson",
   "license": "MIT",
   "dependencies": {
-    "basscss": "^6.1.5",
+    "basscss": "^6.1.6",
     "bassdock": "^2.0.1"
   },
   "devDependencies": {
