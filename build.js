@@ -4,17 +4,36 @@ var fs = require('fs-extra');
 var path = require('path');
 var autobass = require('autobass');
 var cssnext = require('cssnext');
-var bassdock = cssnext([
-    '@import "bassdock";',
+var css = cssnext([
+    '@import "basscss";',
     '@import "./site";',
   ].join('\n'), {
   features: {
     pseudoElements: false,
     rem: false,
     colorRgba: false,
+    customProperties: {
+      variables: {
+        'bold-font-weight': '500',
+        'heading-font-weight': '500',
+        'button-font-weight': '500',
+        'button-font-size': 'var(--h5)',
+        'pre-font-size': '87.5%',
+      }
+    }
   },
   compress: true
 });
+
+var kitchensink = cssnext('@import "./all";', {
+  compress: true,
+  features: {
+    pseudoElements: false,
+    rem: false,
+    colorRgba: false,
+  }
+});
+fs.writeFileSync('kitchensink.css', kitchensink);
 
 var helpers = require('./data/helpers');
 var modules = require('./data/modules');
@@ -28,10 +47,10 @@ data.src = path.join(__dirname, './templates');
 data.layout = fs.readFileSync(path.join(__dirname, './templates/layouts/base.html'), 'utf8');
 data.title = _.capitalize(data.name);
 data.baseurl = '//basscss.com';
-//data.stylesheet = 'http://d2v52k3cl9vedd.cloudfront.net/bassdock/1.3.7/bassdock.min.css';
-data.css = bassdock;
 
-//data.asset_path = 'http://d2v52k3cl9vedd.cloudfront.net/basscss/';
+//data.stylesheet = '/kitchensink.css';
+
+data.css = css;
 
 data.routes = require('./data/routes');
 data.pages = [
@@ -68,11 +87,6 @@ Object.keys(helpers).forEach(function(key) {
 });
 
 var pages = autobass(data);
-
-// This also affects pre tags
-//function removeWhiteSpace(str) {
-//  return str.replace(/\n/g, '').replace(/\s+/g, ' ')
-//};
 
 function writePage(page) {
   var pagePath = path.join(__dirname, page.path);
