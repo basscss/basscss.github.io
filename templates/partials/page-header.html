@@ -1,8 +1,6 @@
 <header class="mt4 mb4">
-  <h1 class="h1 h1-responsive caps m0">
+  <h1 class="h0 h0-responsive m0">
     <%= page.title %>
-    <% if (page.module) { %>
-    <% } %>
   </h1>
   <% if (page.module) { %>
     <div class="sm-flex flex-baseline flex-wrap mxn1">
@@ -11,28 +9,28 @@
         <span class="h5">v<%= page.version %></span>
       </div>
       <div class="flex-auto"></div>
-      <a href="<%= page.npm_link %>" class="h6 caps ml1 mr1 button button-link">npm</a>
-      <a href="<%= page.homepage %>" class="h6 caps ml1 mr1 button button-link">Github</a>
+      <a href="<%= page.npm_link %>" class="h6 btn">npm</a>
+      <a href="<%= page.homepage %>" class="h6 btn">github</a>
     </div>
   <% } %>
   <% if (page.path === '/') { %>
-    <p class="h4 bold caps m0">
+    <p class="h4 bold m0">
       Low-level CSS toolkit
-      <span class="h5 caps">v<%= version %></span>
+      <span class="h5">v<%= version %></span>
     </p>
   <% } %>
   <hr class="mt1 mb1 b2 border-aqua">
   <% if (obj.page.breadcrumbs.length) { %>
     <div class="h5 bold mb3">
-      <a href="/" class="button mr1 button-link blue">Home</a>
+      <a href="/" class="mr1 blue">Home</a>
         <% obj.page.breadcrumbs.forEach(function(crumb, i) { %>
           /
-          <a href="<%= crumb.path %>" class="button ml1 mr1 button-link blue">
+          <a href="<%= crumb.path %>" class="ml1 mr1 blue">
             <%= removePrefix(crumb.title) %>
           </a>
         <% }) %>
       /
-      <span class="h5 bold inline-block ml1" style="vertical-align:middle"><%= page.title %></span>
+      <span class="h5 bold inline-block ml1"><%= page.title %></span>
     </div>
   <% } else if (obj.page.description) { %>
     <p class="bold py1"><%= obj.page.description %></p>

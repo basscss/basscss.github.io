@@ -12,12 +12,12 @@ To start off, make a global navigation using the grid system and other utilities
 ```html
 <nav class="clearfix white bg-black">
   <div class="sm-col">
-    <a href="/" class="button py2 button-transparent">Home</a>
-    <a href="/" class="button py2 button-transparent">Burgers</a>
-    <a href="/" class="button py2 button-transparent">Fries</a>
+    <a href="/" class="btn py2">Home</a>
+    <a href="/" class="btn py2">Burgers</a>
+    <a href="/" class="btn py2">Fries</a>
   </div>
   <div class="sm-col-right">
-    <a href="/" class="button py2 button-transparent">About</a>
+    <a href="/" class="btn py2">About</a>
   </div>
 </nav>
 ```
@@ -40,7 +40,7 @@ Note: This example uses the optional `basscss-utility-headings` module for the l
   style="background-image: url(https://d262ilb51hltx0.cloudfront.net/max/2000/1*DZwdGMaeu-rvTroJYui6Uw.jpeg)">
   <h1 class="h1 h0-responsive caps mt4 mb0 regular">Hamburgers</h1>
   <p class="h3">Artisinal ground chuck creations</p>
-  <a href="#" class="h3 button button-big mb4">Pancake</a>
+  <a href="#" class="h3 btn btn-primary mb4">Pancake</a>
 </header>
 ```
 
@@ -60,18 +60,18 @@ Move the padding for the banner content into a nested div to adjust the layout.
   style="background-image: url(https://d262ilb51hltx0.cloudfront.net/max/2000/1*DZwdGMaeu-rvTroJYui6Uw.jpeg)">
   <nav class="clearfix white">
     <div class="sm-col">
-      <a href="/" class="button py2 button-transparent">Home</a>
-      <a href="/" class="button py2 button-transparent">Burgers</a>
-      <a href="/" class="button py2 button-transparent">Fries</a>
+      <a href="/" class="btn py2">Home</a>
+      <a href="/" class="btn py2">Burgers</a>
+      <a href="/" class="btn py2">Fries</a>
     </div>
     <div class="sm-col-right">
-      <a href="/" class="button py2 button-transparent">About</a>
+      <a href="/" class="btn py2">About</a>
     </div>
   </nav>
   <div class="center px2 py4">
     <h1 class="h1 h0-responsive caps mt4 mb0 regular">Hamburgers</h1>
     <p class="h3">Artisinal ground chuck creations</p>
-    <a href="#" class="h3 button button-big mb4">Pancake</a>
+    <a href="#" class="h3 btn btn-primary mb4">Pancake</a>
   </div>
 </header>
 ```
@@ -260,52 +260,52 @@ Note the container is placed inside the footer element to control max-width.
         <ul class="list-reset">
           <li>
             <h3 class="h4 m0">
-              <a href="#" class="button block button-transparent">Home</a>
+              <a href="#" class="btn block">Home</a>
             </h3>
           </li>
-          <li><a href="#" class="h5 button block button-transparent">Bacon</a></li>
-          <li><a href="#" class="h5 button block button-transparent">Bratwurst</a></li>
-          <li><a href="#" class="h5 button block button-transparent">Andouille</a></li>
-          <li><a href="#" class="h5 button block button-transparent">Pork Loin</a></li>
+          <li><a href="#" class="h5 btn block">Bacon</a></li>
+          <li><a href="#" class="h5 btn block">Bratwurst</a></li>
+          <li><a href="#" class="h5 btn block">Andouille</a></li>
+          <li><a href="#" class="h5 btn block">Pork Loin</a></li>
         </ul>
       </div>
       <div class="col col-6 md-col-3">
         <ul class="list-reset">
           <li>
             <h3 class="h4 m0">
-              <a href="#" class="button block button-transparent">Categories</a>
+              <a href="#" class="btn block">Categories</a>
             </h3>
           </li>
-          <li><a href="#" class="h5 button block button-transparent">Bacon</a></li>
-          <li><a href="#" class="h5 button block button-transparent">Bratwurst</a></li>
-          <li><a href="#" class="h5 button block button-transparent">Andouille</a></li>
-          <li><a href="#" class="h5 button block button-transparent">Pork Loin</a></li>
+          <li><a href="#" class="h5 btn block">Bacon</a></li>
+          <li><a href="#" class="h5 btn block">Bratwurst</a></li>
+          <li><a href="#" class="h5 btn block">Andouille</a></li>
+          <li><a href="#" class="h5 btn block">Pork Loin</a></li>
         </ul>
       </div>
       <div class="col col-6 md-col-3">
         <ul class="list-reset">
           <li>
             <h3 class="h4 m0">
-              <a href="#" class="button block button-transparent">Categories</a>
+              <a href="#" class="btn block">Categories</a>
             </h3>
           </li>
-          <li><a href="#" class="h5 button block button-transparent">Bacon</a></li>
-          <li><a href="#" class="h5 button block button-transparent">Bratwurst</a></li>
-          <li><a href="#" class="h5 button block button-transparent">Andouille</a></li>
-          <li><a href="#" class="h5 button block button-transparent">Pork Loin</a></li>
+          <li><a href="#" class="h5 btn block">Bacon</a></li>
+          <li><a href="#" class="h5 btn block">Bratwurst</a></li>
+          <li><a href="#" class="h5 btn block">Andouille</a></li>
+          <li><a href="#" class="h5 btn block">Pork Loin</a></li>
         </ul>
       </div>
       <div class="col col-6 md-col-3">
         <ul class="list-reset">
           <li>
             <h3 class="h4 m0">
-              <a href="#" class="button block button-transparent">About</a>
+              <a href="#" class="btn block">About</a>
             </h3>
           </li>
-          <li><a href="#" class="h5 button block button-transparent">Bacon</a></li>
-          <li><a href="#" class="h5 button block button-transparent">Bratwurst</a></li>
-          <li><a href="#" class="h5 button block button-transparent">Andouille</a></li>
-          <li><a href="#" class="h5 button block button-transparent">Pork Loin</a></li>
+          <li><a href="#" class="h5 btn block">Bacon</a></li>
+          <li><a href="#" class="h5 btn block">Bratwurst</a></li>
+          <li><a href="#" class="h5 btn block">Andouille</a></li>
+          <li><a href="#" class="h5 btn block">Pork Loin</a></li>
         </ul>
       </div>
     </div>

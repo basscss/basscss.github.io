@@ -1,4 +1,8 @@
 
+div { box-sizing: border-box }
+
+/* Fix in basscss */
+.field { color: inherit }
 
 .container-small {
   max-width: 58rem;

@@ -15,21 +15,21 @@ module that is not included in the default Basscss package.
 Button font sizes can be adjusted with font size utilities.
 
 ```html
-<button type="button" class="h3 button">Burgers</button>
-<button type="button" class="h4 button">Fries</button>
-<button type="button" class="h6 button">Shakes</button>
+<button type="button" class="h3 btn btn-primary">Burgers</button>
+<button type="button" class="h4 btn btn-primary">Fries</button>
+<button type="button" class="h6 btn btn-primary">Shakes</button>
 ```
 
 To change the line-height and padding but leave the font-size the same,
-use button size extensions.
+use button size extensions in the optional basscss-button-sizes module.
 Font size utilities and button size extensions can be combined for more options.
 
 ```html
-<button type="button" class="button button-big">Burgers</button>
-<button type="button" class="button">Fries</button>
+<button type="button" class="btn button-big">Burgers</button>
+<button type="button" class="btn">Fries</button>
 <div class="mb1 md-hide"></div>
-<button type="button" class="button button-narrow">Onion Rings</button>
-<button type="button" class="button button-small">Shakes</button>
+<button type="button" class="btn button-narrow">Onion Rings</button>
+<button type="button" class="btn button-small">Shakes</button>
 ```
 
 
@@ -39,15 +39,15 @@ In HTML, navigation is essentially just groups of links.
 By using the same styles as buttons,
 you can ensure that navigation links are evenly spaced and have large, easy-to-hit targets.
 Negative margin utilities can help line up text elements with other elements on the page.
-The `.button-transparent` color style can be used for navigation items.
+The `.btn` style can be used for navigation items.
 This button style inherits color from its parent, or it can be set with color utilities.
 
 ```html
 <div class="mxn1">
-  <a href="#!" class="button button-narrow button-transparent">Burgers</a>
-  <a href="#!" class="button button-narrow button-transparent">Fries</a>
-  <a href="#!" class="button button-narrow button-transparent">Shakes</a>
-  <a href="#!" class="button button-narrow button-transparent">Onion Rings</a>
+  <a href="#!" class="btn button-narrow">Burgers</a>
+  <a href="#!" class="btn button-narrow">Fries</a>
+  <a href="#!" class="btn button-narrow">Shakes</a>
+  <a href="#!" class="btn button-narrow">Onion Rings</a>
 </div>
 ```
 
@@ -58,16 +58,16 @@ labels fit within the viewport.
 ```html
 <div class="sm-flex center nowrap">
   <div class="flex-auto">
-    <a href="#!" class="button block button-transparent">Burgers</a>
+    <a href="#!" class="btn block">Burgers</a>
   </div>
   <div class="flex-auto">
-    <a href="#!" class="button block button-transparent">Fries</a>
+    <a href="#!" class="btn block">Fries</a>
   </div>
   <div class="flex-auto">
-    <a href="#!" class="button block button-transparent">Shakes</a>
+    <a href="#!" class="btn block">Shakes</a>
   </div>
   <div class="flex-auto">
-    <a href="#!" class="button block button-transparent">Onion Rings</a>
+    <a href="#!" class="btn block">Onion Rings</a>
   </div>
 </div>
 ```
@@ -75,54 +75,32 @@ To stack navigation elements, use the `.block` utility.
 
 ```html
 <div class="sm-col-6 mxn2">
-  <a href="#!" class="button block button-transparent">Burgers</a>
-  <a href="#!" class="button block button-transparent">Fries</a>
-  <a href="#!" class="button block button-transparent">Shakes</a>
-  <a href="#!" class="button block button-transparent">Onion Rings</a>
+  <a href="#!" class="btn block">Burgers</a>
+  <a href="#!" class="btn block">Fries</a>
+  <a href="#!" class="btn block">Shakes</a>
+  <a href="#!" class="btn block">Onion Rings</a>
 </div>
 ```
-<!--
-Use the `.button-nav-tab` color style to create tabbed navigation.
-This only works horizontally, so ensure your navigation fits within narrow viewports.
-
-```html
-<div class="clearfix border-bottom">
-  <a href="#!" class="left button button-nav-tab is-active">Burgers</a>
-  <a href="#!" class="left button button-nav-tab">Fries</a>
-  <a href="#!" class="left button button-nav-tab">Shakes</a>
-</div>
-```
-
-Use the flex object to justify tabbed navigation.
-
-```html
-<div class="flex center">
-  <a href="#!" class="flex-auto button button-narrow button-nav-tab is-active">Burgers</a>
-  <a href="#!" class="flex-auto button button-narrow button-nav-tab">Fries</a>
-  <a href="#!" class="flex-auto button button-narrow button-nav-tab">Shakes</a>
-</div>
-```
--->
 
 Standard color styles can be applied to create a variety of navigation styles.
 
 ```html
 <div class="sm-col-6 bg-white border rounded">
-  <a href="#!" class="button block button-transparent border-bottom">Burgers</a>
-  <a href="#!" class="button block button-transparent border-bottom">Fries</a>
-  <a href="#!" class="button block button-transparent border-bottom">Shakes</a>
-  <a href="#!" class="button block button-transparent">Onion Rings</a>
+  <a href="#!" class="btn block border-bottom">Burgers</a>
+  <a href="#!" class="btn block border-bottom">Fries</a>
+  <a href="#!" class="btn block border-bottom">Shakes</a>
+  <a href="#!" class="btn block">Onion Rings</a>
 </div>
 ```
 
-The default `.button` style can be used to create a pill navigation.
+The default `.btn-primary` style can be used to create a pill navigation.
 
 ```html
 <div>
-  <a href="#!" class="button">Burgers</a>
-  <a href="#!" class="button button-transparent">Fries</a>
-  <a href="#!" class="button button-transparent">Shakes</a>
-  <a href="#!" class="button button-transparent">Onion Rings</a>
+  <a href="#!" class="btn btn-primary">Burgers</a>
+  <a href="#!" class="btn">Fries</a>
+  <a href="#!" class="btn">Shakes</a>
+  <a href="#!" class="btn">Onion Rings</a>
 </div>
 ```
 
@@ -132,16 +110,16 @@ style to remove bullets and padding.
 ```html
 <ul class="list-reset mxn1 mb0">
   <li class="inline-block">
-    <a href="#!" class="button button-narrow button-transparent">Burgers</a>
+    <a href="#!" class="btn button-narrow">Burgers</a>
   </li>
   <li class="inline-block">
-    <a href="#!" class="button button-narrow button-transparent">Fries</a>
+    <a href="#!" class="btn button-narrow">Fries</a>
   </li>
   <li class="inline-block">
-    <a href="#!" class="button button-narrow button-transparent">Shakes</a>
+    <a href="#!" class="btn button-narrow">Shakes</a>
   </li>
   <li class="inline-block">
-    <a href="#!" class="button button-narrow button-transparent">Onion Rings</a>
+    <a href="#!" class="btn button-narrow">Onion Rings</a>
   </li>
 </ul>
 ```
@@ -155,19 +133,19 @@ Stylistically, these are essentially the same as navigation, but with separators
 
 ```html
 <div class="mxn1">
-  <a href="#!" class="button button-narrow button-transparent">Home</a> /
-  <a href="#!" class="button button-narrow button-transparent">Hot Dogs</a> /
-  <span class="button button-narrow button-transparent">Frank</span>
+  <a href="#!" class="btn button-narrow">Home</a> /
+  <a href="#!" class="btn button-narrow">Hot Dogs</a> /
+  <span class="btn button-narrow">Frank</span>
 </div>
 ```
 
 ```html
 <div class="mxn1">
-  <a href="#!" class="button button-narrow button-transparent">Home</a>
+  <a href="#!" class="btn button-narrow">Home</a>
   <svg class="icon gray" data-icon="chevron-right"></svg>
-  <a href="#!" class="button button-narrow button-transparent">Hot Dogs</a>
+  <a href="#!" class="btn button-narrow">Hot Dogs</a>
   <svg class="icon gray" data-icon="chevron-right"></svg>
-  <span class="button button-narrow button-transparent">Frank</span>
+  <span class="btn button-narrow">Frank</span>
 </div>
 ```
 
@@ -184,11 +162,11 @@ Use a combination of layout utilities and button styles to create navigation tha
 
 ```html
 <div class="clearfix">
-  <a href="#!" class="left button button-transparent">
+  <a href="#!" class="left btn">
     <svg class="icon" data-icon="chevron-left"></svg>
     Previous
   </a>
-  <a href="#!" class="right button button-transparent">
+  <a href="#!" class="right btn">
     Next
     <svg class="icon" data-icon="chevron-right"></svg>
   </a>
@@ -200,20 +178,20 @@ with numbers on devices with wider viewports.
 
 ```html
 <div class="clearfix">
-  <a href="#!" class="left button button-narrow button-transparent">
+  <a href="#!" class="left btn button-narrow">
     <svg class="icon" data-icon="chevron-left"></svg>
     Previous
   </a>
-  <a href="#!" class="right button button-narrow button-transparent">
+  <a href="#!" class="right btn button-narrow">
     Next
     <svg class="icon" data-icon="chevron-right"></svg>
   </a>
   <div class="overflow-hidden sm-show center">
-    <a href="#!" class="button bg-gray">1</a>
-    <a href="#!" class="button button-transparent">2</a>
-    <a href="#!" class="button button-transparent">3</a>
-    <a href="#!" class="button button-transparent">4</a>
-    <a href="#!" class="button button-transparent">5</a>
+    <a href="#!" class="btn btn-primary bg-gray">1</a>
+    <a href="#!" class="btn">2</a>
+    <a href="#!" class="btn">3</a>
+    <a href="#!" class="btn">4</a>
+    <a href="#!" class="btn">5</a>
   </div>
 </div>
 ```
@@ -223,18 +201,18 @@ Standard color styles can be used to control the appearance.
 ```html
 <div class="center">
   <div class="inline-block overflow-hidden border rounded">
-    <a href="#!" class="left button button-transparent border-right">
+    <a href="#!" class="left btn border-right">
       <svg class="icon" data-icon="chevron-left"></svg>
       Previous
     </a>
-    <a href="#!" class="right button button-transparent ">
+    <a href="#!" class="right btn">
       Next
       <svg class="icon" data-icon="chevron-right"></svg>
     </a>
     <div class="overflow-hidden sm-show">
-      <a href="#!" class="left button button-transparent border-right">1</a>
-      <a href="#!" class="left button button-transparent border-right">2</a>
-      <a href="#!" class="left button button-transparent border-right">3</a>
+      <a href="#!" class="left btn border-right">1</a>
+      <a href="#!" class="left btn border-right">2</a>
+      <a href="#!" class="left btn border-right">3</a>
     </div>
   </div>
 </div>
@@ -250,9 +228,9 @@ and `.not-rounded` can be used to override button and form field border radii.
 
 ```html
 <div class="inline-block clearfix">
-  <button type="button" class="left button rounded-left is-active">Burgers</button>
-  <button type="button" class="left button border-left not-rounded">Fries</button>
-  <button type="button" class="left button border-left rounded-right">Shakes</button>
+  <button type="button" class="left btn btn-primary rounded-left is-active">Burgers</button>
+  <button type="button" class="left btn btn-primary border-left not-rounded">Fries</button>
+  <button type="button" class="left btn btn-primary border-left rounded-right">Shakes</button>
 </div>
 ```
 
@@ -261,22 +239,22 @@ The flex object can be used to create justified button groups.
 
 ```html
 <div class="flex center">
-  <a href="#!" class="flex-auto button rounded-left is-active">Burgers</a>
-  <a href="#!" class="flex-auto button border-left not-rounded">Fries</a>
-  <a href="#!" class="flex-auto button border-left rounded-right">Shakes</a>
+  <a href="#!" class="flex-auto btn btn-primary rounded-left is-active">Burgers</a>
+  <a href="#!" class="flex-auto btn btn-primary border-left not-rounded">Fries</a>
+  <a href="#!" class="flex-auto btn btn-primary border-left rounded-right">Shakes</a>
 </div>
 ```
 
 Normally, buttons with borders would double up when placed next to each other.
-The `.x-group-item` utility adjusts negative margins and focus states to visually collapse borders.
+The optional `.x-group-item` utility adjusts negative margins and focus states to visually collapse borders.
 Functionally, this is similar to how other frameworks handle button and form input groups,
 but with more direct control over styling.
 
 ```html
 <div class="inline-block clearfix blue">
-  <button type="button" class="left button x-group-item rounded-left">Burgers</button>
-  <button type="button" class="left button-outline x-group-item not-rounded">Fries</button>
-  <button type="button" class="left button-outline x-group-item rounded-right">Shake</button>
+  <button type="button" class="left btn btn-primary x-group-item rounded-left">Burgers</button>
+  <button type="button" class="left btn btn-outline x-group-item not-rounded">Fries</button>
+  <button type="button" class="left btn btn-outline x-group-item rounded-right">Shake</button>
 </div>
 ```
 
@@ -284,9 +262,9 @@ Use `.y-group-item` to group elements vertically.
 
 ```html
 <div class="inline-block blue">
-  <button type="button" class="block full-width button y-group-item rounded-top">Burgers</button>
-  <button type="button" class="block full-width button-outline y-group-item not-rounded">Fries</button>
-  <button type="button" class="block full-width button-outline y-group-item rounded-bottom">Shake</button>
+  <button type="button" class="block full-width btn btn-primary y-group-item rounded-top">Burgers</button>
+  <button type="button" class="block full-width btn btn-outline y-group-item not-rounded">Fries</button>
+  <button type="button" class="block full-width btn btn-outline y-group-item rounded-bottom">Shake</button>
 </div>
 ```
 
@@ -299,12 +277,12 @@ The `.hide` utility visually hides labels, while keeping them accessible to scre
 ```html
 <form class="sm-col-6">
   <label class="hide">Pancakes</label>
-  <input type="text" class="block full-width mb0 field-light rounded-top y-group-item" placeholder="Pancakes">
+  <input type="text" class="block full-width mb0 field rounded-top y-group-item" placeholder="Pancakes">
   <label class="hide">Making</label>
-  <input type="password" class="block full-width mb0 field-light not-rounded y-group-item" placeholder="Making">
+  <input type="password" class="block full-width mb0 field not-rounded y-group-item" placeholder="Making">
   <label class="hide">Bacon</label>
-  <input type="text" class="block full-width field-light rounded-bottom y-group-item" placeholder="Bacon">
-  <button type="submit" class="button">Pancake</button>
+  <input type="text" class="block full-width field rounded-bottom y-group-item" placeholder="Bacon">
+  <button type="submit" class="btn btn-primary">Pancake</button>
 </form>
 ```
 
@@ -313,10 +291,10 @@ The grid system can be used to control button or input group widths.
 ```html
 <form class="clearfix">
   <label class="hide">Bacon</label>
-  <input type="text" class="col col-4 md-col-5 mb0 field-light rounded-left x-group-item" placeholder="Bacon">
+  <input type="text" class="col col-4 md-col-5 mb0 field rounded-left x-group-item" placeholder="Bacon">
   <label class="hide">Pancakes</label>
-  <input type="password" class="col col-4 md-col-5 mb0 field-light not-rounded x-group-item" placeholder="Pancakes">
-  <button type="submit" class="col col-4 md-col-2 button rounded-right">Pancake</button>
+  <input type="password" class="col col-4 md-col-5 mb0 field not-rounded x-group-item" placeholder="Pancakes">
+  <button type="submit" class="col col-4 md-col-2 btn btn-primary rounded-right">Pancake</button>
 </form>
 ```
 
@@ -336,15 +314,15 @@ Be sure dropdowns don’t expand beyond the viewport when used near edges or at 
 
 ```html
 <div class="relative inline-block" data-disclosure>
-  <button type="button" class="button">
+  <button type="button" class="btn btn-primary">
     Burger &#9662;
   </button>
   <div data-details class="fixed top-0 right-0 bottom-0 left-0"></div>
   <div data-details class="absolute left-0 mt1 nowrap white bg-blue rounded">
-    <a href="#!" class="button block button-transparent">Rare</a>
-    <a href="#!" class="button block button-transparent">Medium Rare</a>
-    <a href="#!" class="button block button-transparent">Medium</a>
-    <a href="#!" class="button block button-transparent">Well Done</a>
+    <a href="#!" class="btn block">Rare</a>
+    <a href="#!" class="btn block">Medium Rare</a>
+    <a href="#!" class="btn block">Medium</a>
+    <a href="#!" class="btn block">Well Done</a>
   </div>
 </div>
 ```
@@ -370,15 +348,15 @@ they become the height of normal buttons and inputs plus `.py1`.
 ```html
 <div class="clearfix mb2 white bg-black">
   <div class="left">
-    <a href="#!" class="button py2 m0 button-transparent">Burgers</a>
-    <a href="#!" class="button button-narrow py2 m0 button-transparent">Fries</a>
+    <a href="#!" class="btn py2 m0">Burgers</a>
+    <a href="#!" class="btn button-narrow py2 m0">Fries</a>
   </div>
   <div class="right">
-    <a href="#!" class="button py2 m0 button-transparent">My Account</a>
+    <a href="#!" class="btn py2 m0">My Account</a>
   </div>
   <div class="clearfix sm-hide"></div>
   <div class="overflow-hidden px2 py1">
-    <input type="text" class="mb0 right fit field-dark" placeholder="Search">
+    <input type="text" class="mb0 right fit field bg-darken-1" placeholder="Search">
   </div>
 </div>
 ```
@@ -389,54 +367,54 @@ using background color utilities.
 ```html
 <div class="clearfix mb2 white bg-blue">
   <div class="left">
-    <a href="#!" class="button py2 m0 button-transparent">Burgers</a>
-    <a href="#!" class="button button-narrow py2 m0 button-transparent">Fries</a>
+    <a href="#!" class="btn py2 m0">Burgers</a>
+    <a href="#!" class="btn button-narrow py2 m0">Fries</a>
   </div>
   <div class="right">
-    <a href="#!" class="button py2 m0 button-transparent">My Account</a>
+    <a href="#!" class="btn py2 m0">My Account</a>
   </div>
   <div class="clearfix sm-hide"></div>
   <div class="overflow-hidden px2 py1">
-    <input type="text" class="mb0 right fit field-dark" placeholder="Search">
+    <input type="text" class="mb0 right fit field bg-darken-1" placeholder="Search">
   </div>
 </div>
 <div class="clearfix mb2 white bg-gray">
   <div class="left">
-    <a href="#!" class="button py2 m0 button-transparent">Burgers</a>
-    <a href="#!" class="button button-narrow py2 m0 button-transparent">Fries</a>
+    <a href="#!" class="btn py2 m0">Burgers</a>
+    <a href="#!" class="btn button-narrow py2 m0">Fries</a>
   </div>
   <div class="right">
-    <a href="#!" class="button py2 m0 button-transparent">My Account</a>
+    <a href="#!" class="btn py2 m0">My Account</a>
   </div>
   <div class="clearfix sm-hide"></div>
   <div class="overflow-hidden px2 py1">
-    <input type="text" class="mb0 right fit field-dark" placeholder="Search">
+    <input type="text" class="mb0 right fit field bg-darken-1" placeholder="Search">
   </div>
 </div>
 <div class="clearfix mb2 white bg-green">
   <div class="left">
-    <a href="#!" class="button py2 m0 button-transparent">Burgers</a>
-    <a href="#!" class="button button-narrow py2 m0 button-transparent">Fries</a>
+    <a href="#!" class="btn py2 m0">Burgers</a>
+    <a href="#!" class="btn button-narrow py2 m0">Fries</a>
   </div>
   <div class="right">
-    <a href="#!" class="button py2 m0 button-transparent">My Account</a>
+    <a href="#!" class="btn py2 m0">My Account</a>
   </div>
   <div class="clearfix sm-hide"></div>
   <div class="overflow-hidden px2 py1">
-    <input type="text" class="mb0 right fit field-dark" placeholder="Search">
+    <input type="text" class="mb0 right fit field bg-darken-1" placeholder="Search">
   </div>
 </div>
 <div class="clearfix mb2 white bg-red">
   <div class="left">
-    <a href="#!" class="button py2 m0 button-transparent">Burgers</a>
-    <a href="#!" class="button button-narrow py2 m0 button-transparent">Fries</a>
+    <a href="#!" class="btn py2 m0">Burgers</a>
+    <a href="#!" class="btn button-narrow py2 m0">Fries</a>
   </div>
   <div class="right">
-    <a href="#!" class="button py2 m0 button-transparent">My Account</a>
+    <a href="#!" class="btn py2 m0">My Account</a>
   </div>
   <div class="clearfix sm-hide"></div>
   <div class="overflow-hidden px2 py1">
-    <input type="text" class="mb0 right fit field-dark" placeholder="Search">
+    <input type="text" class="mb0 right fit field bg-darken-1" placeholder="Search">
   </div>
 </div>
 ```
@@ -447,19 +425,19 @@ things like a user account dropdown can be added anywhere in the navbar.
 ```html
 <div class="clearfix white bg-black">
   <div class="left">
-    <a href="#!" class="button py2 m0 button-transparent">Burgers</a>
-    <a href="#!" class="button button-narrow py2 m0 button-transparent">Fries</a>
+    <a href="#!" class="btn py2 m0">Burgers</a>
+    <a href="#!" class="btn button-narrow py2 m0">Fries</a>
   </div>
   <div class="right">
     <div id="account-menu" class="inline-block" data-disclosure>
       <div data-details class="fixed top-0 right-0 bottom-0 left-0"></div>
       <div class="relative">
-        <a href="#!" class="button py2 m0 button-transparent">My Account &#9662;</a>
+        <a href="#!" class="btn py2 m0">My Account &#9662;</a>
         <div data-details class="absolute right-0 nowrap black bg-white rounded" style="min-width:128px">
           <ul class="h5 list-reset mb0">
-            <li><a href="#!" class="button block button-transparent">Profile</a></li>
-            <li><a href="#!" class="button block button-transparent">Settings</a></li>
-            <li><a href="#!" class="button block button-transparent">Sign Out</a></li>
+            <li><a href="#!" class="btn block">Profile</a></li>
+            <li><a href="#!" class="btn block">Settings</a></li>
+            <li><a href="#!" class="btn block">Sign Out</a></li>
           </ul>
         </div>
       </div>
@@ -478,31 +456,31 @@ navigations can also be created using responsive utilities.
 ```html
 <div class="relative clearfix white bg-black">
   <div class="left">
-    <a href="#!" class="button py2 m0 button-transparent">Burgers</a>
+    <a href="#!" class="btn py2 m0">Burgers</a>
   </div>
   <div class="left md-show">
-    <a href="#!" class="button button-narrow py2 m0 button-transparent">Hot Dogs</a>
-    <a href="#!" class="button button-narrow py2 m0 button-transparent">Fries</a>
-    <a href="#!" class="button button-narrow py2 m0 button-transparent">Shakes</a>
-    <a href="#!" class="button button-narrow py2 m0 button-transparent">Onion Rings</a>
+    <a href="#!" class="btn button-narrow py2 m0">Hot Dogs</a>
+    <a href="#!" class="btn button-narrow py2 m0">Fries</a>
+    <a href="#!" class="btn button-narrow py2 m0">Shakes</a>
+    <a href="#!" class="btn button-narrow py2 m0">Onion Rings</a>
   </div>
   <div class="right">
     <div id="account-menu" class="inline-block" data-disclosure>
       <div data-details class="fixed top-0 right-0 bottom-0 left-0"></div>
-      <a href="#!" class="button py2 m0 button-transparent">
+      <a href="#!" class="btn py2 m0">
         <span class="md-hide">Menu &#9662;</span>
         <span class="md-show">More &#9662;</span>
       </a>
       <div data-details class="absolute right-0 xs-left-0 sm-col-6 md-col-4 lg-col-3 nowrap black bg-gray rounded-bottom">
         <ul class="h5 list-reset py1 mb0">
-          <li class="md-hide"><a href="#!" class="button block button-transparent">Hot Dogs</a></li>
-          <li class="md-hide"><a href="#!" class="button block button-transparent">Fries</a></li>
-          <li class="md-hide"><a href="#!" class="button block button-transparent">Shakes</a></li>
-          <li class="md-hide"><a href="#!" class="button block button-transparent">Onion Rings</a></li>
-          <li><a href="#!" class="button block button-transparent">Bacon</a></li>
-          <li><a href="#!" class="button block button-transparent">Pancakes</a></li>
-          <li><a href="#!" class="button block button-transparent">Sausages</a></li>
-          <li><a href="#!" class="button block button-transparent">Waffles</a></li>
+          <li class="md-hide"><a href="#!" class="btn block">Hot Dogs</a></li>
+          <li class="md-hide"><a href="#!" class="btn block">Fries</a></li>
+          <li class="md-hide"><a href="#!" class="btn block">Shakes</a></li>
+          <li class="md-hide"><a href="#!" class="btn block">Onion Rings</a></li>
+          <li><a href="#!" class="btn block">Bacon</a></li>
+          <li><a href="#!" class="btn block">Pancakes</a></li>
+          <li><a href="#!" class="btn block">Sausages</a></li>
+          <li><a href="#!" class="btn block">Waffles</a></li>
         </ul>
       </div>
     </div>

@@ -1,9 +1,9 @@
 
-<hr class="sm-hide mt1 mb1 b2 border-aqua">
+<hr class="sm-hide mt1 mb1">
 
-<a href="/" class="h4 caps mt2 button block button-transparent aqua">
+<a href="/" class="h4 mt2 btn block">
   <svg xmlns="http://www.w3.org/2000/svg"
-    class="mr1 aqua"
+    class="mr1"
     viewBox="0 0 40 16" width="40" height="16" fill="currentcolor">
     <path d="M20 0 L24 8 L40 6 L20 16 L16 8 L0 10 z"/>
   </svg>
@@ -23,8 +23,8 @@
   <% if (route.path === '/') return false %>
   <li class="<%= route.routes ? 'col-12 mt2 mb2' : 'col-6 sm-col-12' %>">
     <a href="<%= route.path %>"
-      class="block button button-transparent
-      <%= obj.page.title === route.title ? 'bg-aqua' : '' %>">
+      class="block btn 
+      <%= obj.page.title === route.title ? 'white bg-blue' : '' %>">
       <%= route.title %>
     </a>
     <% if (route.modules) { %>
@@ -43,7 +43,7 @@
 <% function renderModuleLink(mod) { %>
   <li>
     <a href="<%= this.path + '/#' + obj.removePrefix(mod.module) %>"
-      class="h6 block px2 button button-small button-transparent">
+      class="h6 block px2 btn button-small">
         <%= _.capitalize(mod.name).replace(/\-/g, ' ') %>
     </a>
   </li>

@@ -67,9 +67,9 @@ Each fixed-width column uses inline-styles, but you may want to use a grid syste
     </main>
     <nav class="flex-first border border-blue" style="width:8rem">
       <ul class="list-reset mt2 mb2">
-        <li><a href="#" class="button block button-transparent">Link</a>
-        <li><a href="#" class="button block button-transparent">Link</a>
-        <li><a href="#" class="button block button-transparent">Link</a>
+        <li><a href="#" class="btn block">Link</a>
+        <li><a href="#" class="btn block">Link</a>
+        <li><a href="#" class="btn block">Link</a>
       </ul>
     </nav>
     <aside class="p2 border border-blue" style="width:8rem">
@@ -94,29 +94,29 @@ Borders and border radii can be controlled using utility styles.
     <input
       type="search"
       id="search-input"
-      class="flex-auto m0 field-light rounded-left"
+      class="flex-auto m0 field rounded-left"
       placeholder="Search">
-    <button class="button rounded-right border black bg-silver">Go</button>
+    <button class="btn rounded-right border black bg-silver">Go</button>
   </div>
   <div class="flex mb2">
     <label for="search-input" class="hide">Search</label>
     <input
       type="search"
       id="search-input"
-      class="flex-auto m0 field-light rounded-left"
+      class="flex-auto m0 field rounded-left"
       placeholder="Search">
-    <button class="button not-rounded black bg-silver">Button</button>
-    <button class="button rounded-right border-left black bg-silver">Go</button>
+    <button class="btn not-rounded black bg-silver">Button</button>
+    <button class="btn rounded-right border-left black bg-silver">Go</button>
   </div>
   <div class="flex mb2">
-    <button class="button rounded-left black bg-silver">Button</button>
+    <button class="btn rounded-left black bg-silver">Button</button>
     <label for="search-input" class="hide">Search</label>
     <input
       type="search"
       id="search-input"
-      class="flex-auto m0 field-light not-rounded"
+      class="flex-auto m0 field not-rounded"
       placeholder="Search">
-    <button class="button rounded-right border-left black bg-silver">Go</button>
+    <button class="btn rounded-right border-left black bg-silver">Go</button>
   </div>
 </div>
 ```
