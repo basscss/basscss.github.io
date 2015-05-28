@@ -11,22 +11,16 @@
       Basscss is a lightweight collection of
       base element styles, immutable utilities, layout modules, and color styles designed for speed, clarity, performance, and scalability.
     </p>
-    <div class="py2 mxn2">
+    <div class="py2 flex flex-wrap flex-center mxn2">
       <a class="h4 m2 btn btn-primary button-big" href="/docs">Download</a>
-      <a class="h4 m2 btn button-big btn-outline blue" href="<%= obj.homepage %>">GitHub</a>
+      <a class="h4 m2 btn button-big btn-outline blue display-none" href="<%= obj.homepage %>">GitHub</a>
+      <%= include('share-buttons') %>
     </div>
-    <div class="lg-flex flex-center mxn2">
-      <div id="share" class="flex flex-center px1">
-        <div class="flex-auto"></div>
-        <%= include('share-buttons') %>
-        <div class="flex-auto"></div>
-      </div>
-      <div id="stats" class="h6 caps bold flex-grow flex flex-center flex-wrap flex-justify px1">
-        <div class="px1 py2"><%= obj.stats.gzipSizeKB %></div>
-        <div class="px1 py2"><%= obj.modules.length %> Modules</div>
-        <div class="px1 py2"><%= obj.stats.rules.length %> Rules</div>
-        <div class="px1 py2"><%= obj.stats.declarations.all.length %> Declarations</div>
-      </div>
+    <div id="stats" class="h6 caps bold flex flex-center flex-wrap flex-justify mxn1">
+      <div class="px1 py2"><%= obj.stats.gzipSizeKB %></div>
+      <div class="px1 py2"><%= obj.modules.length %> Modules</div>
+      <div class="px1 py2"><%= obj.stats.rules.length %> Rules</div>
+      <div class="px1 py2"><%= obj.stats.declarations.all.length %> Declarations</div>
     </div>
   </section>
 
@@ -87,7 +81,7 @@
 
   <section id="base" class="sm-flex flex-center mxn2 py3">
     <div class="sm-col-5 px2 py1">
-      <div class="h00 h00-responsive bold center m0 py2 blue bg-aqua">Aa</div>
+      <div class="h1 bold center m0 py2 blue bg-aqua" style="font-size:6rem">Aa</div>
     </div>
     <div class="sm-col-7 px2 py1">
       <h1 class="mt0">Base Elements</h1>
@@ -106,7 +100,7 @@
         <div>.mb4</div>
       </div>
     </div>
-    <div class="flex-first sm-col-7 px2 py1">
+    <div class="order-first sm-col-7 px2 py1">
       <h1 class="mt0">Immutable Utilities</h1>
       <p>
         Simple, composable typographic and layout utilities based on common scales
@@ -154,7 +148,7 @@
         </div>
       </div>
     </div>
-    <div class="flex-first sm-col-7 px2 py1">
+    <div class="order-first sm-col-7 px2 py1">
       <h1 class="mt0">Color</h1>
       <p>
         Simple, customizable color utilities encourage

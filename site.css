@@ -1,8 +1,16 @@
 
 div { box-sizing: border-box }
+hr {
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-4);
+}
 
 /* Fix in basscss */
 .field { color: inherit }
+
+/* Potentially Keep in Core */
+.order-first { order: -1 }
+.order-last { order: 1024 }
 
 .container-small {
   max-width: 58rem;
@@ -69,8 +77,6 @@ pre code {
 }
 
 .highlight pre { background-color: transparent; margin-bottom: 0 }
-
-.b2 { border-width: 2px }
 
 :root {
   --prose-font-size: 1.125rem;

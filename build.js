@@ -6,6 +6,7 @@ var autobass = require('autobass');
 var cssnext = require('cssnext');
 var css = cssnext([
     '@import "basscss";',
+    //'@import "basscss-utility-headings";',
     '@import "./site";',
   ].join('\n'), {
   features: {
@@ -14,11 +15,13 @@ var css = cssnext([
     colorRgba: false,
     customProperties: {
       variables: {
+        //'font-family': '"Avenir Next", "San Francisco", "Helvetica Neue", Helvetica, sans-serif',
         'bold-font-weight': '500',
         'heading-font-weight': '500',
         'button-font-weight': '500',
         'button-font-size': 'var(--h5)',
         'pre-font-size': '87.5%',
+        'black': '#134',
       }
     }
   },

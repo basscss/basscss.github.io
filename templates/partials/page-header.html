@@ -1,16 +1,29 @@
-<header class="mt4 mb4">
+<header class="mt2 mb4">
+  <a href="/"
+    class="btn"
+    style="padding-left:0;padding-right:0"
+    title="Home">
+    <svg xmlns="http://www.w3.org/2000/svg"
+      class=""
+      viewBox="0 0 40 16"
+      width="40"
+      height="16"
+      fill="currentcolor">
+      <path d="M20 0 L24 8 L40 6 L20 16 L16 8 L0 10 z"/>
+    </svg>
+  </a>
   <h1 class="h0 h0-responsive m0">
     <%= page.title %>
   </h1>
   <% if (page.module) { %>
-    <div class="sm-flex flex-baseline flex-wrap mxn1">
-      <div class="bold px1">
+    <div class="sm-flex flex-baseline flex-wrap mxn2">
+      <div class="bold px2">
         <%= page.name %>
         <span class="h5">v<%= page.version %></span>
       </div>
       <div class="flex-auto"></div>
-      <a href="<%= page.npm_link %>" class="h6 btn">npm</a>
-      <a href="<%= page.homepage %>" class="h6 btn">github</a>
+      <a href="<%= page.npm_link %>" class="btn">npm</a>
+      <a href="<%= page.homepage %>" class="btn">github</a>
     </div>
   <% } %>
   <% if (page.path === '/') { %>
