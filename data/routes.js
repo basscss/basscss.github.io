@@ -1,6 +1,6 @@
 
 var _ = require('lodash');
-var modules = require('./modules');
+var bmods = require('./modules');
 
 
 module.exports = [
@@ -12,7 +12,12 @@ module.exports = [
     name: 'docs',
     path: '/docs',
     routes: [].concat(
-      modules,
+      bmods.modules,
+      {
+        name: 'optional-modules',
+        title: 'Optional Modules',
+        path: '/optional-modules'
+      },
       [
         {
           name: 'guides',

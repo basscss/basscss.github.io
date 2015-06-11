@@ -1,8 +1,6 @@
 <header class="mt4 mb4">
   <h1 class="h1 h1-responsive caps m0">
     <%= page.title %>
-    <% if (page.module) { %>
-    <% } %>
   </h1>
   <% if (page.module) { %>
     <div class="sm-flex flex-baseline flex-wrap mxn1">
@@ -36,6 +34,14 @@
     </div>
   <% } else if (obj.page.description) { %>
     <p class="bold py1"><%= obj.page.description %></p>
+  <% } %>
+  <% if (obj.page.optional) { %>
+    <div class="bold p2 bg-yellow rounded">
+      This is an optional module not included in the core Basscss bundle.
+      <br>
+      To install this module, run
+      <code class="navy">npm install <%= page.name %></code>
+    </div>
   <% } %>
 </header>
 

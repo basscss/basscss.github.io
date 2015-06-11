@@ -17,7 +17,7 @@ var bassdock = cssnext([
 });
 
 var helpers = require('./data/helpers');
-var modules = require('./data/modules');
+var bmods = require('./data/modules');
 
 
 // Data
@@ -44,7 +44,8 @@ data.showcase = require('showcase/data');
 data.stats = require('./data/stats');
 data.colorCombinations = require('./data/color-combinations');
 
-data.modules = modules;
+data.modules = bmods.modules;
+data.optionals = bmods.optionals;
 data.optional_modules = data.basscss.optional_modules;
 
 data.partials = {};
