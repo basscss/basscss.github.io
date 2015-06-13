@@ -67,9 +67,9 @@ Each fixed-width column uses inline-styles, but you may want to use a grid syste
     </main>
     <nav class="flex-first border border-blue" style="width:8rem">
       <ul class="list-reset mt2 mb2">
-        <li><a href="#" class="button block button-transparent">Link</a>
-        <li><a href="#" class="button block button-transparent">Link</a>
-        <li><a href="#" class="button block button-transparent">Link</a>
+        <li><a href="#" class="button block button-transparent">Link</a></li>
+        <li><a href="#" class="button block button-transparent">Link</a></li>
+        <li><a href="#" class="button block button-transparent">Link</a></li>
       </ul>
     </nav>
     <aside class="p2 border border-blue" style="width:8rem">
