@@ -1,5 +1,6 @@
 
-var pkg = require('./package.json')
+var pkg = require('../package.json')
+var routes = require('./routes')
 
 module.exports = {
   title: 'Basscss',
@@ -8,8 +9,6 @@ module.exports = {
   author: pkg.author,
   keywords: pkg.keywords,
   version: pkg.version,
-  routes: [
-    '/'
-  ]
+  routes: routes
 }
 
