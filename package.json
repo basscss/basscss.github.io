@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test",
-    "build": "node build",
-    "watch:build": "watch 'npm run build' ./templates",
-    "serve": "http-server -p 8000",
-    "start": "npm run watch:build & npm run serve"
+    "dev": "webpack-dev-server --progress --colors",
+    "prod": "webpack -p --progress --colors",
+    "start": "npm run dev"
   },
   "keywords": [
     "basscss",
@@ -22,7 +21,8 @@
     "basscss": "^7.0.0-beta.1"
   },
   "devDependencies": {
-    "autobass": "^2.0.0",
+    "babel-core": "^5.6.4",
+    "babel-loader": "^5.1.4",
     "basscss-background-images": "0.0.9",
     "basscss-base-buttons": "^1.1.0",
     "basscss-button-blue": "0.0.1",
@@ -53,18 +53,22 @@
     "bassdock": "^2.0.0",
     "colorable": "^1.0.5",
     "colors.css": "^2.3.0",
-    "cssnext": "^1.3.0",
+    "css-loader": "^0.15.1",
+    "cssnext-loader": "^1.0.1",
     "cssstats": "^1.5.1",
     "filesize": "^3.1.2",
-    "fs-extra": "^0.18.0",
     "get-module-info": "^1.2.0",
     "highlight.js": "^8.5.0",
-    "http-server": "^0.8.0",
-    "lodash": "^3.6.0",
+    "json-loader": "^0.5.2",
     "marked": "^0.3.3",
     "marked-example": "^1.0.4",
+    "node-libs-browser": "^0.5.2",
+    "react": "^0.13.3",
+    "react-router": "^0.13.3",
     "showcase": "git://github.com/basscss/showcase",
+    "static-site-generator-webpack-plugin": "^1.0.0",
     "title-case": "^1.1.0",
-    "watch": "^0.16.0"
+    "webpack": "^1.9.11",
+    "webpack-dev-server": "^1.9.0"
   }
 }
