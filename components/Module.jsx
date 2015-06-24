@@ -1,25 +1,23 @@
 
 import React from 'react'
 import { find } from 'lodash'
+import markdown from '../util/markdown'
 
 class Module extends React.Component {
 
   render () {
     let modules = this.props.modules
     let params = this.props.params || {}
-    let mod = {}
-    mod = find(modules, function(m) {
+    let mod = find(modules, function(m) {
       return m.name === params.module
     })
-    if (mod) {
-      console.log(mod.name)
+    let html = {
+      __html: markdown(mod.readme)
     }
     return (
       <main>
-        Module
-        {params.module}
         <h1>{mod.name}</h1>
-        <div>{mod.readme}</div>
+        <div dangerouslySetInnerHTML={html} />
       </main>
     )
   }
