@@ -8,6 +8,11 @@ class Docs extends React.Component {
     return (
       <main>
         Docs
+        <ul>
+          {this.props.routes.map(function(route, i) {
+            return <li key={i}><a href={route}>{route}</a></li>
+          })}
+        </ul>
         <RouteHandler {...this.props} />
       </main>
     )

@@ -60,6 +60,7 @@
     "get-module-info": "^1.2.0",
     "highlight.js": "^8.5.0",
     "json-loader": "^0.5.2",
+    "lodash": "^3.9.3",
     "marked": "^0.3.3",
     "marked-example": "^1.0.4",
     "node-libs-browser": "^0.5.2",
