@@ -2,6 +2,7 @@
 import React from 'react'
 import { find } from 'lodash'
 import markdown from '../util/markdown'
+import ModuleHeader from './ModuleHeader.jsx'
 
 class Module extends React.Component {
 
@@ -14,9 +15,15 @@ class Module extends React.Component {
     let html = {
       __html: markdown(mod.readme)
     }
+    
     return (
       <main>
-        <h1>{mod.name}</h1>
+        <ModuleHeader
+          title={mod.title}
+          name={mod.name}
+          version={mod.version}
+          npm={mod.npm_link}
+          github={mod.homepage} />
         <div dangerouslySetInnerHTML={html} />
       </main>
     )
