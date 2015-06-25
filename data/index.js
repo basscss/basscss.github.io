@@ -2,6 +2,7 @@
 var pkg = require('../package.json')
 var routes = require('./routes')
 var modules = require('./modules')
+var guides = require('./guides')
 
 module.exports = {
   title: 'Basscss',

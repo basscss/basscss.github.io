@@ -1,13 +1,14 @@
 
 import React from 'react'
+import Container from './Container.jsx'
 
 class Index extends React.Component {
 
   render () {
     return (
-      <main>
-        Index
-      </main>
+      <Container>
+        <h1>Basscss</h1>
+      </Container>
     )
   }
 

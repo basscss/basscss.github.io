@@ -8,7 +8,7 @@ class SideBar extends React.Component {
       container: {
         width: '12rem',
         overflow: 'auto',
-        webkitOverflowScrolling: 'touch',
+        WebkitOverflowScrolling: 'touch',
 
         position: 'fixed',
         top: 0,

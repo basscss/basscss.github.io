@@ -3,11 +3,16 @@ import marked from 'marked'
 import hljs from 'highlight.js'
 import { kebabCase } from 'lodash'
 
+import React from 'react'
+import Example from '../components/Example.jsx'
+
 var renderer = new marked.Renderer()
 
 renderer.code = function(code, lang) {
   var result
   if (lang && lang.match(/^html/)) {
+    result = React.renderToStaticMarkup(React.createElement(Example, { html: code }))
+    /*
     result = [
       '<div>',
         '<div>',
@@ -18,6 +23,7 @@ renderer.code = function(code, lang) {
         '</pre>',
       '</div>'
     ].join('')
+    */
   } else {
     result = [
       '<pre>',

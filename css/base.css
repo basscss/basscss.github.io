@@ -1,6 +1,8 @@
 
 @import 'basscss';
+@import 'basscss-highlight';
 
 :root {
+  --font-family: 'SF UI Text', Roboto, 'Helvetica Neue', Helvetica, sans-serif;
 }
 

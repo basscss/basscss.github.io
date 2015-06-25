@@ -64,6 +64,7 @@
     "marked": "^0.3.3",
     "marked-example": "^1.0.4",
     "node-libs-browser": "^0.5.2",
+    "raw-loader": "^0.5.1",
     "react": "^0.13.3",
     "react-router": "^0.13.3",
     "showcase": "git://github.com/basscss/showcase",
