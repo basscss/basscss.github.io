@@ -9,7 +9,13 @@ class PageHeader extends React.Component {
     return (
       <div className='mb3'>
         <Header>
-          <h1>{this.props.title}</h1>
+          <div className='mt2'>
+            <a href='/'
+              className='h4 bold caps compact color-inherit'>
+              Basscss
+            </a>
+            <h1 className='mt0'>{this.props.title}</h1>
+          </div>
         </Header>
         <Breadcrumbs path={this.props.path} />
       </div>

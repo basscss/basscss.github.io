@@ -1,6 +1,7 @@
 
 import React from 'react'
 import titleCase from 'title-case'
+import Link from './Link.jsx'
 
 class Breadcrumbs extends React.Component {
 
@@ -29,15 +30,13 @@ class Breadcrumbs extends React.Component {
       })
 
     return (
-      <div className='h5'>
-        <a href='/' className='btn p0 py1 blue'>Home</a>
+      <div className='h5 mxn1'>
+        <Link path='/' title='Home' />
         {breadcrumbs.map(function(crumb, i) {
           return (
             <span className='' key={i}>
               <span className='muted'> / </span>
-              <a href={crumb.path} className='btn p0 py1 blue'>
-                {crumb.title}
-              </a>
+              <Link {...crumb} />
             </span>
           )
         })}

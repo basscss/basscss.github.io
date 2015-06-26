@@ -3,6 +3,7 @@ import React from 'react'
 import { find } from 'lodash'
 import markdown from '../util/markdown'
 import PageHeader from './PageHeader.jsx'
+import Prose from './Prose.jsx'
 
 class Guide extends React.Component {
 
@@ -18,7 +19,9 @@ class Guide extends React.Component {
     return (
       <main>
         <PageHeader {...guide} />
-        <div dangerouslySetInnerHTML={html} />
+        <Prose>
+          <div dangerouslySetInnerHTML={html} />
+        </Prose>
       </main>
     )
   }

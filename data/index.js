@@ -12,8 +12,11 @@ module.exports = {
   author: pkg.author,
   keywords: pkg.keywords,
   version: pkg.version,
+  homepage: pkg.homepage,
+  repository: pkg.repository,
   routes: routes,
   modules: modules,
+  guides: guides,
   stats: stats,
 }
 

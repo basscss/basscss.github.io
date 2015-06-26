@@ -3,7 +3,10 @@ import React from 'react'
 import { find } from 'lodash'
 import markdown from '../util/markdown'
 import ModuleHeader from './ModuleHeader.jsx'
+import ModuleStats from './ModuleStats.jsx'
+import Prose from './Prose.jsx'
 import Pagination from './Pagination.jsx'
+import Pre from './Pre.jsx'
 
 class Module extends React.Component {
 
@@ -28,7 +31,13 @@ class Module extends React.Component {
           npm={mod.npm_link}
           github={mod.homepage} 
           path={route.path} />
-        <div dangerouslySetInnerHTML={html} />
+        <Prose>
+          <div dangerouslySetInnerHTML={html} />
+        </Prose>
+        <hr />
+        <h3>CSS Source</h3>
+        <Pre>{mod.css}</Pre>
+        <ModuleStats {...mod} />
         <Pagination
           previous={route.previous}
           next={route.next} />

@@ -7,7 +7,34 @@ h4 a, h5 a, h6 a {
   color: inherit;
 }
 
+hr {
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+code {
+  border-bottom: 2px solid var(--darken-2);
+  border-radius: 0;
+}
+
 .compact { font-family: var(--compact-font-family) }
+
+.icon {
+  position: relative;
+  top: .125em;
+
+  /* For UI Guide */
+  width: 1em;
+  height: 1em;
+}
+
+.btn-nav:hover {
+  box-shadow: inset 0 0 0 99999px var(--darken-1);
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
 
 @media (--breakpoint-sm) {
   .Main {
@@ -25,10 +52,13 @@ h4 a, h5 a, h6 a {
 
 :root {
   --font-family: 'SF UI Text', Roboto, 'Helvetica Neue', Helvetica, sans-serif;
+  --line-height: 1.625;
   --compact-font-family: 'SF Compact Text', Roboto, 'Helvetica Neue', Helvetica, sans-serif;
+  --h4: 1.125rem;
   --button-font-size: var(--h5);
   --bold-font-weight: 500;
   --heading-font-weight: 500;
   --container-width: 52rem;
+  --pre-font-size: 87.5%;
 }
 

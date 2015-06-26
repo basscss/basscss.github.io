@@ -1,7 +1,7 @@
 
 import React from 'react'
 import Header from './Header.jsx'
-import NavItem from './NavItem.jsx'
+import Link from './Link.jsx'
 import Breadcrumbs from './Breadcrumbs.jsx'
 
 class ModuleHeader extends React.Component {
@@ -17,11 +17,11 @@ class ModuleHeader extends React.Component {
                 Basscss
               </a>
               <h1 className='m0'>{this.props.title}</h1>
-              <h2 className='h4 m0'>{this.props.name} v{this.props.version}</h2>
+              <h2 className='h5 m0'>{this.props.name} v{this.props.version}</h2>
             </div>
-            <div className='mxn2'>
-              <NavItem path={this.props.npm} title='npm' />
-              <NavItem path={this.props.github} title='GitHub' />
+            <div className='mxn1'>
+              <Link path={this.props.npm} title='npm' />
+              <Link path={this.props.github} title='GitHub' />
             </div>
           </div>
         </Header>
