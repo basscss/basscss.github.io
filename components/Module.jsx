@@ -9,9 +9,13 @@ class Module extends React.Component {
 
   render () {
     let routes = this.props.routes
+    let modules = this.props.modules
     let params = this.props.params || {}
-    let mod = find(routes, function(m) {
-      return m.name === params.module
+    let route = find(routes, function(route) {
+      return route.name === params.module
+    })
+    let mod = find(modules, function(mod) {
+      return mod.slug === params.module
     })
     let html = {
       __html: markdown(mod.readme)
@@ -20,15 +24,14 @@ class Module extends React.Component {
     return (
       <main>
         <ModuleHeader
-          title={mod.title}
-          name={mod.name}
-          version={mod.version}
+          {...mod}
           npm={mod.npm_link}
-          github={mod.homepage} />
+          github={mod.homepage} 
+          path={route.path} />
         <div dangerouslySetInnerHTML={html} />
         <Pagination
-          previous={mod.previous}
-          next={mod.next} />
+          previous={route.previous}
+          next={route.next} />
       </main>
     )
   }

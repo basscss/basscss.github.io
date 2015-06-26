@@ -7,10 +7,10 @@ class NavItem extends React.Component {
   render () {
     return (
       <a href={this.props.path}
-        className={cx('btn blue', {
+        className={cx('btn compact', {
           block: this.props.block
         })}>
-        {this.props.name}
+        {this.props.title}
       </a>
     )
   }

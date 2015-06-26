@@ -10,39 +10,42 @@ function mapPagination(item, i, arr) {
   if (previous) {
     item.previous = {
       path: previous.path,
-      name: previous.name
+      title: previous.title
     }
   }
   if (next) {
     item.next = {
       path: next.path,
-      name: next.name
+      title: next.title
     }
   }
   return item
 }
 
-var moduleRoutes = modules.map(function(mod) {
-  mod.path = '/docs/' + mod.name
-  return mod
-})
+var moduleRoutes = modules
+  .map(function(mod) {
+    return {
+      name: mod.slug,
+      path: '/docs/' + mod.slug,
+      title: mod.title
+    }
+  })
+  .map(mapPagination)
 
-moduleRoutes = moduleRoutes.map(mapPagination)
+var guideRoutes = guides
+  .map(function(guide) {
+    guide.path = '/docs/guides/' + guide.name
+    return guide
+  })
+  .map(mapPagination)
 
-var guideRoutes = guides.map(function(guide) {
-  guide.path = '/docs/guides/' + guide.name
-  return guide
-})
-
-guideRoutes = guideRoutes.map(mapPagination)
-
-var routes = [{ path: '/', name: 'Basscss' }]
-routes.push({ path: '/docs', name: 'Docs' })
+var routes = [{ path: '/', title: 'Basscss' }]
+routes.push({ path: '/docs', title: 'Docs' })
 routes = routes.concat(moduleRoutes)
-routes.push({ path: '/docs/optional-modules', name: 'Optional Modules' })
-routes.push({ path: '/docs/guides', name: 'Guides' })
+routes.push({ path: '/docs/optional-modules', title: 'Optional Modules' })
+routes.push({ path: '/docs/guides', title: 'Guides' })
 routes = routes.concat(guideRoutes)
-routes.push({ path: '/docs/reference', name: 'Reference' })
+routes.push({ path: '/docs/reference', title: 'Reference' })
 
 module.exports = routes
 

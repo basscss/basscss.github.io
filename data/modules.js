@@ -8,8 +8,8 @@ var dir = path.join(__dirname, '../node_modules/basscss')
 
 function mapModules(name) {
   var mod = moduleInfo(name, { dirname: dir }) || {}
-  mod.title = titleCase(mod.title.replace(/\-/, ' '))
-  mod.name = name.replace(/^basscss\-/, '')
+  mod.title = titleCase(mod.title.replace(/^Basscss\-/, '').replace(/\-/, ' '))
+  mod.slug = name.replace(/^basscss\-/, '')
   return mod
 }
 

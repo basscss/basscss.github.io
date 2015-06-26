@@ -17,7 +17,7 @@ class Guide extends React.Component {
     }
     return (
       <main>
-        <PageHeader title={guide.title} />
+        <PageHeader {...guide} />
         <div dangerouslySetInnerHTML={html} />
       </main>
     )

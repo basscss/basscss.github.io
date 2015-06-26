@@ -5,6 +5,7 @@ import SideBar from './SideBar.jsx'
 import Main from './Main.jsx'
 import Container from './Container.jsx'
 import Nav from './Nav.jsx'
+import Footer from './Footer.jsx'
 
 class Docs extends React.Component {
 
@@ -14,6 +15,7 @@ class Docs extends React.Component {
         <Main>
           <Container>
             <RouteHandler {...this.props} />
+            <Footer {...this.props} />
           </Container>
         </Main>
         <SideBar>

@@ -7,6 +7,8 @@ h4 a, h5 a, h6 a {
   color: inherit;
 }
 
+.compact { font-family: var(--compact-font-family) }
+
 @media (--breakpoint-sm) {
   .Main {
     margin-left: 12rem;
@@ -23,8 +25,10 @@ h4 a, h5 a, h6 a {
 
 :root {
   --font-family: 'SF UI Text', Roboto, 'Helvetica Neue', Helvetica, sans-serif;
+  --compact-font-family: 'SF Compact Text', Roboto, 'Helvetica Neue', Helvetica, sans-serif;
   --button-font-size: var(--h5);
-  --button-font-weight: 500;
+  --bold-font-weight: 500;
+  --heading-font-weight: 500;
   --container-width: 52rem;
 }
 
