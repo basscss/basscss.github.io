@@ -1,33 +1,45 @@
 
+var titleCase = require('title-case')
 var basspkg = require('basscss/package.json').basscss
+var modules = require('./modules')
 var guides = require('./guides')
 
-var moduleRoutes = basspkg.modules.map(function(m) {
-  var name = m.replace(/^basscss\-/, '')
-  return {
-    name: name,
-    path: '/docs/' + name
+function mapPagination(item, i, arr) {
+  var previous = arr[i - 1] || false
+  var next = arr[i + 1] || false
+  if (previous) {
+    item.previous = {
+      path: previous.path,
+      name: previous.name
+    }
   }
-})
-var optionalModuleRoutes = basspkg.optional_modules.map(function(m) {
-  var name = m.replace(/^basscss\-/, '')
-  return {
-    name: name,
-    path: '/docs/' + name
+  if (next) {
+    item.next = {
+      path: next.path,
+      name: next.name
+    }
   }
+  return item
+}
+
+var moduleRoutes = modules.map(function(mod) {
+  mod.path = '/docs/' + mod.name
+  return mod
 })
 
+moduleRoutes = moduleRoutes.map(mapPagination)
+
 var guideRoutes = guides.map(function(guide) {
-  return {
-    name: guide.name,
-    path: '/docs/guides/' + guide.name
-  }
+  guide.path = '/docs/guides/' + guide.name
+  return guide
 })
+
+guideRoutes = guideRoutes.map(mapPagination)
 
 var routes = [{ path: '/', name: 'Basscss' }]
 routes.push({ path: '/docs', name: 'Docs' })
 routes = routes.concat(moduleRoutes)
-//routes = routes.concat(optionalModuleRoutes)
+routes.push({ path: '/docs/optional-modules', name: 'Optional Modules' })
 routes.push({ path: '/docs/guides', name: 'Guides' })
 routes = routes.concat(guideRoutes)
 routes.push({ path: '/docs/reference', name: 'Reference' })

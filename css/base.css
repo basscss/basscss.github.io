@@ -2,7 +2,29 @@
 @import 'basscss';
 @import 'basscss-highlight';
 
+h1 a, h2 a, h3 a,
+h4 a, h5 a, h6 a {
+  color: inherit;
+}
+
+@media (--breakpoint-sm) {
+  .Main {
+    margin-left: 12rem;
+  }
+  .SideBar {
+    position: fixed;
+    width: 12rem;
+  }
+}
+
+.Example .fixed {
+  position: static;
+}
+
 :root {
   --font-family: 'SF UI Text', Roboto, 'Helvetica Neue', Helvetica, sans-serif;
+  --button-font-size: var(--h5);
+  --button-font-weight: 500;
+  --container-width: 52rem;
 }
 

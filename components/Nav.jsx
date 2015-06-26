@@ -1,5 +1,6 @@
 
 import React from 'react'
+import NavItem from './NavItem.jsx'
 
 class Nav extends React.Component {
 
@@ -7,13 +8,11 @@ class Nav extends React.Component {
 
     return (
       <nav>
-        <ul>
+        <ul className='list-reset'>
           {this.props.items.map(function(item, i) {
             return (
               <li key={i}>
-                <a href={item.path}>
-                  {item.name}
-                </a>
+                <NavItem {...item} block />
               </li>
             )
           })}

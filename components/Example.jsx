@@ -8,7 +8,7 @@ class Example extends React.Component {
     let code = hljs.highlight('html', this.props.html).value
 
     return (
-      <div className='border rounded'>
+      <div className='Example border rounded'>
         <div className='p2'
           dangerouslySetInnerHTML={{ __html: this.props.html }} />
         <pre className='p2 m0 bg-darken-1'

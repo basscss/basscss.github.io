@@ -6,11 +6,8 @@ class SideBar extends React.Component {
   render () {
     let styles = {
       container: {
-        width: '12rem',
         overflow: 'auto',
         WebkitOverflowScrolling: 'touch',
-
-        position: 'fixed',
         top: 0,
         bottom: 0,
         left: 0
@@ -18,7 +15,8 @@ class SideBar extends React.Component {
     }
 
     return (
-      <div style={styles.container}>
+      <div className='SideBar py2 border-right'
+        style={styles.container}>
         {this.props.children}
       </div>
     )

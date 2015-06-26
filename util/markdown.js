@@ -50,6 +50,7 @@ renderer.heading = function (text, level) {
 
 
 export default function(md) {
+  if (!md) { return false }
   return marked(md, { renderer: renderer })
 }
 

@@ -13,6 +13,7 @@ var guides = [
   {
     name: 'basics',
     title: 'Basics',
+    md: getMarkdown('basics.md')
   },
 ]
 

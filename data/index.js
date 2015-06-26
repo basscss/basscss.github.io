@@ -12,6 +12,5 @@ module.exports = {
   keywords: pkg.keywords,
   version: pkg.version,
   routes: routes,
-  modules: modules
 }
 

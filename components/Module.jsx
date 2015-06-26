@@ -3,13 +3,14 @@ import React from 'react'
 import { find } from 'lodash'
 import markdown from '../util/markdown'
 import ModuleHeader from './ModuleHeader.jsx'
+import Pagination from './Pagination.jsx'
 
 class Module extends React.Component {
 
   render () {
-    let modules = this.props.modules
+    let routes = this.props.routes
     let params = this.props.params || {}
-    let mod = find(modules, function(m) {
+    let mod = find(routes, function(m) {
       return m.name === params.module
     })
     let html = {
@@ -25,6 +26,9 @@ class Module extends React.Component {
           npm={mod.npm_link}
           github={mod.homepage} />
         <div dangerouslySetInnerHTML={html} />
+        <Pagination
+          previous={mod.previous}
+          next={mod.next} />
       </main>
     )
   }

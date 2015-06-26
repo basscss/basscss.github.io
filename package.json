@@ -18,7 +18,7 @@
   "author": "Brent Jackson",
   "license": "MIT",
   "dependencies": {
-    "basscss": "^7.0.0-beta.4"
+    "basscss": "^7.0.0-beta.6"
   },
   "devDependencies": {
     "babel-core": "^5.6.4",
@@ -51,6 +51,7 @@
     "basscss-ui-utility-groups": "^1.0.1",
     "basscss-utility-headings": "0.0.6",
     "bassdock": "^2.0.0",
+    "classnames": "^2.1.2",
     "colorable": "^1.0.5",
     "colors.css": "^2.3.0",
     "css-loader": "^0.15.1",
