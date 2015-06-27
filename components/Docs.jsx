@@ -15,12 +15,12 @@ class Docs extends React.Component {
         <Main>
           <Container>
             <RouteHandler {...this.props} />
-            <Footer {...this.props} />
           </Container>
+          <SideBar>
+            <Nav {...this.props} items={this.props.routes} />
+          </SideBar>
+          <Footer {...this.props} />
         </Main>
-        <SideBar>
-          <Nav items={this.props.routes} />
-        </SideBar>
       </div>
     )
   }

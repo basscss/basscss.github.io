@@ -15,7 +15,7 @@ class SideBar extends React.Component {
     }
 
     return (
-      <div className='SideBar py2 border-right'
+      <div className='SideBar py2'
         style={styles.container}>
         {this.props.children}
       </div>

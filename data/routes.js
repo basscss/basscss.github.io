@@ -43,9 +43,9 @@ var routes = [{ path: '/', title: 'Basscss' }]
 routes.push({ path: '/docs', title: 'Docs' })
 routes = routes.concat(moduleRoutes)
 routes.push({ path: '/docs/optional-modules', title: 'Optional Modules' })
-routes.push({ path: '/docs/guides', title: 'Guides' })
+routes.push({ path: '/docs/guides', name: 'guides', title: 'Guides' })
 routes = routes.concat(guideRoutes)
-routes.push({ path: '/docs/reference', title: 'Reference' })
+routes.push({ path: '/docs/reference', name: 'reference', title: 'Reference' })
 
 module.exports = routes
 

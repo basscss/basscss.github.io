@@ -36,6 +36,10 @@ code {
   text-decoration: underline;
 }
 
+.SideBar {
+  border-top: var(--border-width) solid var(--border-color);
+}
+
 @media (--breakpoint-sm) {
   .Main {
     margin-left: 12rem;
@@ -43,7 +47,14 @@ code {
   .SideBar {
     position: fixed;
     width: 12rem;
+    border-top: 0;
+    border-right: var(--border-width) solid var(--border-color);
   }
+}
+
+.Footer {
+  max-width: var(--container-width);
+  margin: auto;
 }
 
 .Example .fixed {
@@ -51,9 +62,12 @@ code {
 }
 
 :root {
+  /*
   --font-family: 'SF UI Text', Roboto, 'Helvetica Neue', Helvetica, sans-serif;
-  --line-height: 1.625;
   --compact-font-family: 'SF Compact Text', Roboto, 'Helvetica Neue', Helvetica, sans-serif;
+  */
+  --compact-font-family: var(--font-family);
+  --line-height: 1.625;
   --h4: 1.125rem;
   --button-font-size: var(--h5);
   --bold-font-weight: 500;

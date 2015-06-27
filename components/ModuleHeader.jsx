@@ -13,7 +13,7 @@ class ModuleHeader extends React.Component {
           <div className='mt2 flex flex-wrap flex-center'>
             <div className='flex-auto'>
               <a href='/'
-                className='h4 bold caps compact color-inherit'>
+                className='h5 bold compact color-inherit'>
                 Basscss
               </a>
               <h1 className='m0'>{this.props.title}</h1>

@@ -11,7 +11,7 @@ class PageHeader extends React.Component {
         <Header>
           <div className='mt2'>
             <a href='/'
-              className='h4 bold caps compact color-inherit'>
+              className='h5 bold compact color-inherit'>
               Basscss
             </a>
             <h1 className='mt0'>{this.props.title}</h1>
