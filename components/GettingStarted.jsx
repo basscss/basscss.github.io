@@ -13,10 +13,13 @@ class GettingStarted extends React.Component {
       this.props.version,
       '/basscss.min.css" rel="stylesheet">'
     ].join('')
+    let path = this.props.router.path
 
     return (
       <div>
-        <PageHeader title='Getting Started' />
+        <PageHeader
+          title='Getting Started'
+          path={path} />
         <Prose>
           <p className='h3'>Download or install from one of these sources</p>
           <Pre>npm install basscss</Pre>
@@ -24,7 +27,7 @@ class GettingStarted extends React.Component {
           <Pre>git clone {this.props.repository.url}</Pre>
           <div className='py2'>
             <a href={'https://github.com/basscss/basscss/archive/v' + this.props.version + '.zip'}
-              className='h4 btn btn-primary'>
+              className='btn btn-primary'>
               Download Source
             </a>
           </div>
@@ -37,8 +40,11 @@ class GettingStarted extends React.Component {
           <div className='clearfix mxn1'>
             {this.props.modules.map(function(mod, i) {
               return (
-                <div key={i} className='col col-6 sm-col-4 md-col-3'>
-                  <Link {...mod} path={'/docs/' + mod.slug} />
+                <div key={i} className='mb2 col col-6 sm-col-4 md-col-3'>
+                  <Link {...mod}
+                    path={'/docs/' + mod.slug}
+                    block
+                    big />
                 </div>
               )
             })}

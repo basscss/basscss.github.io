@@ -2,7 +2,10 @@
 import React from 'react'
 import { find } from 'lodash'
 import markdown from '../util/markdown'
+import PageHeader from './PageHeader.jsx'
+import Link from './Link.jsx'
 import ModuleHeader from './ModuleHeader.jsx'
+import ModuleMeta from './ModuleMeta.jsx'
 import ModuleStats from './ModuleStats.jsx'
 import Prose from './Prose.jsx'
 import Pagination from './Pagination.jsx'
@@ -20,17 +23,24 @@ class Module extends React.Component {
     let mod = find(modules, function(mod) {
       return mod.slug === params.module
     })
+    let meta = (
+      <div className='mxn1'>
+        <Link path={mod.npm_link}
+          title='View on npm'
+          external
+          text={mod.name + ' v' + mod.version} /> 
+      </div>
+    )
     let html = {
       __html: markdown(mod.readme)
     }
     
     return (
       <main>
-        <ModuleHeader
+        <PageHeader
           {...mod}
-          npm={mod.npm_link}
-          github={mod.homepage} 
-          path={route.path} />
+          path={route.path}
+          meta={meta} />
         <Prose>
           <div dangerouslySetInnerHTML={html} />
         </Prose>

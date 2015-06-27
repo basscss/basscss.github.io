@@ -1,6 +1,7 @@
 
 import React from 'react'
 import Header from './Header.jsx'
+import Link from './Link.jsx'
 import Breadcrumbs from './Breadcrumbs.jsx'
 
 class PageHeader extends React.Component {
@@ -9,12 +10,14 @@ class PageHeader extends React.Component {
     return (
       <div className='mb3'>
         <Header>
-          <div className='mt2'>
-            <a href='/'
-              className='h5 bold compact color-inherit'>
-              Basscss
-            </a>
-            <h1 className='mt0'>{this.props.title}</h1>
+          <div className='flex flex-center flex-wrap'>
+            <div className='flex-auto'>
+              <div className='mxn1'>
+                <Link path='/' title='Basscss' />
+              </div>
+              <h1 className='m0'>{this.props.title}</h1>
+            </div>
+            {this.props.meta}
           </div>
         </Header>
         <Breadcrumbs path={this.props.path} />

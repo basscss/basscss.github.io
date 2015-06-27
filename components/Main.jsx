@@ -5,9 +5,9 @@ class Main extends React.Component {
 
   render () {
     return (
-      <main className='Main'>
+      <div className='Main'>
         {this.props.children}
-      </main>
+      </div>
     )
   }
 
