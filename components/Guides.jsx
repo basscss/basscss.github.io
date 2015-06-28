@@ -18,12 +18,11 @@ class Guides extends React.Component {
             let desc = guide.description
             return (
               <div key={i} className='mb3'>
-                <Link {...guide}
-                  path={'/docs/guides/' + guide.name}
-                  flush
-                  block
-                  big />
-                <p>{desc}</p>
+                <a href={'/docs/guides/' + guide.name}
+                  className='block color-inherit'>
+                  <h3 className='m0'>{guide.title}</h3>
+                  <p>{desc}</p>
+                </a>
               </div>
             )
           })}

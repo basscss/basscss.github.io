@@ -6,7 +6,7 @@ class Footer extends React.Component {
 
   render () {
     return (
-      <footer className='Footer h6 compact px2 sm-px3'>
+      <footer className='Footer container h6 compact mt4 px2 sm-px3'>
         <div className='py3 border-top'>
           <div className='flex flex-wrap flex-baseline mxn1'>
             <Link path='/' title='Basscss' />

@@ -27,7 +27,7 @@ class Index extends React.Component {
           <Intro {...this.props} />
           <ValueProps />
           <Categories />
-          <Showcase />
+          {/* <Showcase /> */}
           <CTA />
         </Container>
         <Footer {...this.props} />

@@ -18,8 +18,8 @@ class OptionalModules extends React.Component {
                 <a href={mod.npm_link}
                   className='block color-inherit'>
                   <h3 className='m0'>{mod.title}</h3>
-                  <h4 className='h5 m0'>{mod.name} v{mod.version}</h4>
-                  <p className='h5 m0'>{mod.description}</p>
+                  <h4 className='m0'>{mod.name} v{mod.version}</h4>
+                  <p className='m0'>{mod.description}</p>
                 </a>
               </li>
             )

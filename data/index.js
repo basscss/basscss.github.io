@@ -3,6 +3,7 @@ var pkg = require('basscss/package.json')
 var routes = require('./routes')
 var modules = require('./modules')
 var guides = require('./guides')
+var references = require('./references')
 var stats = require('./stats')
 
 module.exports = {
@@ -18,6 +19,7 @@ module.exports = {
   modules: modules.modules,
   optionals: modules.optionals,
   guides: guides,
+  references: references,
   stats: stats,
 }
 

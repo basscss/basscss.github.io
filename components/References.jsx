@@ -1,16 +1,18 @@
 
 import React from 'react'
-import PageHeader from './PageHeader.jsx'
+import Page from './Page.jsx'
 
 class References extends React.Component {
 
   render () {
     return (
-      <main>
-        <PageHeader
-          title='References'
-          path={this.props.router.path} />
-      </main>
+      <Page {...this.props.route}>
+        {this.props.references.map(function(reference) {
+          return (
+            <div>{reference.title}</div>
+          )
+        })}
+      </Page>
     )
   }
 

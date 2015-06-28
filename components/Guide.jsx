@@ -1,7 +1,7 @@
 
 import React from 'react'
 import markdown from '../util/markdown'
-import PageHeader from './PageHeader.jsx'
+import Page from './Page.jsx'
 import Prose from './Prose.jsx'
 
 class Guide extends React.Component {
@@ -12,12 +12,11 @@ class Guide extends React.Component {
       __html: markdown(guide.md)
     }
     return (
-      <main>
-        <PageHeader {...guide} />
+      <Page {...guide}>
         <Prose>
           <div dangerouslySetInnerHTML={html} />
         </Prose>
-      </main>
+      </Page>
     )
   }
 

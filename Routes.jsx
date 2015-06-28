@@ -11,6 +11,8 @@ import References from './components/References.jsx'
 import Reference from './components/Reference.jsx'
 import GettingStarted from './components/GettingStarted.jsx'
 import OptionalModules from './components/OptionalModules.jsx'
+import ColorCombinations from './components/ColorCombinations.jsx'
+import Styles from './components/Styles.jsx'
 
 export default Routes = (
   <Route handler={Root} path='/'>
@@ -25,6 +27,8 @@ export default Routes = (
       </Route>
       <Route path='reference'>
         <DefaultRoute handler={References} />
+        <Route handler={ColorCombinations} path='color-combinations' />
+        <Route handler={Styles} path='styles' />
         <Route handler={Reference} path=':reference' />
       </Route>
       <Route handler={Module} path=':module' />

@@ -1,0 +1,10 @@
+
+.icon {
+  position: relative;
+  top: .125em;
+
+  /* For UI Guide */
+  width: 1em;
+  height: 1em;
+}
+
