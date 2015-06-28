@@ -22,7 +22,7 @@ function mapPagination(item, i, arr) {
   return item
 }
 
-var moduleRoutes = modules
+var moduleRoutes = modules.modules
   .map(function(mod) {
     return {
       name: mod.slug,

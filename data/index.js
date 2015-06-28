@@ -15,7 +15,8 @@ module.exports = {
   homepage: pkg.homepage,
   repository: pkg.repository,
   routes: routes,
-  modules: modules,
+  modules: modules.modules,
+  optionals: modules.optionals,
   guides: guides,
   stats: stats,
 }

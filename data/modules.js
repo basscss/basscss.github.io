@@ -4,6 +4,7 @@ var moduleInfo = require('get-module-info')
 var path = require('path')
 
 var moduleNames = require('basscss/package.json').basscss.modules
+var optionalModuleNames = require('basscss/package.json').basscss.optional_modules
 var dir = path.join(__dirname, '../node_modules/basscss')
 
 function mapModules(name) {
@@ -14,6 +15,10 @@ function mapModules(name) {
 }
 
 modules = moduleNames.map(mapModules)
+optionals = optionalModuleNames.map(mapModules)
 
-module.exports = modules
+module.exports = {
+  modules: modules,
+  optionals: optionals
+}
 

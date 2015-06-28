@@ -20,7 +20,7 @@ module.exports = {
       { test: /(\.js$|\.jsx$)/, exclude: /node_modules/, loader: 'babel-loader' },
       { test: /\.json$/, loader: 'json-loader' },
       { test: /\.css$/, exclude: /^colors\.css/, loader: 'css-loader!cssnext-loader' },
-      { test: /\.png$/, loader: 'file-loader?name=images/[hash].[ext]' }
+      { test: /\.png$/, loader: 'file-loader?name=/images/[hash].[ext]' }
     ]
   },
 

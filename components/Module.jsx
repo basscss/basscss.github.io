@@ -1,12 +1,9 @@
 
 import React from 'react'
-import { find } from 'lodash'
 import { CarbonAd } from 'blk'
 import markdown from '../util/markdown'
 import PageHeader from './PageHeader.jsx'
 import Link from './Link.jsx'
-import ModuleHeader from './ModuleHeader.jsx'
-import ModuleMeta from './ModuleMeta.jsx'
 import ModuleStats from './ModuleStats.jsx'
 import Prose from './Prose.jsx'
 import Pagination from './Pagination.jsx'
@@ -15,15 +12,8 @@ import Pre from './Pre.jsx'
 class Module extends React.Component {
 
   render () {
-    let routes = this.props.routes
-    let modules = this.props.modules
-    let params = this.props.params || {}
-    let route = find(routes, function(route) {
-      return route.name === params.module
-    })
-    let mod = find(modules, function(mod) {
-      return mod.slug === params.module
-    })
+    let route = this.props.route
+    let mod = this.props.module
     let meta = (
       <div className='mxn1'>
         <Link path={mod.npm_link}
