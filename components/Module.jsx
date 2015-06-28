@@ -1,6 +1,7 @@
 
 import React from 'react'
 import { find } from 'lodash'
+import { CarbonAd } from 'blk'
 import markdown from '../util/markdown'
 import PageHeader from './PageHeader.jsx'
 import Link from './Link.jsx'
@@ -41,6 +42,7 @@ class Module extends React.Component {
           {...mod}
           path={route.path}
           meta={meta} />
+        <CarbonAd />
         <Prose>
           <div dangerouslySetInnerHTML={html} />
         </Prose>

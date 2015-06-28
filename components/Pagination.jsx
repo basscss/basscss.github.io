@@ -10,6 +10,7 @@ class Pagination extends React.Component {
     let next = this.props.next || false
     let previousLink = previous ? (
       <Link {...previous}
+        big
         title={
           <span>
             <Icon name='chevronLeft' className='icon' /> {previous.title}
@@ -18,6 +19,7 @@ class Pagination extends React.Component {
     ) : false
     let nextLink = next ? (
       <Link {...next}
+        big
         title={
           <span>
             {next.title} <Icon name='chevronRight' className='icon' />
