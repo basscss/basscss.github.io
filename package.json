@@ -2,7 +2,7 @@
   "name": "basscss.github.io",
   "version": "1.0.0",
   "description": "Documentation page for Basscss",
-  "main": "index.js",
+  "main": "data/index.js",
   "scripts": {
     "reset": "rm -r docs",
     "404": "mv 404/index.html 404.html && rm -r 404",

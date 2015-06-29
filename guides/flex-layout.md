@@ -13,7 +13,7 @@ One of the most obvious use-cases for flexbox, is vertical alignment. To vertica
 
 ```html
 <div class="flex flex-center p2" style="min-height:128px">
-  <div class="bold p2 mx-auto border border-blue blue">
+  <div class="bold p2 mx-auto border blue">
     Vertically Aligned Div
   </div>
 </div>
@@ -30,13 +30,13 @@ Add `.flex-auto` to the main content area to make it fill the available space.
 <!-- Note: min-height is set to 60vh for demonstration only. -->
 <!-- Use 100vh to fill the viewport height. -->
 <div class="flex flex-column" style="min-height:60vh">
-  <header class="p2 border border-blue">
+  <header class="p2 border">
     <h1 class="h2 m0">Flex Object Sticky Footer</h1>
   </header>
   <main class="flex-auto p2">
     <h1>Main content area</h1>
   </main>
-  <footer class="p2 border border-blue">
+  <footer class="p2 border">
     <p class="m0">Footer</p>
   </footer>
 </div>
@@ -57,7 +57,7 @@ Each fixed-width column uses inline-styles, but you may want to use a grid syste
 <!-- Note: min-height is set to 60vh for demonstration only. -->
 <!-- Use 100vh to fill the viewport height. -->
 <div class="flex flex-column" style="min-height:60vh">
-  <header class="p2 border border-blue">
+  <header class="p2 border">
     <h1 class="h2 m0">Flex Object Holy Grail</h1>
   </header>
   <div class="flex-auto sm-flex">
@@ -65,18 +65,18 @@ Each fixed-width column uses inline-styles, but you may want to use a grid syste
       <h1>Main content</h1>
       <p>Sorry it's not 100% responsive, but the sidebars have to be fixed width for this demo.</p>
     </main>
-    <nav class="flex-first border border-blue" style="width:8rem">
+    <nav class="flex-first border" style="width:8rem">
       <ul class="list-reset mt2 mb2">
         <li><a href="#" class="btn block">Link</a>
         <li><a href="#" class="btn block">Link</a>
         <li><a href="#" class="btn block">Link</a>
       </ul>
     </nav>
-    <aside class="p2 border border-blue" style="width:8rem">
+    <aside class="p2 border" style="width:8rem">
       <p>Sidebar</p>
     </aside>
   </div>
-  <footer class="p2 border border-blue">
+  <footer class="p2 border">
     <p class="m0">Footer</p>
   </footer>
 </div>
@@ -170,34 +170,34 @@ To create columns that automatically fill the amount of space available, add `.f
 ```html
 <div class="center p2">
   <div class="flex mxn2">
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">.flex-auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">.flex-auto</div></div>
   </div>
   <div class="flex mxn2">
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">.flex-auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">.flex-auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">.flex-auto</div></div>
   </div>
   <div class="flex mxn2">
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">.flex-auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">.flex-auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">.flex-auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">.flex-auto</div></div>
   </div>
   <div class="flex mxn2">
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">.flex-auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">.flex-auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">.flex-auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">.flex-auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">.flex-auto</div></div>
   </div>
   <div class="flex mxn2">
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">.flex-auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">.flex-auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">.flex-auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">.flex-auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">.flex-auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">.flex-auto</div></div>
   </div>
 </div>
 ```
@@ -210,18 +210,18 @@ Setting a width on one or more columns can allow for more fine-grained control.
 ```html
 <div class="center flex-auto p2">
   <div class="flex mxn2">
-    <div class="flex-none col-6 border-box p2"><div class="p2 border border-blue">1/2</div></div>
-    <div class="flex-auto p2"><div class="p2 border border-blue">auto</div></div>
-    <div class="flex-auto p2"><div class="p2 border border-blue">auto</div></div>
+    <div class="flex-none col-6 border-box p2"><div class="p2 border">1/2</div></div>
+    <div class="flex-auto p2"><div class="p2 border">auto</div></div>
+    <div class="flex-auto p2"><div class="p2 border">auto</div></div>
   </div>
   <div class="flex mxn2">
-    <div class="col-4 border-box p2"><div class="p2 border border-blue">1/3</div></div>
-    <div class="flex-auto p2"><div class="p2 border border-blue">auto</div></div>
+    <div class="col-4 border-box p2"><div class="p2 border">1/3</div></div>
+    <div class="flex-auto p2"><div class="p2 border">auto</div></div>
   </div>
   <div class="flex mxn2">
-    <div class="col-3 border-box p2"><div class="p2 border border-blue">1/4</div></div>
-    <div class="flex-auto p2"><div class="p2 border border-blue">auto</div></div>
-    <div class="col-4 border-box p2"><div class="p2 border border-blue">1/3</div></div>
+    <div class="col-3 border-box p2"><div class="p2 border">1/4</div></div>
+    <div class="flex-auto p2"><div class="p2 border">auto</div></div>
+    <div class="col-4 border-box p2"><div class="p2 border">1/3</div></div>
   </div>
 </div>
 ```
@@ -236,24 +236,24 @@ Add `.flex-wrap` to rows where columns should wrap, and use grid column width ut
 ```html
 <div class="center p2">
   <div class="flex mxn2">
-    <div class="col-6 border-box p2"><div class="p2 border border-blue">.col-6</div></div>
-    <div class="col-6 border-box p2"><div class="p2 border border-blue">.col-6</div></div>
+    <div class="col-6 border-box p2"><div class="p2 border">.col-6</div></div>
+    <div class="col-6 border-box p2"><div class="p2 border">.col-6</div></div>
   </div>
   <hr>
   <div class="flex flex-wrap mxn2">
-    <div class="col-6 md-col-3 border-box p2"><div class="p2 border border-blue">.col-6 .md-col-3</div></div>
-    <div class="col-6 md-col-3 border-box p2"><div class="p2 border border-blue">.col-6 .md-col-3</div></div>
-    <div class="col-6 md-col-3 border-box p2"><div class="p2 border border-blue">.col-6 .md-col-3</div></div>
-    <div class="col-6 md-col-3 border-box p2"><div class="p2 border border-blue">.col-6 .md-col-3</div></div>
+    <div class="col-6 md-col-3 border-box p2"><div class="p2 border">.col-6 .md-col-3</div></div>
+    <div class="col-6 md-col-3 border-box p2"><div class="p2 border">.col-6 .md-col-3</div></div>
+    <div class="col-6 md-col-3 border-box p2"><div class="p2 border">.col-6 .md-col-3</div></div>
+    <div class="col-6 md-col-3 border-box p2"><div class="p2 border">.col-6 .md-col-3</div></div>
   </div>
   <hr>
   <div class="sm-flex flex-wrap mxn2">
-    <div class="sm-col-6 lg-col-2 border-box p2"><div class="p2 border border-blue">.sm-col-6 .lg-col-2</div></div>
-    <div class="sm-col-6 lg-col-2 border-box p2"><div class="p2 border border-blue">.sm-col-6 .lg-col-2</div></div>
-    <div class="sm-col-6 lg-col-2 border-box p2"><div class="p2 border border-blue">.sm-col-6 .lg-col-2</div></div>
-    <div class="sm-col-6 lg-col-2 border-box p2"><div class="p2 border border-blue">.sm-col-6 .lg-col-2</div></div>
-    <div class="sm-col-6 lg-col-2 border-box p2"><div class="p2 border border-blue">.sm-col-6 .lg-col-2</div></div>
-    <div class="sm-col-6 lg-col-2 border-box p2"><div class="p2 border border-blue">.sm-col-6 .lg-col-2</div></div>
+    <div class="sm-col-6 lg-col-2 border-box p2"><div class="p2 border">.sm-col-6 .lg-col-2</div></div>
+    <div class="sm-col-6 lg-col-2 border-box p2"><div class="p2 border">.sm-col-6 .lg-col-2</div></div>
+    <div class="sm-col-6 lg-col-2 border-box p2"><div class="p2 border">.sm-col-6 .lg-col-2</div></div>
+    <div class="sm-col-6 lg-col-2 border-box p2"><div class="p2 border">.sm-col-6 .lg-col-2</div></div>
+    <div class="sm-col-6 lg-col-2 border-box p2"><div class="p2 border">.sm-col-6 .lg-col-2</div></div>
+    <div class="sm-col-6 lg-col-2 border-box p2"><div class="p2 border">.sm-col-6 .lg-col-2</div></div>
   </div>
 </div>
 ```
@@ -266,10 +266,10 @@ To nest elements, add `.flex` to the column that contains nested columns.
 ```html
 <div class="center flex-auto p2">
   <div class="flex flex-center mxn2">
-    <div class="flex-auto border-box p2"><div class="p2 border border-blue">.flex-auto</div></div>
-    <div class="sm-flex col-6 border-box p2 border border-blue">
-      <div class="flex-auto"><div class="p2 border border-blue">.flex-auto</div></div>
-      <div class="flex-auto"><div class="p2 border border-blue">.flex-auto</div></div>
+    <div class="flex-auto border-box p2"><div class="p2 border">.flex-auto</div></div>
+    <div class="sm-flex col-6 border-box p2 border">
+      <div class="flex-auto"><div class="p2 border">.flex-auto</div></div>
+      <div class="flex-auto"><div class="p2 border">.flex-auto</div></div>
     </div>
   </div>
 </div>
@@ -286,19 +286,19 @@ To stagger content differently than its source order in HTML, use the `.flex-fir
   <p>Resize the viewport to see the effect.</p>
   <div class="sm-flex flex-center">
     <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="192" width="192" class="flex-last m2" />
-    <div class="flex-auto p2 border border-blue">.flex-auto</div>
+    <div class="flex-auto p2 border">.flex-auto</div>
   </div>
   <div class="sm-flex flex-center">
     <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="192" width="192" class="m2" />
-    <div class="flex-auto p2 border border-blue">.flex-auto</div>
+    <div class="flex-auto p2 border">.flex-auto</div>
   </div>
   <div class="sm-flex flex-center">
     <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="192" width="192" class="flex-last m2" />
-    <div class="flex-auto p2 border border-blue">.flex-auto</div>
+    <div class="flex-auto p2 border">.flex-auto</div>
   </div>
   <div class="sm-flex flex-center">
     <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="192" width="192" class="m2" />
-    <div class="flex-auto p2 border border-blue">.flex-auto</div>
+    <div class="flex-auto p2 border">.flex-auto</div>
   </div>
 </div>
 ```
@@ -311,7 +311,7 @@ Columns with different amounts of content should be the same height by default. 
 ```html
 <div class="px2">
   <div class="flex mxn2">
-    <div class="col-6 border-box p2 border border-blue">
+    <div class="col-6 border-box p2 border">
       <div>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia qui tempore, odio sit ad magni eaque expedita fugit autem, error, facilis excepturi omnis. Pariatur iste possimus soluta quos, deserunt, laborum.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia qui tempore, odio sit ad magni eaque expedita fugit autem, error, facilis excepturi omnis. Pariatur iste possimus soluta quos, deserunt, laborum.</p>
@@ -320,8 +320,8 @@ Columns with different amounts of content should be the same height by default. 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia qui tempore, odio sit ad magni eaque expedita fugit autem, error, facilis excepturi omnis. Pariatur iste possimus soluta quos, deserunt, laborum.</p>
       </div>
     </div>
-    <div class="col-6 flex border-box p2 border border-blue">
-      <div class="col-12 border border-blue">Equal height column</div>
+    <div class="col-6 flex border-box p2 border">
+      <div class="col-12 border">Equal height column</div>
     </div>
   </div>
 </div>

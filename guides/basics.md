@@ -93,11 +93,11 @@ For example, when using a grid system.
 
 ## Box Model Simulation
 
-<div class="center p1 blue border border-blue">
+<div class="center p1 blue border">
   <p class="mb0">Margin</p>
-  <div class="m1 py1 px2 border border-blue">
+  <div class="m1 py1 px2 border">
     <p>Padding</p>
-    <div class="p2 border border-blue">Content</div>
+    <div class="p2 border">Content</div>
   </div>
 </div>
 
@@ -111,8 +111,8 @@ Do not set display properties on floated elements.
 When elements are floated, they are set to display block.
 
 ```html
-<div class="border border-blue">
-  <div class="right p1 border border-blue">.right</div>
+<div class="border">
+  <div class="right p1 border">.right</div>
   <p>Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin. Bacon t-bone hamburger turkey capicola rump short loin. Drumstick pork fatback pork chop doner pork belly prosciutto pastrami sausage. Ground round prosciutto shank pastrami corned beef venison tail. Turkey short loin tenderloin jerky porchetta pork loin.</p>
 </div>
 ```
@@ -122,10 +122,10 @@ Clearfixes are used to ensure the parent element maintains the height of its con
 This container element is using the `.clearfix` class.
 
 ```html
-<div class="clearfix border border-blue">
-  <div class="left p2 border border-blue">.left</div>
-  <div class="left p2 border border-blue">.left</div>
-  <div class="right p2 border border-blue">.right</div>
+<div class="clearfix border">
+  <div class="left p2 border">.left</div>
+  <div class="left p2 border">.left</div>
+  <div class="right p2 border">.right</div>
 </div>
 ```
 
@@ -133,12 +133,12 @@ Overflow hidden crops overflowing content, but can also be used as a clearfix
 because it creates what’s called a new _block formatting context_.
 
 ```html
-<div class="border border-blue">
-  <div class="overflow-hidden border border-blue">
-    <div class="left p2 border border-blue">.left</div>
-    <div class="left p2 border border-blue">
+<div class="border">
+  <div class="overflow-hidden border">
+    <div class="left p2 border">.left</div>
+    <div class="left p2 border">
       .left
-      <div class="p1 border border-blue" style="width:64rem">wider than parent element</div>
+      <div class="p1 border" style="width:64rem">wider than parent element</div>
     </div>
   </div>
 </div>
@@ -149,17 +149,17 @@ This is the basis of the
 [Media Object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/).
 
 ```html
-<div class="clearfix border border-blue">
-  <div class="left p1 border border-blue">.left</div>
-  <p class="overflow-hidden p1 border border-blue">.overflow-hidden (overflow hidden) Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin. Bacon t-bone hamburger turkey capicola rump short loin. Drumstick pork fatback pork chop doner pork belly prosciutto pastrami sausage. Ground round prosciutto shank pastrami corned beef venison tail. Turkey short loin tenderloin jerky porchetta pork loin.</p>
+<div class="clearfix border">
+  <div class="left p1 border">.left</div>
+  <p class="overflow-hidden p1 border">.overflow-hidden (overflow hidden) Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin. Bacon t-bone hamburger turkey capicola rump short loin. Drumstick pork fatback pork chop doner pork belly prosciutto pastrami sausage. Ground round prosciutto shank pastrami corned beef venison tail. Turkey short loin tenderloin jerky porchetta pork loin.</p>
 </div>
 ```
 
 ```html
-<div class="clearfix border border-blue">
-  <div class="left p1 border border-blue">.left</div>
-  <div class="right p1 border border-blue">.right</div>
-  <p class="overflow-hidden p1 border border-blue">.overflow-hidden (overflow hidden) Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin. Bacon t-bone hamburger turkey capicola rump short loin. Drumstick pork fatback pork chop doner pork belly prosciutto pastrami sausage. Ground round prosciutto shank pastrami corned beef venison tail. Turkey short loin tenderloin jerky porchetta pork loin.</p>
+<div class="clearfix border">
+  <div class="left p1 border">.left</div>
+  <div class="right p1 border">.right</div>
+  <p class="overflow-hidden p1 border">.overflow-hidden (overflow hidden) Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin. Bacon t-bone hamburger turkey capicola rump short loin. Drumstick pork fatback pork chop doner pork belly prosciutto pastrami sausage. Ground round prosciutto shank pastrami corned beef venison tail. Turkey short loin tenderloin jerky porchetta pork loin.</p>
 </div>
 ```
 
@@ -185,11 +185,11 @@ When using percentage-based widths, remember that the percentage is based on wid
 so nesting elements with percentage-based widths will get incrementally smaller as you nest.
 
 ```html
-<div class="clearfix border border-blue">
-  <div class="left half-width py1"><div class="border border-blue">.left.half-width</div></div>
+<div class="clearfix border">
+  <div class="left half-width py1"><div class="border">.left.half-width</div></div>
   <div class="left half-width">
-    <div class="left half-width py1"><div class="border border-blue">Nested .left.half-width</div></div>
-    <div class="left half-width py1"><div class="border border-blue">Nested .left.half-width</div></div>
+    <div class="left half-width py1"><div class="border">Nested .left.half-width</div></div>
+    <div class="left half-width py1"><div class="border">Nested .left.half-width</div></div>
   </div>
 </div>
 ```
@@ -236,11 +236,11 @@ And be sure you
 before adding more than four levels.
 
 ```html
-<div class="border border-blue">
-  <div class="relative p4 border border-blue">
+<div class="border">
+  <div class="relative p4 border">
     .relative
-    <div class="absolute top-0 right-0 p1 m1 border border-blue">.absolute .top-0 .right-0</div>
-    <div class="absolute top-0 right-0 p1 m3 border border-blue">.absolute .top-0 .right-0</div>
+    <div class="absolute top-0 right-0 p1 m1 border">.absolute .top-0 .right-0</div>
+    <div class="absolute top-0 right-0 p1 m3 border">.absolute .top-0 .right-0</div>
   </div>
 </div>
 ```

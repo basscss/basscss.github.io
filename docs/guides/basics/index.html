@@ -102,11 +102,11 @@ If an element has no set width, it will shrink to fit its container.</p>
 <p>If an element has a declared width or height, padding and borders will be added to those values.
 It’s often easier to add padding and borders to child elements rather than directly to elements with set widths.
 For example, when using a grid system.</p>
-<h2 id="box-model-simulation"><a href="#box-model-simulation">Box Model Simulation</a></h2><div class="center p1 blue border border-blue">
+<h2 id="box-model-simulation"><a href="#box-model-simulation">Box Model Simulation</a></h2><div class="center p1 blue border">
   <p class="mb0">Margin</p>
-  <div class="m1 py1 px2 border border-blue">
+  <div class="m1 py1 px2 border">
     <p>Padding</p>
-    <div class="p2 border border-blue">Content</div>
+    <div class="p2 border">Content</div>
   </div>
 </div>
 
@@ -115,63 +115,63 @@ elements out of the normal document flow.
 When you float an element left or right, the content following the float will flow beside and around the element.</p>
 <p>Do not set display properties on floated elements.
 When elements are floated, they are set to display block.</p>
-<div class="Example mb2 border rounded"><div class="p2 border-bottom"><div class="border border-blue">
-  <div class="right p1 border border-blue">.right</div>
+<div class="Example mb2 border rounded"><div class="p2 border-bottom"><div class="border">
+  <div class="right p1 border">.right</div>
   <p>Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin. Bacon t-bone hamburger turkey capicola rump short loin. Drumstick pork fatback pork chop doner pork belly prosciutto pastrami sausage. Ground round prosciutto shank pastrami corned beef venison tail. Turkey short loin tenderloin jerky porchetta pork loin.</p>
 </div></div><pre class="p2 m0 border-none">
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border border-blue"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"right p1 border border-blue"</span>&gt;</span>.right<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"right p1 border"</span>&gt;</span>.right<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin. Bacon t-bone hamburger turkey capicola rump short loin. Drumstick pork fatback pork chop doner pork belly prosciutto pastrami sausage. Ground round prosciutto shank pastrami corned beef venison tail. Turkey short loin tenderloin jerky porchetta pork loin.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre></div><p>If an element contains only floated children, such as in a grid system, its height will collapse.
 Clearfixes are used to ensure the parent element maintains the height of its content.
 This container element is using the <code>.clearfix</code> class.</p>
-<div class="Example mb2 border rounded"><div class="p2 border-bottom"><div class="clearfix border border-blue">
-  <div class="left p2 border border-blue">.left</div>
-  <div class="left p2 border border-blue">.left</div>
-  <div class="right p2 border border-blue">.right</div>
+<div class="Example mb2 border rounded"><div class="p2 border-bottom"><div class="clearfix border">
+  <div class="left p2 border">.left</div>
+  <div class="left p2 border">.left</div>
+  <div class="right p2 border">.right</div>
 </div></div><pre class="p2 m0 border-none">
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix border border-blue"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left p2 border border-blue"</span>&gt;</span>.left<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left p2 border border-blue"</span>&gt;</span>.left<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"right p2 border border-blue"</span>&gt;</span>.right<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left p2 border"</span>&gt;</span>.left<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left p2 border"</span>&gt;</span>.left<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"right p2 border"</span>&gt;</span>.right<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre></div><p>Overflow hidden crops overflowing content, but can also be used as a clearfix
 because it creates what’s called a new <em>block formatting context</em>.</p>
-<div class="Example mb2 border rounded"><div class="p2 border-bottom"><div class="border border-blue">
-  <div class="overflow-hidden border border-blue">
-    <div class="left p2 border border-blue">.left</div>
-    <div class="left p2 border border-blue">
+<div class="Example mb2 border rounded"><div class="p2 border-bottom"><div class="border">
+  <div class="overflow-hidden border">
+    <div class="left p2 border">.left</div>
+    <div class="left p2 border">
       .left
-      <div class="p1 border border-blue" style="width:64rem">wider than parent element</div>
+      <div class="p1 border" style="width:64rem">wider than parent element</div>
     </div>
   </div>
 </div></div><pre class="p2 m0 border-none">
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border border-blue"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"overflow-hidden border border-blue"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left p2 border border-blue"</span>&gt;</span>.left<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left p2 border border-blue"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"overflow-hidden border"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left p2 border"</span>&gt;</span>.left<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left p2 border"</span>&gt;</span>
       .left
-      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p1 border border-blue"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"width:64rem"</span>&gt;</span>wider than parent element<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p1 border"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"width:64rem"</span>&gt;</span>wider than parent element<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre></div><p>Using overflow hidden on an element placed after one or more floated elements will prevent that element from wrapping under the floated elements.
 This is the basis of the
 <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">Media Object</a>.</p>
-<div class="Example mb2 border rounded"><div class="p2 border-bottom"><div class="clearfix border border-blue">
-  <div class="left p1 border border-blue">.left</div>
-  <p class="overflow-hidden p1 border border-blue">.overflow-hidden (overflow hidden) Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin. Bacon t-bone hamburger turkey capicola rump short loin. Drumstick pork fatback pork chop doner pork belly prosciutto pastrami sausage. Ground round prosciutto shank pastrami corned beef venison tail. Turkey short loin tenderloin jerky porchetta pork loin.</p>
+<div class="Example mb2 border rounded"><div class="p2 border-bottom"><div class="clearfix border">
+  <div class="left p1 border">.left</div>
+  <p class="overflow-hidden p1 border">.overflow-hidden (overflow hidden) Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin. Bacon t-bone hamburger turkey capicola rump short loin. Drumstick pork fatback pork chop doner pork belly prosciutto pastrami sausage. Ground round prosciutto shank pastrami corned beef venison tail. Turkey short loin tenderloin jerky porchetta pork loin.</p>
 </div></div><pre class="p2 m0 border-none">
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix border border-blue"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left p1 border border-blue"</span>&gt;</span>.left<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"overflow-hidden p1 border border-blue"</span>&gt;</span>.overflow-hidden (overflow hidden) Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin. Bacon t-bone hamburger turkey capicola rump short loin. Drumstick pork fatback pork chop doner pork belly prosciutto pastrami sausage. Ground round prosciutto shank pastrami corned beef venison tail. Turkey short loin tenderloin jerky porchetta pork loin.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre></div><div class="Example mb2 border rounded"><div class="p2 border-bottom"><div class="clearfix border border-blue">
-  <div class="left p1 border border-blue">.left</div>
-  <div class="right p1 border border-blue">.right</div>
-  <p class="overflow-hidden p1 border border-blue">.overflow-hidden (overflow hidden) Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin. Bacon t-bone hamburger turkey capicola rump short loin. Drumstick pork fatback pork chop doner pork belly prosciutto pastrami sausage. Ground round prosciutto shank pastrami corned beef venison tail. Turkey short loin tenderloin jerky porchetta pork loin.</p>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left p1 border"</span>&gt;</span>.left<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"overflow-hidden p1 border"</span>&gt;</span>.overflow-hidden (overflow hidden) Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin. Bacon t-bone hamburger turkey capicola rump short loin. Drumstick pork fatback pork chop doner pork belly prosciutto pastrami sausage. Ground round prosciutto shank pastrami corned beef venison tail. Turkey short loin tenderloin jerky porchetta pork loin.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre></div><div class="Example mb2 border rounded"><div class="p2 border-bottom"><div class="clearfix border">
+  <div class="left p1 border">.left</div>
+  <div class="right p1 border">.right</div>
+  <p class="overflow-hidden p1 border">.overflow-hidden (overflow hidden) Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin. Bacon t-bone hamburger turkey capicola rump short loin. Drumstick pork fatback pork chop doner pork belly prosciutto pastrami sausage. Ground round prosciutto shank pastrami corned beef venison tail. Turkey short loin tenderloin jerky porchetta pork loin.</p>
 </div></div><pre class="p2 m0 border-none">
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix border border-blue"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left p1 border border-blue"</span>&gt;</span>.left<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"right p1 border border-blue"</span>&gt;</span>.right<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"overflow-hidden p1 border border-blue"</span>&gt;</span>.overflow-hidden (overflow hidden) Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin. Bacon t-bone hamburger turkey capicola rump short loin. Drumstick pork fatback pork chop doner pork belly prosciutto pastrami sausage. Ground round prosciutto shank pastrami corned beef venison tail. Turkey short loin tenderloin jerky porchetta pork loin.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left p1 border"</span>&gt;</span>.left<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"right p1 border"</span>&gt;</span>.right<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"overflow-hidden p1 border"</span>&gt;</span>.overflow-hidden (overflow hidden) Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin. Bacon t-bone hamburger turkey capicola rump short loin. Drumstick pork fatback pork chop doner pork belly prosciutto pastrami sausage. Ground round prosciutto shank pastrami corned beef venison tail. Turkey short loin tenderloin jerky porchetta pork loin.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre></div><h1 id="widths"><a href="#widths">Widths</a></h1><p>The default document flow in HTML is fluid.
 This means that creating fluid and responsive layouts should be very easy to achieve.
 Avoid using fixed widths at all in your layout.
@@ -185,18 +185,18 @@ Most grid systems these days use this approach,
 along with media queries to prevent broken layouts across devices.
 When using percentage-based widths, remember that the percentage is based on width of the parent,
 so nesting elements with percentage-based widths will get incrementally smaller as you nest.</p>
-<div class="Example mb2 border rounded"><div class="p2 border-bottom"><div class="clearfix border border-blue">
-  <div class="left half-width py1"><div class="border border-blue">.left.half-width</div></div>
+<div class="Example mb2 border rounded"><div class="p2 border-bottom"><div class="clearfix border">
+  <div class="left half-width py1"><div class="border">.left.half-width</div></div>
   <div class="left half-width">
-    <div class="left half-width py1"><div class="border border-blue">Nested .left.half-width</div></div>
-    <div class="left half-width py1"><div class="border border-blue">Nested .left.half-width</div></div>
+    <div class="left half-width py1"><div class="border">Nested .left.half-width</div></div>
+    <div class="left half-width py1"><div class="border">Nested .left.half-width</div></div>
   </div>
 </div></div><pre class="p2 m0 border-none">
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix border border-blue"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left half-width py1"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border border-blue"</span>&gt;</span>.left.half-width<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left half-width py1"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>.left.half-width<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left half-width"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left half-width py1"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border border-blue"</span>&gt;</span>Nested .left.half-width<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left half-width py1"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border border-blue"</span>&gt;</span>Nested .left.half-width<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left half-width py1"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Nested .left.half-width<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left half-width py1"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Nested .left.half-width<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre></div><h1 id="media-queries-and-mobile-first-approach"><a href="#media-queries-and-mobile-first-approach">Media Queries and Mobile-First Approach</a></h1><p>When building responsive websites, best practices suggest using a mobile-first approach.
 First consider content and user flows, then create layouts that work well
@@ -228,18 +228,18 @@ If you do need to set z-index, start with the <code>.z1</code> class and work up
 And be sure you
 <a href="http://philipwalton.com/articles/what-no-one-told-you-about-z-index/">understand z-index</a>
 before adding more than four levels.</p>
-<div class="Example mb2 border rounded"><div class="p2 border-bottom"><div class="border border-blue">
-  <div class="relative p4 border border-blue">
+<div class="Example mb2 border rounded"><div class="p2 border-bottom"><div class="border">
+  <div class="relative p4 border">
     .relative
-    <div class="absolute top-0 right-0 p1 m1 border border-blue">.absolute .top-0 .right-0</div>
-    <div class="absolute top-0 right-0 p1 m3 border border-blue">.absolute .top-0 .right-0</div>
+    <div class="absolute top-0 right-0 p1 m1 border">.absolute .top-0 .right-0</div>
+    <div class="absolute top-0 right-0 p1 m3 border">.absolute .top-0 .right-0</div>
   </div>
 </div></div><pre class="p2 m0 border-none">
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border border-blue"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"relative p4 border border-blue"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"relative p4 border"</span>&gt;</span>
     .relative
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"absolute top-0 right-0 p1 m1 border border-blue"</span>&gt;</span>.absolute .top-0 .right-0<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"absolute top-0 right-0 p1 m3 border border-blue"</span>&gt;</span>.absolute .top-0 .right-0<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"absolute top-0 right-0 p1 m1 border"</span>&gt;</span>.absolute .top-0 .right-0<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"absolute top-0 right-0 p1 m3 border"</span>&gt;</span>.absolute .top-0 .right-0<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre></div><h1 id="extending-basscss"><a href="#extending-basscss">Extending Basscss</a></h1><p>You can do a lot with Basscss’s suite of styles, but if you decide to add new styles to your project,
 here are some tips and recommendations to keep your code simple and maintainable:</p>
