@@ -1,9 +1,12 @@
 
+svg,
 .icon {
   position: relative;
   top: .125em;
+}
 
-  /* For UI Guide */
+/* For UI Guide */
+.icon {
   width: 1em;
   height: 1em;
 }

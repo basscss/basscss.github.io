@@ -19,10 +19,9 @@ class Docs extends React.Component {
             <RouteHandler {...this.props} />
           </Container>
           <SideBar>
-            <div className='px1'>
-              <Link path='/'
-                text={<Logo size={24} />} />
-            </div>
+            <a href='/' className='block px2'>
+              <Logo size={24} />
+            </a>
             <Nav {...this.props} items={this.props.routes} />
           </SideBar>
           <Footer {...this.props} />

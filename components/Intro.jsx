@@ -16,17 +16,27 @@ class Intro extends React.Component {
               Lightning-Fast Modular CSS with No Side Effects
             </p>
             <p className='h3'>
-              Basscss is a lightweight collection of base element styles, immutable utilities, layout modules, and color styles designed for speed, clarity, performance, and scalability.
+              Basscss is a lightweight collection of base element styles and immutable utilities designed for speed, clarity, performance, and scalability.
             </p>
           </div>
-          <div className='m2 flex-none'>
-            <LinkBtn
-              path='/docs'
-              title='Download'
-              big />
+          <div className='flex-none py2'>
+            <div className='inline-block px2'>
+              <LinkBtn
+                path='/docs'
+                title='Download'
+                big />
+            </div>
+            <div className='inline-block px2'>
+              <LinkBtn
+                path={this.props.homepage}
+                title='GitHub'
+                outline
+                big />
+            </div>
           </div>
         </div>
-        <div className='sm-flex flex-center flex-wrap py3 mxn2'>
+        <Stats {...this.props.stats} modules={this.props.modules} />
+        <div className='sm-flex flex-center flex-wrap py1 mxn2'>
           <div className='m2'>
             <TweetButton
               text='Low-level CSS toolkit' />
@@ -41,7 +51,6 @@ class Intro extends React.Component {
             <CarbonAd />
           </div>
         </div>
-        <Stats {...this.props.stats} modules={this.props.modules} />
       </Section>
     )
   }

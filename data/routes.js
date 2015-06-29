@@ -31,14 +31,12 @@ var moduleRoutes = modules.modules
       title: mod.title
     }
   })
-  .map(mapPagination)
 
 var guideRoutes = guides
   .map(function(guide) {
     guide.path = '/docs/guides/' + guide.name
     return guide
   })
-  .map(mapPagination)
 
 var referenceRoutes = references
   .map(function(reference) {
@@ -54,6 +52,8 @@ routes.push({ path: '/docs/guides', name: 'guides', title: 'Guides' })
 routes = routes.concat(guideRoutes)
 routes.push({ path: '/docs/reference', name: 'reference', title: 'Reference' })
 routes = routes.concat(referenceRoutes)
+
+routes = routes.map(mapPagination)
 
 module.exports = routes
 

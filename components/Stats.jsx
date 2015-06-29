@@ -13,10 +13,10 @@ class Stats extends React.Component {
 
     return (
       <div className='h6 caps compact bold flex flex-justify flex-wrap mxn2'>
-        <div className='px2'>{size}</div>
-        <div className='px2'>{modules} Modules</div>
-        <div className='px2'>{rules} Rules</div>
-        <div className='px2'>{decs} Declarations</div>
+        <div className='px2 py1'>{size}</div>
+        <div className='px2 py1'>{modules} Modules</div>
+        <div className='px2 py1'>{rules} Rules</div>
+        <div className='px2 py1'>{decs} Declarations</div>
       </div>
     )
   }

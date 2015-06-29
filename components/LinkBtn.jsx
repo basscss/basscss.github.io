@@ -12,7 +12,9 @@ class LinkBtn extends React.Component {
       <a href={this.props.path}
         title={this.props.title}
         target={target}
-        className={cx('btn compact btn-primary', {
+        className={cx('btn compact', 
+        (this.props.outline ? 'btn-outline blue' : 'btn-primary'),
+        {
           block: this.props.block,
           'h4 py2': this.props.big
         })}>

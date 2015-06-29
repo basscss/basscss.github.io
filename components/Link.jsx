@@ -16,6 +16,7 @@ class Link extends React.Component {
           'p1': !this.props.flush,
           'p0 py1': this.props.flush,
           block: this.props.block,
+          'align-baseline': this.props.baseline,
           'h4': this.props.big
         })}>
         {text}
@@ -33,6 +34,7 @@ Link.propTypes = {
   block: React.PropTypes.bool,
   big: React.PropTypes.bool,
   flush: React.PropTypes.bool,
+  baseline: React.PropTypes.bool,
 }
 
 export default Link

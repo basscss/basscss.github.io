@@ -5,7 +5,7 @@ class Section extends React.Component {
 
   render () {
     return (
-      <section className='py4'>
+      <section className='py3'>
         {this.props.children}
       </section>
     )

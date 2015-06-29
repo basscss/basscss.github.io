@@ -2,7 +2,7 @@
 import React from 'react'
 import { Route, DefaultRoute } from 'react-router'
 import Root from './components/Root.jsx'
-import Index from './components/Index.jsx'
+import Home from './components/Home.jsx'
 import Docs from './components/Docs.jsx'
 import Module from './components/Module.jsx'
 import Guides from './components/Guides.jsx'
@@ -16,7 +16,7 @@ import Styles from './components/Styles.jsx'
 
 export default Routes = (
   <Route handler={Root} path='/'>
-    <DefaultRoute handler={Index} />
+    <DefaultRoute handler={Home} />
     <Route handler={Docs} path='/docs'>
       <DefaultRoute handler={GettingStarted} />
       <Route handler={OptionalModules} path='optional-modules' />

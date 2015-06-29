@@ -4,21 +4,21 @@
   "description": "Documentation page for Basscss",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test",
     "dev": "webpack-dev-server --progress --colors",
     "prod": "webpack -p --progress --colors",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "test": "mocha test"
   },
   "keywords": [
     "basscss",
     "css",
-    "oocss",
-    "documentation"
+    "documentation",
+    "oocss"
   ],
   "author": "Brent Jackson",
   "license": "MIT",
   "dependencies": {
-    "basscss": "^7.0.0-beta.6"
+    "basscss": "^7.0.0-beta.7"
   },
   "devDependencies": {
     "babel-core": "^5.6.4",

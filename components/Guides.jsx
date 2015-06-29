@@ -1,33 +1,19 @@
 
 import React from 'react'
-import PageHeader from './PageHeader.jsx'
-import Link from './Link.jsx'
+import Page from './Page.jsx'
+import LinkList from './LinkList.jsx'
 
 class Guides extends React.Component {
 
   render () {
-    let guides = this.props.guides
-    let path = this.props.router.path
+    let guides = this.props.guides.map(function(guide) {
+      guide.path = '/docs/guides/' + guide.name
+      return guide
+    })
     return (
-      <main>
-        <PageHeader
-          title='Guides'
-          path={path} />
-        <div className='mb4'>
-          {guides.map(function(guide, i) {
-            let desc = guide.description
-            return (
-              <div key={i} className='mb3'>
-                <a href={'/docs/guides/' + guide.name}
-                  className='block color-inherit'>
-                  <h3 className='m0'>{guide.title}</h3>
-                  <p>{desc}</p>
-                </a>
-              </div>
-            )
-          })}
-        </div>
-      </main>
+      <Page {...this.props.route}>
+        <LinkList items={guides} />
+      </Page>
     )
   }
 

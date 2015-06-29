@@ -38,7 +38,7 @@ class Module extends React.Component {
         </Prose>
         <hr />
         <h3>CSS Source</h3>
-        <Pre>{mod.css}</Pre>
+        <Pre>{mod.cleanCss}</Pre>
         <ModuleStats {...mod} />
         <Pagination
           previous={route.previous}
