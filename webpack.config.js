@@ -8,8 +8,8 @@ var routes = data.routes.map(function(route) {
 
 module.exports = {
   entry: {
-    docs: './docs',
-    404: './404'
+    docs: './src/docs',
+    404: './src/404'
   },
 
   output: {

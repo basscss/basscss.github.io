@@ -4,9 +4,11 @@
   "description": "Documentation page for Basscss",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -r docs",
+    "reset": "rm -r docs",
+    "404": "mv 404/index.html 404.html && rm -r 404",
+    "clean": "rm 404.bundle.js docs.bundle.js",
     "dev": "webpack-dev-server",
-    "prod": "webpack -p --progress --colors",
+    "prod": "webpack -p --progress --colors && npm run 404 && npm run clean",
     "start": "npm run dev",
     "test": "mocha test"
   },

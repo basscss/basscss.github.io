@@ -16,10 +16,12 @@ class FourOhFour extends React.Component {
     let navitems = this.props.routes.concat(this.props.links)
     return (
       <Main>
-        <Container wide>
-          <Page title='Page Not Found'
-            path='/'>
-            <h1>404</h1>
+        <Container>
+          <Page title='Page Not Found' >
+            <a href='/' className='inline-block'>
+              <Logo size={128} />
+            </a>
+            <h1 className='m0'>404</h1>
           </Page>
         </Container>
         <SideBar>
@@ -28,7 +30,7 @@ class FourOhFour extends React.Component {
           </a>
           <Nav {...this.props} items={navitems} />
         </SideBar>
-        <Footer {...this.props} wide />
+        <Footer {...this.props} />
       </Main>
     )
   }

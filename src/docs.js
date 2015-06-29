@@ -2,7 +2,7 @@
 import React from 'react'
 import { find } from 'lodash'
 import Router from 'react-router'
-import Routes from './Routes.jsx'
+import Routes from '../Routes.jsx'
 
 export default function render(locals, callback) {
   Router.run(Routes, locals.path, function (Handler, state) {
