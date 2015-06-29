@@ -262,9 +262,9 @@ Use `.y-group-item` to group elements vertically.
 
 ```html
 <div class="inline-block blue">
-  <button type="button" class="block full-width btn btn-primary y-group-item rounded-top">Burgers</button>
-  <button type="button" class="block full-width btn btn-outline y-group-item not-rounded">Fries</button>
-  <button type="button" class="block full-width btn btn-outline y-group-item rounded-bottom">Shake</button>
+  <button type="button" class="block col-12 btn btn-primary y-group-item rounded-top">Burgers</button>
+  <button type="button" class="block col-12 btn btn-outline y-group-item not-rounded">Fries</button>
+  <button type="button" class="block col-12 btn btn-outline y-group-item rounded-bottom">Shake</button>
 </div>
 ```
 
@@ -277,11 +277,11 @@ The `.hide` utility visually hides labels, while keeping them accessible to scre
 ```html
 <form class="sm-col-6">
   <label class="hide">Pancakes</label>
-  <input type="text" class="block full-width mb0 field rounded-top y-group-item" placeholder="Pancakes">
+  <input type="text" class="block col-12 field rounded-top y-group-item" placeholder="Pancakes">
   <label class="hide">Making</label>
-  <input type="password" class="block full-width mb0 field not-rounded y-group-item" placeholder="Making">
+  <input type="password" class="block col-12 field not-rounded y-group-item" placeholder="Making">
   <label class="hide">Bacon</label>
-  <input type="text" class="block full-width field rounded-bottom y-group-item" placeholder="Bacon">
+  <input type="text" class="block col-12 mb2 field rounded-bottom y-group-item" placeholder="Bacon">
   <button type="submit" class="btn btn-primary">Pancake</button>
 </form>
 ```
@@ -291,9 +291,9 @@ The grid system can be used to control button or input group widths.
 ```html
 <form class="clearfix">
   <label class="hide">Bacon</label>
-  <input type="text" class="col col-4 md-col-5 mb0 field rounded-left x-group-item" placeholder="Bacon">
+  <input type="text" class="col col-4 md-col-5 field rounded-left x-group-item" placeholder="Bacon">
   <label class="hide">Pancakes</label>
-  <input type="password" class="col col-4 md-col-5 mb0 field not-rounded x-group-item" placeholder="Pancakes">
+  <input type="password" class="col col-4 md-col-5 field not-rounded x-group-item" placeholder="Pancakes">
   <button type="submit" class="col col-4 md-col-2 btn btn-primary rounded-right">Pancake</button>
 </form>
 ```
@@ -356,7 +356,7 @@ they become the height of normal buttons and inputs plus `.py1`.
   </div>
   <div class="clearfix sm-hide"></div>
   <div class="overflow-hidden px2 py1">
-    <input type="text" class="mb0 right fit field bg-darken-1" placeholder="Search">
+    <input type="text" class="right fit field white bg-darken-1" placeholder="Search">
   </div>
 </div>
 ```
@@ -375,7 +375,7 @@ using background color utilities.
   </div>
   <div class="clearfix sm-hide"></div>
   <div class="overflow-hidden px2 py1">
-    <input type="text" class="mb0 right fit field bg-darken-1" placeholder="Search">
+    <input type="text" class="right fit field white bg-darken-1" placeholder="Search">
   </div>
 </div>
 <div class="clearfix mb2 white bg-gray">
@@ -388,7 +388,7 @@ using background color utilities.
   </div>
   <div class="clearfix sm-hide"></div>
   <div class="overflow-hidden px2 py1">
-    <input type="text" class="mb0 right fit field bg-darken-1" placeholder="Search">
+    <input type="text" class="right fit field white bg-darken-1" placeholder="Search">
   </div>
 </div>
 <div class="clearfix mb2 white bg-green">
@@ -401,7 +401,7 @@ using background color utilities.
   </div>
   <div class="clearfix sm-hide"></div>
   <div class="overflow-hidden px2 py1">
-    <input type="text" class="mb0 right fit field bg-darken-1" placeholder="Search">
+    <input type="text" class="right fit field white bg-darken-1" placeholder="Search">
   </div>
 </div>
 <div class="clearfix mb2 white bg-red">
@@ -414,7 +414,7 @@ using background color utilities.
   </div>
   <div class="clearfix sm-hide"></div>
   <div class="overflow-hidden px2 py1">
-    <input type="text" class="mb0 right fit field bg-darken-1" placeholder="Search">
+    <input type="text" class="right fit field white bg-darken-1" placeholder="Search">
   </div>
 </div>
 ```

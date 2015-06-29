@@ -11,7 +11,7 @@ module.exports = {
   title: 'Basscss',
   name: pkg.name,
   description: pkg.description,
-  author: pkg.author,
+  author: pkg.author.name,
   keywords: pkg.keywords,
   version: pkg.version,
   homepage: pkg.homepage,
@@ -23,5 +23,11 @@ module.exports = {
   references: references,
   stats: stats,
   showcase: showcase,
+  links: [
+    { path: '/stats', name: 'stats', title: 'Stats' },
+    { path: '/showcase', name: 'showcase', title: 'Showcase' },
+    { path: '/themes', name: 'themes', title: 'Themes' },
+    { path: '/customize', name: 'customize', title: 'Customize' }
+  ]
 }
 

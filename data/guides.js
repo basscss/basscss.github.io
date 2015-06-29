@@ -46,10 +46,10 @@ var guides = [
     description: 'Using NPM, Cssnext, Bower, Sass, and other tools to customize Basscss for your needs.'
   },
   {
-    name: 'css4',
-    title: 'CSS4 Syntax',
-    md: getMarkdown('css4.md'),
-    description: 'Getting started with CSS4 features, including custom properties and custom media queries'
+    name: 'future-css',
+    title: 'Future CSS Syntax',
+    md: getMarkdown('future-css.md'),
+    description: 'Getting started with bleeding edge CSS features, including custom properties and custom media queries'
   },
 ]
 

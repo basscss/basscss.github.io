@@ -14,9 +14,7 @@ class Reference extends React.Component {
     }
     return (
       <Page {...this.props.route}>
-        <Prose>
-          <div dangerouslySetInnerHTML={{ __html: body }} />
-        </Prose>
+        <Prose html={body} />
       </Page>
     )
   }

@@ -22,9 +22,7 @@ class Module extends React.Component {
           text={mod.name + ' v' + mod.version} /> 
       </div>
     )
-    let html = {
-      __html: markdown(mod.readme)
-    }
+    let html = markdown(mod.readme)
     
     return (
       <main>
@@ -33,9 +31,7 @@ class Module extends React.Component {
           path={route.path}
           meta={meta} />
         <CarbonAd />
-        <Prose>
-          <div dangerouslySetInnerHTML={html} />
-        </Prose>
+        <Prose html={html} />
         <hr />
         <h3>CSS Source</h3>
         <Pre>{mod.cleanCss}</Pre>

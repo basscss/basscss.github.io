@@ -7,10 +7,13 @@ var routes = data.routes.map(function(route) {
 })
 
 module.exports = {
-  entry: './entry.js',
+  entry: {
+    docs: './docs',
+    404: './404'
+  },
 
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: __dirname,
     libraryTarget: 'umd'
   },
@@ -33,6 +36,7 @@ module.exports = {
   },
 
   plugins: [
-    new StaticSiteGeneratorPlugin('bundle.js', routes, data)
+    new StaticSiteGeneratorPlugin('docs.bundle.js', routes, data),
+    new StaticSiteGeneratorPlugin('404.bundle.js', ['/404'], data),
   ]
 }

@@ -210,18 +210,18 @@ Setting a width on one or more columns can allow for more fine-grained control.
 ```html
 <div class="center flex-auto p2">
   <div class="flex mxn2">
-    <div class="flex-none col-6 p2"><div class="p2 border border-blue">1/2</div></div>
+    <div class="flex-none col-6 border-box p2"><div class="p2 border border-blue">1/2</div></div>
     <div class="flex-auto p2"><div class="p2 border border-blue">auto</div></div>
     <div class="flex-auto p2"><div class="p2 border border-blue">auto</div></div>
   </div>
   <div class="flex mxn2">
-    <div class="col-4 p2"><div class="p2 border border-blue">1/3</div></div>
+    <div class="col-4 border-box p2"><div class="p2 border border-blue">1/3</div></div>
     <div class="flex-auto p2"><div class="p2 border border-blue">auto</div></div>
   </div>
   <div class="flex mxn2">
-    <div class="col-3 p2"><div class="p2 border border-blue">1/4</div></div>
+    <div class="col-3 border-box p2"><div class="p2 border border-blue">1/4</div></div>
     <div class="flex-auto p2"><div class="p2 border border-blue">auto</div></div>
-    <div class="col-4 p2"><div class="p2 border border-blue">1/3</div></div>
+    <div class="col-4 border-box p2"><div class="p2 border border-blue">1/3</div></div>
   </div>
 </div>
 ```
@@ -236,24 +236,24 @@ Add `.flex-wrap` to rows where columns should wrap, and use grid column width ut
 ```html
 <div class="center p2">
   <div class="flex mxn2">
-    <div class="col-6 p2"><div class="p2 border border-blue">.col-6</div></div>
-    <div class="col-6 p2"><div class="p2 border border-blue">.col-6</div></div>
+    <div class="col-6 border-box p2"><div class="p2 border border-blue">.col-6</div></div>
+    <div class="col-6 border-box p2"><div class="p2 border border-blue">.col-6</div></div>
   </div>
   <hr>
   <div class="flex flex-wrap mxn2">
-    <div class="col-6 md-col-3 p2"><div class="p2 border border-blue">.col-6 .md-col-3</div></div>
-    <div class="col-6 md-col-3 p2"><div class="p2 border border-blue">.col-6 .md-col-3</div></div>
-    <div class="col-6 md-col-3 p2"><div class="p2 border border-blue">.col-6 .md-col-3</div></div>
-    <div class="col-6 md-col-3 p2"><div class="p2 border border-blue">.col-6 .md-col-3</div></div>
+    <div class="col-6 md-col-3 border-box p2"><div class="p2 border border-blue">.col-6 .md-col-3</div></div>
+    <div class="col-6 md-col-3 border-box p2"><div class="p2 border border-blue">.col-6 .md-col-3</div></div>
+    <div class="col-6 md-col-3 border-box p2"><div class="p2 border border-blue">.col-6 .md-col-3</div></div>
+    <div class="col-6 md-col-3 border-box p2"><div class="p2 border border-blue">.col-6 .md-col-3</div></div>
   </div>
   <hr>
   <div class="sm-flex flex-wrap mxn2">
-    <div class="sm-col-6 lg-col-2 p2"><div class="p2 border border-blue">.sm-col-6 .lg-col-2</div></div>
-    <div class="sm-col-6 lg-col-2 p2"><div class="p2 border border-blue">.sm-col-6 .lg-col-2</div></div>
-    <div class="sm-col-6 lg-col-2 p2"><div class="p2 border border-blue">.sm-col-6 .lg-col-2</div></div>
-    <div class="sm-col-6 lg-col-2 p2"><div class="p2 border border-blue">.sm-col-6 .lg-col-2</div></div>
-    <div class="sm-col-6 lg-col-2 p2"><div class="p2 border border-blue">.sm-col-6 .lg-col-2</div></div>
-    <div class="sm-col-6 lg-col-2 p2"><div class="p2 border border-blue">.sm-col-6 .lg-col-2</div></div>
+    <div class="sm-col-6 lg-col-2 border-box p2"><div class="p2 border border-blue">.sm-col-6 .lg-col-2</div></div>
+    <div class="sm-col-6 lg-col-2 border-box p2"><div class="p2 border border-blue">.sm-col-6 .lg-col-2</div></div>
+    <div class="sm-col-6 lg-col-2 border-box p2"><div class="p2 border border-blue">.sm-col-6 .lg-col-2</div></div>
+    <div class="sm-col-6 lg-col-2 border-box p2"><div class="p2 border border-blue">.sm-col-6 .lg-col-2</div></div>
+    <div class="sm-col-6 lg-col-2 border-box p2"><div class="p2 border border-blue">.sm-col-6 .lg-col-2</div></div>
+    <div class="sm-col-6 lg-col-2 border-box p2"><div class="p2 border border-blue">.sm-col-6 .lg-col-2</div></div>
   </div>
 </div>
 ```
@@ -266,8 +266,8 @@ To nest elements, add `.flex` to the column that contains nested columns.
 ```html
 <div class="center flex-auto p2">
   <div class="flex flex-center mxn2">
-    <div class="flex-auto p2"><div class="p2 border border-blue">.flex-auto</div></div>
-    <div class="sm-flex col-6 p2 border border-blue">
+    <div class="flex-auto border-box p2"><div class="p2 border border-blue">.flex-auto</div></div>
+    <div class="sm-flex col-6 border-box p2 border border-blue">
       <div class="flex-auto"><div class="p2 border border-blue">.flex-auto</div></div>
       <div class="flex-auto"><div class="p2 border border-blue">.flex-auto</div></div>
     </div>
@@ -311,7 +311,7 @@ Columns with different amounts of content should be the same height by default. 
 ```html
 <div class="px2">
   <div class="flex mxn2">
-    <div class="col-6 p2 border border-blue">
+    <div class="col-6 border-box p2 border border-blue">
       <div>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia qui tempore, odio sit ad magni eaque expedita fugit autem, error, facilis excepturi omnis. Pariatur iste possimus soluta quos, deserunt, laborum.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia qui tempore, odio sit ad magni eaque expedita fugit autem, error, facilis excepturi omnis. Pariatur iste possimus soluta quos, deserunt, laborum.</p>
@@ -320,7 +320,7 @@ Columns with different amounts of content should be the same height by default. 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia qui tempore, odio sit ad magni eaque expedita fugit autem, error, facilis excepturi omnis. Pariatur iste possimus soluta quos, deserunt, laborum.</p>
       </div>
     </div>
-    <div class="col-6 flex p2 border border-blue">
+    <div class="col-6 flex border-box p2 border border-blue">
       <div class="col-12 border border-blue">Equal height column</div>
     </div>
   </div>
@@ -338,74 +338,74 @@ This method also works well when the number of items changes dynamically.
 ```html
 <div class="p2">
   <div class="flex flex-wrap mxn2">
-    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
+    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 border-box p2">
       <div class="p1 border rounded">
         <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
-    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
+    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 border-box p2">
       <div class="p1 border rounded">
         <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
         <p class="m0">Card that is taller than the others</p>
       </div>
     </div>
-    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
+    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 border-box p2">
       <div class="p1 border rounded">
         <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
-    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
+    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 border-box p2">
       <div class="p1 border rounded">
         <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
-    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
+    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 border-box p2">
       <div class="p1 border rounded">
         <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
-    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
+    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 border-box p2">
       <div class="p1 border rounded">
         <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
-    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
+    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 border-box p2">
       <div class="p1 border rounded">
         <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
-    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
+    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 border-box p2">
       <div class="p1 border rounded">
         <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
-    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
+    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 border-box p2">
       <div class="p1 border rounded">
         <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
-    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
+    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 border-box p2">
       <div class="p1 border rounded">
         <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
-    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
+    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 border-box p2">
       <div class="p1 border rounded">
         <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>
       </div>
     </div>
-    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 p2">
+    <div class="flex col-6 sm-col-4 md-col-3 lg-col-2 border-box p2">
       <div class="p1 border rounded">
         <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="256" height="auto" />
         <p class="m0">Card</p>

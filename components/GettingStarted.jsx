@@ -2,7 +2,6 @@
 import React from 'react'
 import Page from './Page.jsx'
 import PageHeader from './PageHeader.jsx'
-import Pagination from './Pagination.jsx'
 import Prose from './Prose.jsx'
 import Pre from './Pre.jsx'
 import Link from './Link.jsx'
@@ -34,7 +33,6 @@ class GettingStarted extends React.Component {
           <Pre>{stylesheetLink}</Pre>
         </Prose>
         <hr className='m0' />
-        <Pagination next={next} />
       </Page>
     )
   }

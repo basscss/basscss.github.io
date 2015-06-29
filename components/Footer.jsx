@@ -13,6 +13,7 @@ class Footer extends React.Component {
             <div className='flex flex-wrap flex-baseline mxn1'>
               <Link path='/' title='Basscss' />
               <div className=''>v{this.props.version}</div>
+              <Link path='/docs' title='Docs' />
               <Link path='//github.com/basscss/basscss' title='GitHub' />
               <div className='flex-auto' />
               <Link path='//jxnblk.com' title='Made by Jxnblk' />

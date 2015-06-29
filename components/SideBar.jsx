@@ -1,5 +1,6 @@
 
 import React from 'react'
+import script from '../data/sidebar'
 
 class SideBar extends React.Component {
 
@@ -18,6 +19,7 @@ class SideBar extends React.Component {
       <div className='SideBar py2'
         style={styles.container}>
         {this.props.children}
+        <script dangerouslySetInnerHTML={{ __html: script }} />
       </div>
     )
   }

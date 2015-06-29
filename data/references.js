@@ -13,15 +13,18 @@ module.exports = [
   {
     name: 'principles',
     title: 'Design Principles',
-    md: getMarkdown('principles.md')
+    md: getMarkdown('principles.md'),
+    description: 'The principles behind Basscss'
   },
   {
     name: 'styles',
-    title: 'Table of Styles'
+    title: 'Table of Styles',
+    description: 'Index of all declarations'
   },
   {
     name: 'color-combinations',
-    title: 'Color Combos'
+    title: 'Color Combos',
+    description: 'List of readable color combinations'
   },
   //{
   //  name: 'resources',

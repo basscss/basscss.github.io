@@ -41,7 +41,7 @@ class ColorComboCard extends React.Component {
           {' '}
           <span className='h4'>{combo.color.hex} / {combo.combo.hex}</span>
         </h3>
-        <pre>.{combo.color.name} .bg-{combo.combo.name}</pre>
+        <pre className='p0 border-none'>.{combo.color.name} .bg-{combo.combo.name}</pre>
       </div>
     )
   }

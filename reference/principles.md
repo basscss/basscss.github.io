@@ -40,14 +40,7 @@ Complex implementations of these systems should be flexible and work independent
 
 # Organizing Principles
 
-Styles should be organized according to these high-level categories:
-
-- Base Elements
-- Immutable Utilities
-- Layout Modules
-- Color
-- Components
-
+Styles should be organized into base element and immutable utilities.
 Conceptually, these are based on smart defaults,
 basic layout considerations, volatility, and cohesion.
 
@@ -58,7 +51,6 @@ Each style should reset and style one element –
 use repetition in code when appropriate to aid in readability and comprehension.
 
 Core typographical considerations, such as typefaces and type scale should be defined here.
-Base-level element-derived utilities, such as a type scale based on headings, can be defined here.
 
 These styles should not define thematic characteristics.
 These styles should never or very rarely be overridden.
@@ -67,7 +59,7 @@ these styles should be adjusted and made less opinionated.
 
 ## Immutable Utilities
 
-Utilities provide the backbone for layout and, once set, should never be changed or extended.
+Utilities provide the backbone for typography and layout and, once set, should never be changed or extended.
 Each utility should contain as few CSS properties as possible, generally just one or two.
 Utilities should do one thing and do it well,
 they should be simple and obvious to use,
@@ -76,38 +68,14 @@ and they should operate independently.
 The values used for utilities, such as white space scales, may change over time,
 but the utilities themselves and their naming conventions should not.
 
-Utilities should not define thematic characteristics, such as colors and borders.
-
-## Layout Modules
-
-Layout modules imply relationships between elements and are often tied to various markup structures.
-These include things like grid systems and the media object.
-Once these are defined they should rarely be changed and carefully handled when they do.
-Layout modules should operate independently of thematic styles,
-be highly reusable, and conform to consistent design layout patterns.
-
-## Color
-
-The word _color_ is used loosely here to describe
-the surface-level aspects of a design, including
-colors, backgrounds, borders, shadows and other properties
-that are decorative and highly likely to change over time.
-They should be kept completely separate from structural styles,
-and they should be applied directly to the elements they affect whenever possible.
-Avoid parent selectors and contextual styles.
-
-A suite of color utilities for common styles, such as foreground and background colors, borders, and transitions,
-will allow for flexibility and future stylistic changes.
-
-## Components
+## A Note on Components
 
 Components have high cohesion with HTML and Javascript.
 That is, they are interdependent and inseparable.
 Naming conventions and organization of components are highly dependent on
 application architecture and templating engines.
 
-Basscss is unopinionated in component implementation but suggests the utilization of folder structure and naming conventions similar to those proposed in
-[BEM](http://bem.info) and [Suitcss](http://suitcss.github.io)
+Basscss is unopinionated in component implementation but suggests the utilization of folder structure and naming conventions similar to those proposed in [Suitcss](http://suitcss.github.io)
 to clearly distinguish components from low-level styles.
 
 Implementation aside, these general guidelines can help create components on top of Basscss:
@@ -115,9 +83,13 @@ Implementation aside, these general guidelines can help create components on top
 - Components should follow the open/closed principle, and should not be defined early on, but created in a highly-reusable fashion once patterns arise.
 - Base component structural styles should be clearly separated from related thematic extensions.
 - For large, scalable applications, modifying existing components and introducing new components should follow a standardized process.
-- With a small enough team, these are generally unnecessary.
+- CSS-only components are generally unnecessary.
 
 # Naming Conventions
+
+The naming conventions in Basscss are intentionally short and simple to promote
+understanding, internalization, and clarity.
+This simple, straightforward naming convention reflects the simplicity of the styles themselves.
 
 Avoid naming conventions that imply relationships to specific parts of a user interface.
 Content-derived names discourage reuse and often result in bloated, duplicative code,
@@ -127,9 +99,5 @@ Presentational names promote wide reuse but require more coordination outside of
 Depending on the size, skill, and familiarity of the team, some naming conventions may work better than others.
 
 Keep javascript selectors completely separate from stylistic ones and use a prefix convention, such as `.js-`, to denote them as being separate.
-
-The naming conventions in Basscss are intentionally short and simple to promote
-understanding, internalization, and clarity.
-This simple, straightforward naming convention reflects the simplicity of the styles themselves.
 
 

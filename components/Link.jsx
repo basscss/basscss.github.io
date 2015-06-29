@@ -13,6 +13,7 @@ class Link extends React.Component {
         title={this.props.title}
         target={target}
         className={cx('btn compact btn-link', {
+          'btn-small': this.props.compact,
           'p1': !this.props.flush,
           'p0 py1': this.props.flush,
           block: this.props.block,
@@ -35,6 +36,7 @@ Link.propTypes = {
   big: React.PropTypes.bool,
   flush: React.PropTypes.bool,
   baseline: React.PropTypes.bool,
+  compact: React.PropTypes.bool,
 }
 
 export default Link

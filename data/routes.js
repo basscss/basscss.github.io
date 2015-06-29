@@ -45,12 +45,12 @@ var referenceRoutes = references
   })
 
 var routes = [{ path: '/', title: 'Basscss' }]
-routes.push({ path: '/docs', title: 'Docs' })
+routes.push({ path: '/docs', title: 'Getting Started' })
 routes = routes.concat(moduleRoutes)
 routes.push({ path: '/docs/optional-modules', title: 'Optional Modules' })
-routes.push({ path: '/docs/guides', name: 'guides', title: 'Guides' })
+routes.push({ path: '/docs/guides', name: 'guides', title: 'Guides', index: true })
 routes = routes.concat(guideRoutes)
-routes.push({ path: '/docs/reference', name: 'reference', title: 'Reference' })
+routes.push({ path: '/docs/reference', name: 'reference', title: 'Reference', index: true })
 routes = routes.concat(referenceRoutes)
 
 routes = routes.map(mapPagination)

@@ -4,8 +4,8 @@
   and can be used in conjunction with many other frameworks, libraries, and stylesheets.
 </p>
 
-# CSS4
-Basscss is written in CSS4 and uses [cssnext](https://cssnext.github.io/) to post-process down to CSS3 for use in today’s browsers. Basscss can also be post-processed with [Rework](https://github.com/reworkcss/rework). To learn more about using CSS4 features, see the [CSS4 Guide](/docs/guides/css4).
+# Future CSS
+Basscss is written in spec-compliant CSS with bleeding edge features and uses [cssnext](https://cssnext.github.io/) to transpile to CSS that is compatible with today’s browsers. Basscss can also be transpiles with [Rework](https://github.com/reworkcss/rework). To learn more about using future CSS features, see the [Future CSS Guide](/docs/guides/css4).
 
 
 # Bassplate

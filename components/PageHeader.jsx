@@ -13,7 +13,7 @@ class PageHeader extends React.Component {
           <div className='flex flex-center flex-wrap'>
             <div className='flex-auto'>
               <div className='mxn1'>
-                <Link path='/' title='Basscss' />
+                <Link path='/' title='Basscss' compact />
               </div>
               <h1 className='m0'>{this.props.title}</h1>
             </div>

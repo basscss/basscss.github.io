@@ -8,14 +8,11 @@ class Guide extends React.Component {
 
   render () {
     let guide = this.props.guide
-    let html = {
-      __html: markdown(guide.md)
-    }
+    let html = markdown(guide.md)
+
     return (
       <Page {...guide}>
-        <Prose>
-          <div dangerouslySetInnerHTML={html} />
-        </Prose>
+        <Prose html={html} />
       </Page>
     )
   }

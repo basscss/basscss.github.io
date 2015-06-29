@@ -7,13 +7,20 @@ import Link from './Link.jsx'
 class Styles extends React.Component {
 
   render () {
+    let styles = {
+      section: {
+        clear: 'both'
+      }
+    }
+
     return (
       <Page {...this.props.route}>
         {this.props.modules.map(function(mod, i) {
           return (
             <section key={i}
               id={mod.slug}
-              className='py3'>
+              className='py3'
+              style={styles.section}>
               <div className='flex flex-wrap'>
                 <h2 className='flex-auto m0'>
                   <a href={'#' + mod.slug}>

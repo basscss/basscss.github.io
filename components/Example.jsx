@@ -11,7 +11,7 @@ class Example extends React.Component {
       <div className='Example mb2 border rounded'>
         <div className='p2 border-bottom'
           dangerouslySetInnerHTML={{ __html: this.props.html }} />
-        <pre className='p2 m0'
+        <pre className='p2 m0 border-none'
           dangerouslySetInnerHTML={{ __html: code }} />
       </div>
     )

@@ -13,6 +13,7 @@ import GettingStarted from './components/GettingStarted.jsx'
 import OptionalModules from './components/OptionalModules.jsx'
 import ColorCombinations from './components/ColorCombinations.jsx'
 import Styles from './components/Styles.jsx'
+import FourOhFour from './components/404.jsx'
 
 export default Routes = (
   <Route handler={Root} path='/'>
@@ -33,6 +34,7 @@ export default Routes = (
       </Route>
       <Route handler={Module} path=':module' />
     </Route>
+    <Route handler={FourOhFour} path='404' />
   </Route>
 )
 

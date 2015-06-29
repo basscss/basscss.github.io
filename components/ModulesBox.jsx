@@ -10,7 +10,7 @@ class ModulesBox extends React.Component {
   render () {
     return (
       <Section>
-        <h2 className='m0'>Modular, Literally</h2>
+        <h2 className='mt0'>Modular, Literally</h2>
         <p className=''>
           Basscss is composed of <b>{this.props.modules.length}</b> modules - each available in standalone format on npm.
         </p>

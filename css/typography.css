@@ -11,7 +11,13 @@ hr {
 
 code {
   border-bottom: 2px solid var(--darken-2);
-  border-radius: 0;
+}
+
+pre {
+  padding-left: var(--space-2);
+  padding-right: var(--space-2);
+  overflow: auto;
+  border-left: 4px solid var(--darken-1);
 }
 
 .compact { font-family: var(--compact-font-family) }

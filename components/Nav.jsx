@@ -9,13 +9,14 @@ class Nav extends React.Component {
     let path = this.props.router.path
 
     return (
-      <nav>
+      <nav id='menu'>
         <ul className='list-reset clearfix'>
           {this.props.items.map(function(item, i) {
             let active = item.path === path
             return (
               <li key={i}
                 className={cx('col col-6 sm-col-12', {
+                  'mt2': item.index,
                   active: active
                 })}>
                 <NavItem {...item} block active={active} />

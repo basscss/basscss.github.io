@@ -1,6 +1,6 @@
 
 <p class="h3">
-  Custom media queries and custom properties are powerful CSS4 features that
+  Custom media queries and custom properties are powerful CSS features that
   provide more flexibility than similar features found in CSS preprocessors such as Sass and Less,
   with the potential for native browser support in the near future.
   With post-processors like [cssnext](https://cssnext.github.io) and [Rework](https://github.com/reworkcss/rework), you can start using these features today.
@@ -103,7 +103,7 @@ Use the extension-name within an `@media` rule to use the value.
 }
 ```
 
-# Other CSS4 features
+# Other CSS features
 
 Cssnext also supports these features:
 
