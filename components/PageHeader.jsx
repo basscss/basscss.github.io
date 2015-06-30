@@ -10,7 +10,7 @@ class PageHeader extends React.Component {
     return (
       <div className='mb3'>
         <Header>
-          <div className='flex flex-center flex-wrap'>
+          <div className='sm-flex flex-center flex-wrap'>
             <div className='flex-auto'>
               <div className='mxn1'>
                 <Link path='/' title='Basscss' compact />
