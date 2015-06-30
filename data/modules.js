@@ -1,31 +1,21 @@
 
-var path = require('path')
-var moduleInfo = require('get-module-info')
 var titleCase = require('title-case')
-var marked = require('marked')
-var renderer = require('./marked-renderer')
-var bmods = require('basscss/package.json').basscss
-var obj = {}
+var moduleInfo = require('get-module-info')
+var path = require('path')
 
-function getModules(name) {
-  var opts = opts || {}
-  var mod = moduleInfo(name, { dirname: path.join(__dirname, '../node_modules/basscss') })
-  var title = mod.title.replace(/^Basscss\-/, '')
-  mod.title = titleCase(title)
-  mod.body = marked(mod.readme, { renderer: renderer })
-  mod.content = mod.body
-  mod.path = '/' + mod.name.replace(/^basscss\-/,'')
-  mod.module = true
+var moduleNames = require('basscss').modules
+var optionalModuleNames = require('basscss').optional_modules
+var dir = path.join(__dirname, '..')
+
+function mapModules(name) {
+  var mod = moduleInfo(name, { dirname: dir }) || {}
+  mod.title = titleCase(mod.title.replace(/^Basscss\-/, '').replace(/\-/, ' '))
+  mod.slug = name.replace(/^basscss\-/, '')
   return mod
 }
 
-var modules = bmods.modules.map(getModules)
-var optionals = bmods.optional_modules.map(getModules)
-optionals = optionals.map(function(m) {
-  m.optional = true
-  return m
-})
-
+modules = moduleNames.map(mapModules)
+optionals = optionalModuleNames.map(mapModules)
 
 module.exports = {
   modules: modules,

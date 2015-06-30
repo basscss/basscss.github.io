@@ -1,0 +1,8 @@
+
+.Prose .Example {
+  clear: both;
+}
+
+.Prose > p:first-child {
+  font-size: var(--h3);
+}

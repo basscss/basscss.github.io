@@ -1,0 +1,32 @@
+
+@import 'basscss';
+@import 'basscss-highlight';
+
+@import './StylesTable';
+@import './typography';
+@import './layout';
+@import './icon';
+@import './buttons';
+
+@import './SideBar';
+@import './Main';
+@import './Prose';
+@import './Example';
+@import './carbonads';
+
+:root {
+  --font-family: 'SF UI Text', Roboto, 'Helvetica Neue', Helvetica, sans-serif;
+  --compact-font-family: 'SF Compact Text', Roboto, 'Helvetica Neue', Helvetica, sans-serif;
+  /*
+  --compact-font-family: var(--font-family);
+  --h4: 1.125rem;
+  */
+  --line-height: 1.625;
+  --button-font-size: var(--h5);
+  --bold-font-weight: 500;
+  --heading-font-weight: 500;
+  --container-width: 52rem;
+  --pre-font-size: 87.5%;
+  --pre-border-radius: 0;
+}
+
