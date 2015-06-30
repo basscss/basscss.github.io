@@ -16,7 +16,7 @@ class CTA extends React.Component {
           <div className='flex-none px2 py1'>
             <LinkBtn
               path='/docs'
-              title='Download'
+              title='Get Started'
               big />
           </div>
           <div className='flex-none px2 py1'>
