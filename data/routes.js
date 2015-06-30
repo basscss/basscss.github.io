@@ -1,5 +1,4 @@
 
-var titleCase = require('title-case')
 var basspkg = require('basscss/package.json').basscss
 var modules = require('./modules')
 var guides = require('./guides')
