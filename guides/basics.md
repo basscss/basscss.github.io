@@ -186,10 +186,10 @@ so nesting elements with percentage-based widths will get incrementally smaller 
 
 ```html
 <div class="clearfix border">
-  <div class="left half-width py1"><div class="border">.left.half-width</div></div>
-  <div class="left half-width">
-    <div class="left half-width py1"><div class="border">Nested .left.half-width</div></div>
-    <div class="left half-width py1"><div class="border">Nested .left.half-width</div></div>
+  <div class="left col-6 py1"><div class="border">.left.col-6</div></div>
+  <div class="left col-6">
+    <div class="left col-6 py1"><div class="border">Nested .left.col-6</div></div>
+    <div class="left col-6 py1"><div class="border">Nested .left.col-6</div></div>
   </div>
 </div>
 ```

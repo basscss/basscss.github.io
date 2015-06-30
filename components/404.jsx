@@ -17,11 +17,12 @@ class FourOhFour extends React.Component {
     return (
       <Main>
         <Container>
-          <Page title='Page Not Found'>
-            <a href='/' className='inline-block'>
-              <Logo size={128} />
-            </a>
-            <h1 className='m0'>404</h1>
+          <Page title='404: Page Not Found'>
+            <div className='center'>
+              <a href='/' className='inline-block'>
+                <Logo size={512} />
+              </a>
+            </div>
           </Page>
         </Container>
         <SideBar>

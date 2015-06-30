@@ -25,7 +25,7 @@ class Index extends React.Component {
             </div>
             <h1 className='m0'>Basscss</h1>
             <p className='h3 bold'>
-              {this.props.description} v{this.props.version}
+              {this.props.description} <span className='h5'>v{this.props.version}</span>
             </p>
           </Header>
           <Intro {...this.props} />

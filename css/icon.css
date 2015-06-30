@@ -1,4 +1,9 @@
 
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
 svg,
 .icon {
   position: relative;

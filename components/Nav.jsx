@@ -15,11 +15,15 @@ class Nav extends React.Component {
             let active = item.path === path
             return (
               <li key={i}
-                className={cx('col col-6 sm-col-12', {
-                  'mt2': item.index,
+                className={cx('col sm-col-12', {
+                  'col col-6': !item.index,
+                  'clear col-12 mt3': item.index,
                   active: active
                 })}>
-                <NavItem {...item} block active={active} />
+                <NavItem {...item}
+                  block
+                  caps={item.index}
+                  active={active} />
               </li>
             )
           })}

@@ -17,7 +17,7 @@ class ModulesBox extends React.Component {
         <Row>
           {this.props.modules.map(function(mod, i) {
             return (
-              <Col sm={6} md={3} key={i} compact>
+              <Col xs={6} md={3} key={i} compact>
                 <Link {...mod}
                   path={'/docs/' + mod.slug}
                   flush
