@@ -12,15 +12,10 @@
 @import './Main';
 @import './Prose';
 @import './Example';
-@import './carbonads';
 
 :root {
   --font-family: 'SF UI Text', Roboto, 'Helvetica Neue', Helvetica, sans-serif;
   --compact-font-family: 'SF Compact Text', Roboto, 'Helvetica Neue', Helvetica, sans-serif;
-  /*
-  --compact-font-family: var(--font-family);
-  --h4: 1.125rem;
-  */
   --line-height: 1.625;
   --button-font-size: var(--h5);
   --bold-font-weight: 500;

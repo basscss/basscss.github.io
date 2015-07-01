@@ -1,6 +1,5 @@
 
 import React from 'react'
-import { CarbonAd } from 'blk'
 import Logo from 'basscss-logo'
 import Container from './Container.jsx'
 import Header from './Header.jsx'

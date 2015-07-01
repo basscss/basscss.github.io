@@ -1,5 +1,6 @@
 
 import React from 'react'
+import carboncss from '../css/carbonads.css'
 import { TweetButton, GithubButton, CarbonAd } from 'blk'
 import Section from './Section.jsx'
 import LinkBtn from './LinkBtn.jsx'
@@ -48,6 +49,7 @@ class Intro extends React.Component {
           </div>
           <div className='flex-auto' />
           <div className='flex-none m2'>
+            <style dangerouslySetInnerHTML={{ __html: carboncss }} />
             <CarbonAd />
           </div>
         </div>
