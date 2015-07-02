@@ -12,6 +12,8 @@ import Showcase from './Showcase.jsx'
 import CTA from './CTA.jsx'
 import Footer from './Footer.jsx'
 
+import HomeNav from './HomeNav.jsx'
+
 class Index extends React.Component {
 
   render () {
@@ -19,13 +21,20 @@ class Index extends React.Component {
       <div>
         <Container wide>
           <Header>
-            <div className='blue'>
-              <Logo />
+            <div className='md-flex flex-center'>
+              <div className='flex-auto'>
+                <div className='blue'>
+                  <Logo />
+                </div>
+                <h1 className='m0'>Basscss</h1>
+                <p className='h3 bold'>
+                  {this.props.description} <span className='h5'>v{this.props.version}</span>
+                </p>
+              </div>
+              <div>
+                <HomeNav />
+              </div>
             </div>
-            <h1 className='m0'>Basscss</h1>
-            <p className='h3 bold'>
-              {this.props.description} <span className='h5'>v{this.props.version}</span>
-            </p>
           </Header>
           <Intro {...this.props} />
           <ValueProps />

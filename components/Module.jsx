@@ -1,5 +1,6 @@
 
 import React from 'react'
+import carboncss from '../css/carbonads.css'
 import { CarbonAd } from 'blk'
 import markdown from '../util/markdown'
 import PageHeader from './PageHeader.jsx'
@@ -31,6 +32,7 @@ class Module extends React.Component {
           path={route.path}
           meta={meta} />
         <CarbonAd />
+        <style dangerouslySetInnerHTML={{ __html: carboncss }} />
         <Prose html={html} />
         <hr />
         <h3>CSS Source</h3>
