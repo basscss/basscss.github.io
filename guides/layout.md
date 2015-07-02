@@ -33,7 +33,7 @@ By not defining a column width, each side will be as wide as its contents.
 # Hero Banner
 
 Next create a hero banner using utility styles.
-Note: This example uses the optional `basscss-utility-headings` module for the large heading.
+Note: This example uses the optional `basscss-background-images` and `basscss-utility-headings` modules for the large heading.
 
 ```html
 <header class="center px3 py4 white bg-gray bg-cover bg-center"
@@ -313,10 +313,5 @@ Note the container is placed inside the footer element to control max-width.
   </div>
 </footer>
 ```
-
-
-<p class="h3">
-  Be sure to check out the other guides to learn more about using Basscss.
-</p>
 
 
