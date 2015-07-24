@@ -9,10 +9,15 @@ import Link from './Link.jsx'
 class GettingStarted extends React.Component {
 
   render () {
-    let stylesheetLink = [
-      '<link href="http://d2v52k3cl9vedd.cloudfront.net/basscss/',
+    let cdnLink = [
+      'http://d2v52k3cl9vedd.cloudfront.net/basscss/',
       this.props.version,
-      '/basscss.min.css" rel="stylesheet">'
+      '/basscss.min.css'
+    ].join('')
+    let stylesheetLink = [
+      '<link href="',
+      cdnLink,
+      '" rel="stylesheet">'
     ].join('')
     let next = this.props.route.next
 
@@ -29,7 +34,7 @@ class GettingStarted extends React.Component {
               Download Source
             </a>
           </div>
-          <p>Or use the CDN link:</p>
+          <p>Or use the <a href={cdnLink}>CDN link</a>:</p>
           <Pre>{stylesheetLink}</Pre>
         </Prose>
         <hr className='m0' />
