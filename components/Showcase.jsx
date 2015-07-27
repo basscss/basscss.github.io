@@ -8,7 +8,7 @@ import Link from './Link.jsx'
 class Showcase extends React.Component {
 
   render () {
-    let assetPath = this.props.asset_path
+    let assetPath = this.props.cdn
     return (
       <Section>
         <h2 className='inline-block mr1'>
