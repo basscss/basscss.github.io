@@ -16,7 +16,7 @@ class Nav extends React.Component {
             return (
               <li key={i}
                 className={cx('col sm-col-12', {
-                  'col col-6': !item.index,
+                  'col-6': !item.index,
                   'clear col-12 mt3': item.index,
                   active: active
                 })}>
