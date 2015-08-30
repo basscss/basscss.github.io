@@ -47,7 +47,6 @@
     "react": "^0.13.3",
     "react-geomicons": "^2.0.4",
     "react-router": "^0.13.3",
-    "showcase": "git://github.com/basscss/showcase",
     "static-site-generator-webpack-plugin": "^1.0.0",
     "title-case": "^1.1.0",
     "webpack": "^1.9.11",

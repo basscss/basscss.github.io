@@ -5,7 +5,7 @@ var modules = require('./modules')
 var guides = require('./guides')
 var references = require('./references')
 var stats = require('./stats')
-var showcase = require('showcase/data')
+// var showcase = require('showcase/data')
 
 module.exports = {
   title: 'Basscss',
@@ -22,7 +22,7 @@ module.exports = {
   guides: guides,
   references: references,
   stats: stats,
-  showcase: showcase,
+  // showcase: showcase,
   links: [
     { path: '/stats', name: 'stats', title: 'Stats' },
     { path: '/showcase', name: 'showcase', title: 'Showcase' },

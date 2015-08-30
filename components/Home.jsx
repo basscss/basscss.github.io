@@ -8,7 +8,7 @@ import ValueProps from './ValueProps.jsx'
 import Categories from './Categories.jsx'
 import ModulesBox from './ModulesBox.jsx'
 import Principles from './Principles.jsx'
-import Showcase from './Showcase.jsx'
+// import Showcase from './Showcase.jsx'
 import CTA from './CTA.jsx'
 import Footer from './Footer.jsx'
 
@@ -42,8 +42,10 @@ class Index extends React.Component {
           <Categories />
           <hr className='mt0' />
           <ModulesBox {...this.props} />
-          <hr />
-          <Showcase {...this.props.showcase} />
+          {/*
+            <hr />
+            <Showcase {...this.props.showcase} />
+          */}
           <hr className='mb4' />
           <CTA {...this.props} />
         </Container>
