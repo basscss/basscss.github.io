@@ -1,6 +1,6 @@
 
 
-export default sidebarScript = `
+const sidebarScript = `
   var sidebar = document.querySelector('.SideBar');
   function debounce(func, wait) {
     var timeout;
@@ -23,4 +23,6 @@ export default sidebarScript = `
   });
   sidebar.scrollTop = getPosition();
 `
+
+export default sidebarScript
 

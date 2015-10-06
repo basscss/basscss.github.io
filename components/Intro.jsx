@@ -50,7 +50,7 @@ class Intro extends React.Component {
           <div className='flex-auto' />
           <div className='flex-none m2'>
             <style dangerouslySetInnerHTML={{ __html: carboncss }} />
-            <CarbonAd />
+            <CarbonAd placement='basscsscom' />
           </div>
         </div>
       </Section>

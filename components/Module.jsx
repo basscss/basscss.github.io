@@ -20,18 +20,18 @@ class Module extends React.Component {
         <Link path={mod.npm_link}
           title='View on npm'
           external
-          text={mod.name + ' v' + mod.version} /> 
+          text={mod.name + ' v' + mod.version} />
       </div>
     )
     let html = markdown(mod.readme)
-    
+
     return (
       <main>
         <PageHeader
           {...mod}
           path={route.path}
           meta={meta} />
-        <CarbonAd />
+        <CarbonAd placement='basscsscom' />
         <style dangerouslySetInnerHTML={{ __html: carboncss }} />
         <Prose html={html} />
         <hr />

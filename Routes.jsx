@@ -15,7 +15,7 @@ import ColorCombinations from './components/ColorCombinations.jsx'
 import Styles from './components/Styles.jsx'
 import FourOhFour from './components/404.jsx'
 
-export default Routes = (
+const Routes = (
   <Route handler={Root} path='/'>
     <DefaultRoute handler={Home} />
     <Route handler={Docs} path='/docs'>
@@ -37,4 +37,6 @@ export default Routes = (
     <Route handler={FourOhFour} path='404' />
   </Route>
 )
+
+export default Routes
 

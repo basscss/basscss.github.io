@@ -12,7 +12,7 @@ class Page extends React.Component {
     return (
       <main>
         <PageHeader {...this.props} />
-        <CarbonAd />
+        <CarbonAd placement='basscsscom' />
         <style dangerouslySetInnerHTML={{ __html: carboncss }} />
         {this.props.children}
         <Pagination {...this.props} />
