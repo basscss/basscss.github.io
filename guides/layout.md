@@ -4,6 +4,7 @@
   This guide will walk you through common layout patterns to create an entire page with a basic information hierarchy.
 </p>
 
+Note: this guide makes use of the optional <a href="https://www.npmjs.com/package/basscss-background-images" target="_blank">Background Images</a> and <a href="https://www.npmjs.com/package/basscss-utility-headings" target="_blank">Utility Heading</a> modules that are not included in the default Basscss package.
 
 # Global Navigation
 
