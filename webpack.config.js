@@ -1,15 +1,11 @@
 
+var webpack = require('webpack')
 var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
-var data = require('./data')
-
-var routes = data.routes.map(function(route) {
-  return route.path
-})
 
 module.exports = {
   entry: {
     docs: './src/docs',
-    404: './src/404'
+    dev: './src/dev'
   },
 
   output: {
@@ -20,23 +16,24 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /(\.js$|\.jsx$)/, exclude: /node_modules/, loader: 'babel-loader' },
-      { test: /\.json$/, loader: 'json-loader' },
-      { test: /\.css$/, exclude: /^colors\.css/, loader: 'css-loader!cssnext-loader' },
-      { test: /\.png$/, loader: 'file-loader?name=/images/[hash].[ext]' }
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
+      {
+        test: /\.css$/,
+        loader: 'css-loader'
+      }
     ]
   },
 
-  cssnext: {
-    compress: true,
-    features: {
-      colorRgba: false,
-      rem: false,
-    }
-  },
-
   plugins: [
-    new StaticSiteGeneratorPlugin('docs.bundle.js', routes, data),
-    new StaticSiteGeneratorPlugin('404.bundle.js', ['/404'], data),
+    new StaticSiteGeneratorPlugin('docs.bundle.js', ['/'], {})
   ]
 }
+
