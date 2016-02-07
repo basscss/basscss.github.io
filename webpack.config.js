@@ -7,6 +7,8 @@ var postcssImport = require('postcss-import')
 var postcssCustomProperties = require('postcss-custom-properties')
 var postcssColorFunction = require('postcss-color-function')
 
+var pkg = require('basscss/package.json')
+
 var renderer = new marked.Renderer()
 
 renderer.code = markedExample({
@@ -62,6 +64,10 @@ module.exports = {
           'css',
           'postcss'
         ]
+      },
+      {
+        test: /\.png$/,
+        loader: 'file-loader?name=/images/[hash].[ext]'
       }
     ]
   },
@@ -70,7 +76,7 @@ module.exports = {
     new StaticSiteGeneratorPlugin('docs.bundle.js', [
       '/',
       '/404.html'
-    ], {}),
+    ], pkg),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],

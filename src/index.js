@@ -9,9 +9,9 @@ module.exports = function render(locals, callback) {
   let html
 
   if (locals.path.match(/404/)) {
-    html = ReactDOMServer.renderToString(<Root {...locals} children={<NotFound />} />)
+    html = ReactDOMServer.renderToStaticMarkup(<Root {...locals} children={<NotFound />} />)
   } else {
-    html = ReactDOMServer.renderToString(<Root {...locals} children={<Home />} />)
+    html = ReactDOMServer.renderToStaticMarkup(<Root {...locals} children={<Home />} />)
   }
 
   callback(null, `<!DOCTYPE html>${html}`)
