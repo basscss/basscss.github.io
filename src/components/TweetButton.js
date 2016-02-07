@@ -6,7 +6,7 @@ const script = {
 }
 
 const TweetButton = ({ text, url, large, ...props }) => (
-  <div className='inline-block'>
+  <div style={{ height: 28 }}>
     <a href='https://twitter.com/share'
       className='twitter-share-button'
       data-text={text}

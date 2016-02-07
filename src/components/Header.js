@@ -2,6 +2,7 @@
 import React from 'react'
 import Logo from 'basscss-logo'
 import TweetButton from './TweetButton'
+import GithubBadge from './GithubBadge'
 import NpmBadge from './NpmBadge'
 import TravisBadge from './TravisBadge'
 import CarbonAd from './CarbonAd'
@@ -42,10 +43,7 @@ const Header = ({ name, version, modules, stats, ...props}) => (
           text='Basscss: Low-Level CSS Toolkit'
           url='http://basscss.com' />
         <Space />
-        <a href='//github.com/basscss/basscss'>
-          <img src='//img.shields.io/github/stars/basscss/basscss.svg?style=social&label=Star'
-            height='20px' />
-        </a>
+        <GithubBadge />
         <Space />
         <TravisBadge />
         <Space />
