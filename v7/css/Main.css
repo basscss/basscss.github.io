@@ -1,0 +1,6 @@
+
+@media (--breakpoint-sm) {
+  .Main {
+    margin-left: 12rem;
+  }
+}

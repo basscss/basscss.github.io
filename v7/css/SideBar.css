@@ -1,0 +1,13 @@
+
+.SideBar {
+  border-top: var(--border-width) solid var(--border-color);
+}
+
+@media (--breakpoint-sm) {
+  .SideBar {
+    position: fixed;
+    width: 12rem;
+    border-top: 0;
+    border-right: var(--border-width) solid var(--border-color);
+  }
+}

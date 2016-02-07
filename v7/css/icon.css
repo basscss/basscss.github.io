@@ -1,0 +1,18 @@
+
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+svg,
+.icon {
+  position: relative;
+  top: .125em;
+}
+
+/* For UI Guide */
+.icon {
+  width: 1em;
+  height: 1em;
+}
+
