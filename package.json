@@ -4,9 +4,8 @@
   "description": "Documentation page for Basscss",
   "scripts": {
     "clean": "rm dev.bundle.js docs.bundle.js",
-    "dev": "webpack-dev-server",
-    "prod": "webpack -p --progress --colors && npm run clean",
-    "start": "npm run dev"
+    "build": "webpack --colors && npm run clean",
+    "start": "webpack-dev-server"
   },
   "keywords": [
     "basscss",
@@ -16,14 +15,14 @@
   ],
   "author": "Brent Jackson",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
     "babel": "^6.3.26",
     "babel-loader": "^6.2.2",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
-    "basscss-highlight": "^0.1.0",
+    "basscss-basic": "^1.0.0",
+    "basscss-highlight": "^0.2.0-beta2",
     "basscss-logo": "^1.0.0",
     "css-loader": "^0.23.1",
     "cssstats": "^2.1.3",
@@ -46,5 +45,8 @@
     "static-site-generator-webpack-plugin": "^2.0.1",
     "webpack": "^1.12.13",
     "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "basscss": "^8.0.0-beta3"
   }
 }
