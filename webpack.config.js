@@ -20,7 +20,7 @@ renderer.code = markedExample({
 module.exports = {
   entry: {
     docs: [
-      './src/docs'
+      './src/index'
     ],
     dev: [
       'webpack-dev-server/client?http://localhost:8080',
