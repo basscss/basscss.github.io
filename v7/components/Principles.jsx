@@ -28,7 +28,7 @@ class Principles extends React.Component {
             <h3>Balance Consistency with Flexibility</h3>
           </Col>
         </Row>
-        <Link path='/docs/reference/principles'
+        <Link path='/v7/docs/reference/principles'
           title='Read more'
           big
           flush />

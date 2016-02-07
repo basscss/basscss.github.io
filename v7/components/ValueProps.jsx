@@ -42,8 +42,8 @@ class ValueProps extends React.Component {
         </Row>
         <div>
           <Link
-            path='/docs/reference/principles'
-            title='Read more about Basscss’s design principles' 
+            path='/v7/docs/reference/principles'
+            title='Read more about Basscss’s design principles'
             flush
             big />
         </div>

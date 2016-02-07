@@ -14,7 +14,7 @@ class LinkList extends React.Component {
           return (
             <li key={i}
               className='mb3'>
-              <a href={item.path}
+              <a href={`/v7${item.path}`}
                 className='block color-inherit'>
                 <h3 className='m0'>
                   {item.title}

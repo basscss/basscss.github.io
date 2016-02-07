@@ -19,14 +19,14 @@ class FourOhFour extends React.Component {
         <Container>
           <Page title='404: Page Not Found'>
             <div className='center'>
-              <a href='/' className='inline-block'>
+              <a href='/v7' className='inline-block'>
                 <Logo size={512} />
               </a>
             </div>
           </Page>
         </Container>
         <SideBar>
-          <a href='/' className='block px2'>
+          <a href='/v7' className='block px2'>
             <Logo size={24} />
           </a>
           <Nav {...this.props} items={navitems} />

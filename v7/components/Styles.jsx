@@ -29,7 +29,7 @@ class Styles extends React.Component {
                   <span className='h5'> v{mod.version}</span>
                 </h2>
                 <Link
-                  path={'/docs/' + mod.slug}
+                  path={'/v7/docs/' + mod.slug}
                   title='View Docs'
                   flush />
               </div>

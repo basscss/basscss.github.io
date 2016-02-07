@@ -19,7 +19,7 @@ class ModulesBox extends React.Component {
             return (
               <Col xs={6} md={3} key={i} compact>
                 <Link {...mod}
-                  path={'/docs/' + mod.slug}
+                  path={'/v7/docs/' + mod.slug}
                   flush
                   block
                   big />

@@ -16,13 +16,13 @@ class Breadcrumbs extends React.Component {
         function getParents(i) {
           parents.unshift(arr[i])
           if (arr[i - 1]) {
-            getParents(i - 1)  
+            getParents(i - 1)
           }
         }
         getParents(i)
         return {
           title: titleCase(c.replace(/\-/, ' ')),
-          path: '/' + parents.join('/')
+          path: '/v7/' + parents.join('/')
         }
       })
       .filter(function(c) {
@@ -31,7 +31,7 @@ class Breadcrumbs extends React.Component {
 
     return (
       <div className='h5 mxn1'>
-        <Link path='/' title='Home' />
+        <Link path='/v7' title='Home' />
         {breadcrumbs.map(function(crumb, i) {
           return (
             <span className='' key={i}>

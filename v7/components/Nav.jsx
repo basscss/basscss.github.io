@@ -21,6 +21,7 @@ class Nav extends React.Component {
                   active: active
                 })}>
                 <NavItem {...item}
+                  path={`/v7${item.path}`}
                   block
                   caps={item.index}
                   active={active} />

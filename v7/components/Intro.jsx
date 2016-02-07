@@ -23,7 +23,7 @@ class Intro extends React.Component {
           <div className='flex-none py2'>
             <div className='inline-block px2'>
               <LinkBtn
-                path='/docs'
+                path='/v7/docs'
                 title='Download'
                 big />
             </div>

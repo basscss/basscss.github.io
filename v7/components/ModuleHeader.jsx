@@ -12,7 +12,7 @@ class ModuleHeader extends React.Component {
         <Header>
           <div className='mt2 flex flex-wrap flex-center'>
             <div className='flex-auto'>
-              <a href='/'
+              <a href='/v7/'
                 className='h5 bold compact color-inherit'>
                 Basscss
               </a>

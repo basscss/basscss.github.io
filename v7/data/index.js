@@ -24,10 +24,10 @@ module.exports = {
   stats: stats,
   // showcase: showcase,
   links: [
-    { path: '/stats', name: 'stats', title: 'Stats' },
-    { path: '/showcase', name: 'showcase', title: 'Showcase' },
-    { path: '/themes', name: 'themes', title: 'Themes' },
-    { path: '/customize', name: 'customize', title: 'Customize' }
+    // { path: '/stats', name: 'stats', title: 'Stats' },
+    // { path: '/showcase', name: 'showcase', title: 'Showcase' },
+    // { path: '/themes', name: 'themes', title: 'Themes' },
+    // { path: '/customize', name: 'customize', title: 'Customize' }
   ]
 }
 

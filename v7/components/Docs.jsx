@@ -2,7 +2,6 @@
 import React from 'react'
 import { RouteHandler } from 'react-router'
 import Logo from 'basscss-logo'
-import Link from './Link.jsx'
 import SideBar from './SideBar.jsx'
 import Main from './Main.jsx'
 import Container from './Container.jsx'
@@ -26,7 +25,7 @@ class Docs extends React.Component {
             <RouteHandler {...this.props} />
           </Container>
           <SideBar>
-            <a href='/' className='block px2'>
+            <a href='/v7' className='block px2'>
               <Logo size={24} />
             </a>
             <Nav {...this.props} items={navitems} />
