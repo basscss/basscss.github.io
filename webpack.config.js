@@ -6,6 +6,7 @@ var markedExample = require('marked-example')
 var postcssImport = require('postcss-import')
 var postcssCustomProperties = require('postcss-custom-properties')
 var postcssColorFunction = require('postcss-color-function')
+var cssnano = require('cssnano')
 
 var pkg = require('basscss/package.json')
 
@@ -88,6 +89,7 @@ module.exports = {
       postcssImport(),
       postcssCustomProperties(),
       postcssColorFunction(),
+      cssnano()
     ]
   },
 

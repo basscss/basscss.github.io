@@ -24,7 +24,7 @@ class Home extends React.Component {
           <Nav id='nav' items={nav} />
           <Features {...this.props} />
           <Testimonials {...this.props} />
-          <div className='container mb4'>
+          <div className='max-width-4 mx-auto mb4'>
             <GettingStarted {...this.props} />
             <Docs {...this.props} />
             <OptionalsPromo />

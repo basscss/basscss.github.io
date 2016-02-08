@@ -88,6 +88,7 @@ td {
   vertical-align: top;
 }
 
+/* Prototype */
 .btn {
   font-family: inherit;
   font-size: inherit;
@@ -99,6 +100,12 @@ td {
   border-radius: 3px;
   color: #fff;
   background-color: #07c;
+}
+
+/* Prototype */
+.measure {
+  max-width: 36em;
+  outline: 1px solid tomato;
 }
 
 :root {
