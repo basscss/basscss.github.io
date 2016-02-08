@@ -1,42 +1,1629 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>Basscss</title><meta name="description" content="Low-level CSS toolkit"><meta name="author" content="Brent Jackson"><meta name="keywords" content="atomic css, basscss, css, framework, functional css, oocss"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/images/0cb7a3e04e305ef915e64aa1a921ba05.png"><link rel="apple-touch-icon-precomposed" href="/images/f48c400f6f1aa4b44cb2b7a8103291b9.png"><style>
-/*! Basscss | http://basscss.com | MIT License */body{margin:0}img{max-width:100%}svg{max-height:100%}fieldset,input,select,textarea{font-family:inherit;font-size:1rem;box-sizing:border-box;margin-top:0;margin-bottom:0}label{vertical-align:middle}input[type=date],input[type=datetime-local],input[type=datetime],input[type=email],input[type=month],input[type=number],input[type=password],input[type=search],input[type=tel],input[type=text],input[type=time],input[type=url],input[type=week]{height:2.25rem;padding:.5rem;vertical-align:middle;-webkit-appearance:none}select{line-height:1.75;padding:.5rem}select:not([multiple]){height:2.25rem;vertical-align:middle}textarea{line-height:1.75;padding:.5rem}table{border-collapse:separate;border-spacing:0;max-width:100%;width:100%}th{text-align:left;font-weight:500}td,th{padding:.25rem 1rem;line-height:inherit}th{vertical-align:bottom}td{vertical-align:top}body{line-height:1.625;font-size:100%}body,h1,h2,h3,h4,h5,h6{font-family:SF UI Text,Roboto,Helvetica Neue,Helvetica,sans-serif}h1,h2,h3,h4,h5,h6{font-weight:500;line-height:1.25;margin-top:1em;margin-bottom:.5em}dl,ol,p,ul{margin-top:0;margin-bottom:1rem}code,pre,samp{font-family:Source Code Pro,Consolas,monospace;font-size:87.5%}pre{margin-top:0;margin-bottom:1rem;overflow-x:scroll}h1{font-size:2rem}h2{font-size:1.5rem}h3{font-size:1.25rem}h4{font-size:1rem}h5{font-size:.875rem}h6{font-size:.75rem}body{color:#111;background-color:#fff}a{color:#0074d9;text-decoration:none}a:hover{text-decoration:underline}code,pre{background-color:transparent;border-radius:0}hr{border:0;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:rgba(0,0,0,.125)}.field{border:1px solid rgba(0,0,0,.125);border-radius:3px}.field.is-focused,.field:focus{outline:0;border-color:#0074d9;box-shadow:0 0 0 2px rgba(0,116,217,.5)}.field.is-disabled,.field:disabled{background-color:rgba(0,0,0,.125);opacity:.5}.field.is-read-only,.field:read-only:not(select){background-color:rgba(0,0,0,.125)}.field.is-success{border-color:#2ecc40}.field.is-success.is-focused,.field.is-success:focus{box-shadow:0 0 0 2px rgba(46,204,64,.5)}.field.is-warning{border-color:#ffdc00}.field.is-warning.is-focused,.field.is-warning:focus{box-shadow:0 0 0 2px rgba(255,220,0,.5)}.field.is-error,.field:invalid{border-color:#ff4136}.field.is-error.is-focused,.field.is-error:focus,.field:invalid.is-focused,.field:invalid:focus{box-shadow:0 0 0 2px rgba(255,65,54,.5)}.table-light td,.table-light th{border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgba(0,0,0,.125)}.table-light tr:last-child td{border-bottom:0}.btn{font-family:inherit;font-size:.875rem;font-weight:700;font-weight:500;cursor:pointer;display:inline-block;line-height:1.125rem;padding:.5rem 1rem;margin:0;height:auto;border:1px solid transparent;vertical-align:middle;-webkit-appearance:none;color:inherit;background-color:transparent}.btn,.btn:hover{text-decoration:none}.btn:focus{outline:0;border-color:rgba(0,0,0,.125);box-shadow:0 0 0 3px rgba(0,0,0,.25)}::-moz-focus-inner{border:0;padding:0}.btn-primary{color:#fff;background-color:#0074d9;border-radius:3px}.btn-primary:hover{box-shadow:inset 0 0 0 20rem rgba(0,0,0,.0625)}.btn-primary:active{box-shadow:inset 0 0 0 20rem rgba(0,0,0,.125),inset 0 3px 4px 0 rgba(0,0,0,.25),0 0 1px rgba(0,0,0,.125)}.btn-primary.is-disabled,.btn-primary:disabled{opacity:.5}.btn-outline,.btn-outline:hover{border-color:currentcolor}.btn-outline{border-radius:3px}.btn-outline:hover{box-shadow:inset 0 0 0 20rem rgba(0,0,0,.0625)}.btn-outline:active{box-shadow:inset 0 0 0 20rem rgba(0,0,0,.125),inset 0 3px 4px 0 rgba(0,0,0,.25),0 0 1px rgba(0,0,0,.125)}.btn-outline.is-disabled,.btn-outline:disabled{opacity:.5}.h1{font-size:2rem}.h2{font-size:1.5rem}.h3{font-size:1.25rem}.h4{font-size:1rem}.h5{font-size:.875rem}.h6{font-size:.75rem}.font-family-inherit{font-family:inherit}.font-size-inherit{font-size:inherit}.text-decoration-none{text-decoration:none}.bold{font-weight:700;font-weight:500}.regular{font-weight:400}.italic{font-style:italic}.caps{text-transform:uppercase;letter-spacing:.2em}.left-align{text-align:left}.center{text-align:center}.right-align{text-align:right}.justify{text-align:justify}.nowrap{white-space:nowrap}.break-word{word-wrap:break-word}.line-height-1{line-height:1}.line-height-2{line-height:1.125}.line-height-3{line-height:1.25}.line-height-4{line-height:1.5}.list-style-none{list-style:none}.underline{text-decoration:underline}.truncate{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.list-reset{list-style:none;padding-left:0}.inline{display:inline}.block{display:block}.inline-block{display:inline-block}.table{display:table}.table-cell{display:table-cell}.overflow-hidden{overflow:hidden}.overflow-scroll{overflow:scroll}.overflow-auto{overflow:auto}.clearfix:after,.clearfix:before{content:" ";display:table}.clearfix:after{clear:both}.left{float:left}.right{float:right}.fit{max-width:100%}.border-box{box-sizing:border-box}.align-baseline{vertical-align:baseline}.align-top{vertical-align:top}.align-middle{vertical-align:middle}.align-bottom{vertical-align:bottom}.m0{margin:0}.mt0{margin-top:0}.mr0{margin-right:0}.mb0{margin-bottom:0}.ml0,.mx0{margin-left:0}.mx0{margin-right:0}.my0{margin-top:0;margin-bottom:0}.m1{margin:.5rem}.mt1{margin-top:.5rem}.mr1{margin-right:.5rem}.mb1{margin-bottom:.5rem}.ml1,.mx1{margin-left:.5rem}.mx1{margin-right:.5rem}.my1{margin-top:.5rem;margin-bottom:.5rem}.m2{margin:1rem}.mt2{margin-top:1rem}.mr2{margin-right:1rem}.mb2{margin-bottom:1rem}.ml2,.mx2{margin-left:1rem}.mx2{margin-right:1rem}.my2{margin-top:1rem;margin-bottom:1rem}.m3{margin:2rem}.mt3{margin-top:2rem}.mr3{margin-right:2rem}.mb3{margin-bottom:2rem}.ml3,.mx3{margin-left:2rem}.mx3{margin-right:2rem}.my3{margin-top:2rem;margin-bottom:2rem}.m4{margin:4rem}.mt4{margin-top:4rem}.mr4{margin-right:4rem}.mb4{margin-bottom:4rem}.ml4,.mx4{margin-left:4rem}.mx4{margin-right:4rem}.my4{margin-top:4rem;margin-bottom:4rem}.mxn1{margin-left:-.5rem;margin-right:-.5rem}.mxn2{margin-left:-1rem;margin-right:-1rem}.mxn3{margin-left:-2rem;margin-right:-2rem}.mxn4{margin-left:-4rem;margin-right:-4rem}.ml-auto{margin-left:auto}.mr-auto,.mx-auto{margin-right:auto}.mx-auto{margin-left:auto}.p0{padding:0}.pt0{padding-top:0}.pr0{padding-right:0}.pb0{padding-bottom:0}.pl0,.px0{padding-left:0}.px0{padding-right:0}.py0{padding-top:0;padding-bottom:0}.p1{padding:.5rem}.pt1{padding-top:.5rem}.pr1{padding-right:.5rem}.pb1{padding-bottom:.5rem}.pl1{padding-left:.5rem}.py1{padding-top:.5rem;padding-bottom:.5rem}.px1{padding-left:.5rem;padding-right:.5rem}.p2{padding:1rem}.pt2{padding-top:1rem}.pr2{padding-right:1rem}.pb2{padding-bottom:1rem}.pl2{padding-left:1rem}.py2{padding-top:1rem;padding-bottom:1rem}.px2{padding-left:1rem;padding-right:1rem}.p3{padding:2rem}.pt3{padding-top:2rem}.pr3{padding-right:2rem}.pb3{padding-bottom:2rem}.pl3{padding-left:2rem}.py3{padding-top:2rem;padding-bottom:2rem}.px3{padding-left:2rem;padding-right:2rem}.p4{padding:4rem}.pt4{padding-top:4rem}.pr4{padding-right:4rem}.pb4{padding-bottom:4rem}.pl4{padding-left:4rem}.py4{padding-top:4rem;padding-bottom:4rem}.px4{padding-left:4rem;padding-right:4rem}.relative{position:relative}.absolute{position:absolute}.fixed{position:fixed}.top-0{top:0}.right-0{right:0}.bottom-0{bottom:0}.left-0{left:0}.z1{z-index:1}.z2{z-index:2}.z3{z-index:3}.z4{z-index:4}.lg-show,.md-show,.sm-show{display:none!important}@media (min-width:40em){.sm-show{display:block!important}}@media (min-width:52em){.md-show{display:block!important}}@media (min-width:64em){.lg-show{display:block!important}}@media (min-width:40em){.sm-hide{display:none!important}}@media (min-width:52em){.md-hide{display:none!important}}@media (min-width:64em){.lg-hide{display:none!important}}.display-none{display:none!important}.hide{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px)}.container{max-width:52rem;margin-left:auto;margin-right:auto}.col{float:left}.col,.col-right{box-sizing:border-box}.col-right{float:right}.col-1{width:8.33333%}.col-2{width:16.66667%}.col-3{width:25%}.col-4{width:33.33333%}.col-5{width:41.66667%}.col-6{width:50%}.col-7{width:58.33333%}.col-8{width:66.66667%}.col-9{width:75%}.col-10{width:83.33333%}.col-11{width:91.66667%}.col-12{width:100%}@media (min-width:40em){.sm-col{float:left;box-sizing:border-box}.sm-col-right{float:right;box-sizing:border-box}.sm-col-1{width:8.33333%}.sm-col-2{width:16.66667%}.sm-col-3{width:25%}.sm-col-4{width:33.33333%}.sm-col-5{width:41.66667%}.sm-col-6{width:50%}.sm-col-7{width:58.33333%}.sm-col-8{width:66.66667%}.sm-col-9{width:75%}.sm-col-10{width:83.33333%}.sm-col-11{width:91.66667%}.sm-col-12{width:100%}}@media (min-width:52em){.md-col{float:left;box-sizing:border-box}.md-col-right{float:right;box-sizing:border-box}.md-col-1{width:8.33333%}.md-col-2{width:16.66667%}.md-col-3{width:25%}.md-col-4{width:33.33333%}.md-col-5{width:41.66667%}.md-col-6{width:50%}.md-col-7{width:58.33333%}.md-col-8{width:66.66667%}.md-col-9{width:75%}.md-col-10{width:83.33333%}.md-col-11{width:91.66667%}.md-col-12{width:100%}}@media (min-width:64em){.lg-col{float:left;box-sizing:border-box}.lg-col-right{float:right;box-sizing:border-box}.lg-col-1{width:8.33333%}.lg-col-2{width:16.66667%}.lg-col-3{width:25%}.lg-col-4{width:33.33333%}.lg-col-5{width:41.66667%}.lg-col-6{width:50%}.lg-col-7{width:58.33333%}.lg-col-8{width:66.66667%}.lg-col-9{width:75%}.lg-col-10{width:83.33333%}.lg-col-11{width:91.66667%}.lg-col-12{width:100%}}.flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.flex-column{-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.flex-wrap{-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}.flex-center{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.flex-baseline{-webkit-box-align:baseline;-webkit-align-items:baseline;-ms-flex-align:baseline;align-items:baseline}.flex-stretch{-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch}.flex-start{-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}.flex-end{-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}.flex-justify{-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.flex-auto{-webkit-box-flex:1;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;min-width:0;min-height:0}.flex-grow{-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto}.flex-none{-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}.flex-first{-webkit-box-ordinal-group:0;-webkit-order:-1;-ms-flex-order:-1;order:-1}.flex-last{-webkit-box-ordinal-group:100000;-webkit-order:99999;-ms-flex-order:99999;order:99999}@media (min-width:40em){.sm-flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}}@media (min-width:52em){.md-flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}}@media (min-width:64em){.lg-flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}}.border{border:1px solid rgba(0,0,0,.125)}.border-top{border-top-style:solid;border-top-width:1px;border-top-color:rgba(0,0,0,.125)}.border-right{border-right-style:solid;border-right-width:1px;border-right-color:rgba(0,0,0,.125)}.border-bottom{border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:rgba(0,0,0,.125)}.border-left{border-left-style:solid;border-left-width:1px;border-left-color:rgba(0,0,0,.125)}.border-none{border:0}.rounded{border-radius:3px}.circle{border-radius:50%}.rounded-top{border-radius:3px 3px 0 0}.rounded-right{border-radius:0 3px 3px 0}.rounded-bottom{border-radius:0 0 3px 3px}.rounded-left{border-radius:3px 0 0 3px}.not-rounded{border-radius:0}.black{color:#111}.gray{color:#aaa}.silver{color:#ddd}.white{color:#fff}.aqua{color:#7fdbff}.blue{color:#0074d9}.navy{color:#001f3f}.teal{color:#39cccc}.green{color:#2ecc40}.olive{color:#3d9970}.lime{color:#01ff70}.yellow{color:#ffdc00}.orange{color:#ff851b}.red{color:#ff4136}.fuchsia{color:#f012be}.purple{color:#b10dc9}.maroon{color:#85144b}.color-inherit{color:inherit}.muted{opacity:.5}.bg-black{background-color:#111}.bg-gray{background-color:#aaa}.bg-silver{background-color:#ddd}.bg-white{background-color:#fff}.bg-aqua{background-color:#7fdbff}.bg-blue{background-color:#0074d9}.bg-navy{background-color:#001f3f}.bg-teal{background-color:#39cccc}.bg-green{background-color:#2ecc40}.bg-olive{background-color:#3d9970}.bg-lime{background-color:#01ff70}.bg-yellow{background-color:#ffdc00}.bg-orange{background-color:#ff851b}.bg-red{background-color:#ff4136}.bg-fuchsia{background-color:#f012be}.bg-purple{background-color:#b10dc9}.bg-maroon{background-color:#85144b}.bg-darken-1{background-color:rgba(0,0,0,.0625)}.bg-darken-2{background-color:rgba(0,0,0,.125)}.bg-darken-3{background-color:rgba(0,0,0,.25)}.bg-darken-4{background-color:rgba(0,0,0,.5)}.bg-lighten-1{background-color:hsla(0,0%,100%,.0625)}.bg-lighten-2{background-color:hsla(0,0%,100%,.125)}.bg-lighten-3{background-color:hsla(0,0%,100%,.25)}.bg-lighten-4{background-color:hsla(0,0%,100%,.5)}.hljs{-webkit-text-size-adjust:none}.diff .hljs-header,.hljs-comment,.hljs-javadoc{color:#aaa;font-style:italic}.css .rule .hljs-keyword,.hljs-keyword,.hljs-request,.hljs-status,.hljs-subst,.hljs-winutils,.nginx .hljs-title{color:#111;font-weight:700}.hljs-hexcolor,.hljs-number,.ruby .hljs-constant{color:#3d9970}.hljs-dartdoc,.hljs-phpdoc,.hljs-string,.hljs-tag .hljs-value,.tex .hljs-formula{color:#ff4136}.hljs-id,.hljs-title,.scss .hljs-preprocessor{color:#ff4136;font-weight:700}.hljs-list .hljs-keyword,.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type,.tex .hljs-command,.vhdl .hljs-literal{color:#001f3f;font-weight:700}.django .hljs-tag .hljs-keyword,.hljs-rules .hljs-property,.hljs-tag,.hljs-tag .hljs-title{color:#001f3f;font-weight:400}.hljs-attribute,.hljs-regexp,.hljs-variable,.lisp .hljs-body{color:#3d9970}.clojure .hljs-keyword,.hljs-prompt,.hljs-symbol,.lisp .hljs-keyword,.ruby .hljs-symbol .hljs-string,.scheme .hljs-keyword,.tex .hljs-special{color:#b10dc9}.hljs-built_in{color:#001f3f}.hljs-cdata,.hljs-doctype,.hljs-pi,.hljs-pragma,.hljs-preprocessor,.hljs-shebang{color:#aaa;font-weight:700}.hljs-deletion{background:#f012be}.hljs-addition{background:#01ff70}.diff .hljs-change{background:#001f3f}.hljs-chunk{color:#ddd}@media (max-width:40em){.StylesTable,.StylesTable td,.StylesTable th,.StylesTable tr{display:block}.StylesTable td{font-size:.875rem;padding:.25rem 0}.StylesTable th{height:0;overflow:hidden}.StylesTable td:first-child{font-size:1rem;font-weight:500;border-bottom:2px solid rgba(0,0,0,.125)}.StylesTable tr{margin-bottom:.5rem}}@media (min-width:40em){.StylesTable td,.StylesTable th{font-size:.875rem;padding:.25rem 0;vertical-align:baseline}.StylesTable th:first-child{width:25%}.StylesTable th{border-bottom:2px solid rgba(0,0,0,.125)}.StylesTable td{border-bottom:1px solid rgba(0,0,0,.125)}}h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{color:inherit}hr{margin-top:2rem;margin-bottom:2rem}code{border-bottom:2px solid rgba(0,0,0,.125)}pre{padding-left:1rem;padding-right:1rem;overflow:auto;border-left:4px solid rgba(0,0,0,.0625)}.compact{font-family:SF Compact Text,Roboto,Helvetica Neue,Helvetica,sans-serif}.clear{clear:both}@media (min-width:40em){.sm-px3{padding-left:2rem;padding-right:2rem}}svg{max-width:100%;height:auto}.icon,svg{position:relative;top:.125em}.icon{width:1em;height:1em}.btn-small{padding:.125rem .5rem}.btn-nav:hover{box-shadow:inset 0 0 0 99999px rgba(0,0,0,.0625)}.btn-link:hover{text-decoration:underline}.SideBar{border-top:1px solid rgba(0,0,0,.125)}@media (min-width:40em){.SideBar{position:fixed;width:12rem;border-top:0;border-right:1px solid rgba(0,0,0,.125)}}@media (min-width:40em){.Main{margin-left:12rem}}.Prose .Example{clear:both}.Prose>p:first-child{font-size:1.25rem}.Example .fixed{position:static}</style></head><body><div><div class="container px2 sm-px3" style="max-width:64rem;"><header class="py2 mt3 border-bottom"><div class="md-flex flex-center"><div class="flex-auto"><div class="blue"><svg viewBox="0 0 32 32" width="48" height="48" fill="currentcolor"><path d="M 0.315455101251475 17.607114386689492 L 9.25 8.511067019790897 L 22.75 18.511067019790897 L 31.684544898748523 14.392885613310508 L 22.75 23.488932980209103 L 9.25 13.488932980209103 L 0.315455101251475 17.607114386689492"></path></svg></div><h1 class="m0">Basscss</h1><p class="h3 bold">Low-level CSS toolkit <span class="h5">v7.1.1</span></p></div><div><div class="mxn1"><a href="/docs" class="btn compact btn-link p1">Docs</a><a href="/docs/guides" class="btn compact btn-link p1">Guides</a><a href="/docs/reference" class="btn compact btn-link p1">Reference</a><a href="//github.com/basscss/basscss" class="btn compact btn-link p1">GitHub</a><a href="//npmjs.com/package/basscss" class="btn compact btn-link p1">npm</a></div></div></div></header><section class="py3"><div class="sm-flex flex-center mxn2"><div class="m2"><p class="h2 bold">Lightning-Fast Modular CSS with No Side Effects</p><p class="h3">Basscss is a lightweight collection of base element styles and immutable utilities designed for speed, clarity, performance, and scalability.</p></div><div class="flex-none py2"><div class="inline-block px2"><a href="/docs" title="Download" class="btn compact btn-primary h4 py2">Download</a></div><div class="inline-block px2"><a href="https://github.com/basscss/basscss" title="GitHub" class="btn compact btn-outline blue h4 py2">GitHub</a></div></div></div><div class="h6 caps compact bold flex flex-justify flex-wrap mxn2"><div class="px2 py1">3.39 KB</div><div class="px2 py1">22 Modules</div><div class="px2 py1">297 Rules</div><div class="px2 py1">452 Declarations</div></div><div class="sm-flex flex-center flex-wrap py1 mxn2"><div class="m2"><div class="inline-block"><a href="https://twitter.com/share" class="twitter-share-button" data-text="Low-level CSS toolkit" data-via="jxnblk" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?"http":"https";if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document, "script", "twitter-wjs");</script></div></div><div class="m2"><div class="inline-block"><iframe src="https://ghbtns.com/github-btn.html?user=basscss&amp;repo=basscss&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe></div></div><div class="flex-auto"></div><div class="flex-none m2"><style>#carbonads{margin-top:1rem;margin-bottom:1rem;max-width:none}@media (min-width:52em){#carbonads{float:right;margin-top:0;margin-left:1rem;max-width:20pc}}@media (min-width:83em){#carbonads{position:fixed;bottom:0;right:0;margin:1rem;max-width:130px!important}#carbonads .carbon-img{float:none;display:block;margin:auto;margin-bottom:1rem}}</style><div><style>
-      #carbonads {
-        display: inline-block;
-        font-size: 14px;
-        line-height: 1.25;
-        text-align: left;
-      }
-      #carbonads a,
-      #carbonads a:hover {
-        text-decoration: none;
-        color: inherit;
-      }
-      #carbonads span { display: block }
-      #carbonads > span::before,
-      #carbonads > span::after {
-        content: '';
-        display: table;
-      }
-      #carbonads > span::after {
-        clear: both;
-      }
-      .carbon-img {
-        float: left;
-        margin-right: .5em;
-      }
-      .carbon-img > img { display: block }
-      .carbon-text { overflow: hidden }
-      .carbon-poweredby {
-        float: left;
-        margin-top: .25em;
-        opacity: 0.5;
-      }
-      @media (min-width: 40em) {
-        #carbonads {
-          max-width: 320px;
-        }
-      }
-    </style><script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1696&amp;serve=CVYD42T&amp;placement=basscsscom" id="_carbonads_js"></script></div></div></div></section><section class="py3"><div class="clearfix mxn2"><div class="sm-col sm-col-6 px2 mb3"><h2>Code with Confidence</h2><p>Using clear, humanized naming conventions, Basscss is quick to internalize and easy to reason about while speeding up development time with more scalable, more readable code.</p></div><div class="sm-col sm-col-6 px2 mb3"><h2>No Side Effects</h2><p>Things behave exactly as expected with immutable utilities and styles that follow the open/closed principle to help prevent common pitfalls with CSS.</p></div></div><div class="clearfix mxn2"><div class="sm-col sm-col-6 px2 mb3"><h2>Composable</h2><p>Reusable, interoperable styles work like building blocks to lay the foundation for any stylesheet and can be mixed and matched in any number of combinations.</p></div><div class="sm-col sm-col-6 px2 mb3"><h2>Designed for Design</h2><p>Basscss strikes a balance between consistency and flexibility to allow for rapid prototyping and quick iterative changes when designing in the browser.</p></div></div><div class="clearfix mxn2"><div class="sm-col sm-col-6 px2 mb3"><h2>Responsive by Default</h2><p>Basscss provides lightweight, performant styles and flexible utilities to design for any device and to help reduce boilerplate in stylesheets.</p></div><div class="sm-col sm-col-6 px2 mb3"><h2>Unassuming</h2><p>Modular and customizable base, typography, layout, and color styles don’t dictate what things should look like and play well with other stylesheets and frameworks.</p></div></div><div><a href="/docs/reference/principles" title="Read more about Basscss’s design principles" class="btn compact btn-link p0 py1 h4">Read more about Basscss’s design principles</a></div></section><hr><section class="py3"><div class="clearfix mxn2"><div class="sm-col sm-col-6 px2 mb3"><svg viewBox="0 0 256 256" style="width:128px;max-width:100%;height:auto;max-height:100%;"><rect x="2" y="2" width="252" height="252" style="fill:none;stroke:#0074D9;stroke-width:2;"></rect><text x="128" y="192" style="font-family:inherit;font-size:160px;font-weight:bold;text-anchor:middle;fill:#0074D9;">Aa</text></svg><h2>Base Elements</h2><p>Unopinionated and customizable core typographic, form, button, and base element styles keep designs consistent where it matters most.</p></div><div class="sm-col sm-col-6 px2 mb3"><svg viewBox="0 0 256 256" style="width:128px;max-width:100%;height:auto;max-height:100%;"><rect x="2" y="2" width="252" height="252" style="fill:none;stroke:#0074D9;stroke-width:2;"></rect><text x="128" y="192" style="font-family:inherit;font-size:112px;font-weight:bold;text-anchor:middle;fill:#0074D9;">.m2</text></svg><h2>Immutable Utilities</h2><p>Simple, composable typographic, layout, and color utilities based on common scales promote faster design and development in the browser and more performant, more readable code with no side effects.</p></div></div></section><hr class="mt0"><section class="py3"><h2 class="mt0">Modular, Literally</h2><p class="">Basscss is composed of <b>22</b> modules - each available in standalone format on npm.</p><div class="clearfix mxn2"><div class="col col-6 md-col-3 px2"><a href="/docs/base-reset" title="Base Reset" class="btn compact btn-link p0 py1 block h4">Base Reset</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/base-forms" title="Base Forms" class="btn compact btn-link p0 py1 block h4">Base Forms</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/base-tables" title="Base Tables" class="btn compact btn-link p0 py1 block h4">Base Tables</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/base-typography" title="Base Typography" class="btn compact btn-link p0 py1 block h4">Base Typography</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/color-base" title="Color Base" class="btn compact btn-link p0 py1 block h4">Color Base</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/color-forms" title="Color Forms" class="btn compact btn-link p0 py1 block h4">Color Forms</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/color-tables" title="Color Tables" class="btn compact btn-link p0 py1 block h4">Color Tables</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/btn" title="Btn" class="btn compact btn-link p0 py1 block h4">Btn</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/btn-primary" title="Btn Primary" class="btn compact btn-link p0 py1 block h4">Btn Primary</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/btn-outline" title="Btn Outline" class="btn compact btn-link p0 py1 block h4">Btn Outline</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/type-scale" title="Type Scale" class="btn compact btn-link p0 py1 block h4">Type Scale</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/utility-typography" title="Utility Typography" class="btn compact btn-link p0 py1 block h4">Utility Typography</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/utility-layout" title="Utility Layout" class="btn compact btn-link p0 py1 block h4">Utility Layout</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/align" title="Align" class="btn compact btn-link p0 py1 block h4">Align</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/white-space" title="White Space" class="btn compact btn-link p0 py1 block h4">White Space</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/positions" title="Positions" class="btn compact btn-link p0 py1 block h4">Positions</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/responsive-states" title="Responsive States" class="btn compact btn-link p0 py1 block h4">Responsive States</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/grid" title="Grid" class="btn compact btn-link p0 py1 block h4">Grid</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/flex-object" title="Flex Object" class="btn compact btn-link p0 py1 block h4">Flex Object</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/borders" title="Borders" class="btn compact btn-link p0 py1 block h4">Borders</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/colors" title="Colors" class="btn compact btn-link p0 py1 block h4">Colors</a></div><div class="col col-6 md-col-3 px2"><a href="/docs/background-colors" title="Background Colors" class="btn compact btn-link p0 py1 block h4">Background Colors</a></div></div></section><hr class="mb4"><section class="py3"><div class="sm-flex flex-center mxn2"><div class="flex-auto px2"><h2 class="m0">Get Started</h2><p class="h3 m0">View the docs to download Basscss and learn more.</p></div><div class="flex-none px2 py1"><a href="/docs" title="Get Started" class="btn compact btn-primary h4 py2">Get Started</a></div><div class="flex-none px2 py1"><a href="https://github.com/basscss/basscss" title="GitHub" class="btn compact btn-outline blue h4 py2">GitHub</a></div></div></section></div><footer class="Footer h6 compact mt4"><div class="container px2 sm-px3" style="max-width:64rem;"><div class="py3 border-top"><div class="flex flex-wrap flex-baseline mxn1"><a href="/" title="Basscss" class="btn compact btn-link p1">Basscss</a><div class="">v7.1.1</div><a href="/docs" title="Docs" class="btn compact btn-link p1">Docs</a><a href="//github.com/basscss/basscss" title="GitHub" class="btn compact btn-link p1">GitHub</a><div class="flex-auto"></div><a href="//jxnblk.com" title="Made by Jxnblk" class="btn compact btn-link p1">Made by Jxnblk</a></div></div></div></footer></div><script>
+<!DOCTYPE html><html><head><meta charset="utf-8"/><title>Basscss</title><meta name="description" content="Low-level CSS toolkit"/><meta name="author" content="Brent Jackson"/><meta name="keywords" content="atomic css, basscss, css, framework, functional css, oocss"/><meta name="viewport" content="width=device-width,initial-scale=1"/><style>/* Basscss Basic */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Helvetica Neue',
+    Helvetica,
+    sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  color: #111;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  max-height: 100%;
+}
+
+a {
+  color: #07c;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
+
+h1 { font-size: 2rem }
+
+h2 { font-size: 1.5rem }
+
+h3 { font-size: 1.25rem }
+
+h4 { font-size: 1rem }
+
+h5 { font-size: .875rem }
+
+h6 { font-size: .75rem }
+
+p, dl, ol, ul, pre, blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+code,
+pre,
+samp {
+  font-family:
+    'Roboto Mono',
+    'Source Code Pro',
+    Menlo,
+    Consolas,
+    'Liberation Mono',
+    monospace;
+}
+
+code, samp {
+  font-size: 87.5%;
+  padding: .125em;
+}
+
+pre {
+  font-size: 87.5%;
+  overflow: scroll;
+}
+
+blockquote {
+  font-size: 1.25rem;
+  font-style: italic;
+  margin-left: 0;
+}
+
+hr {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  border: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ccc;
+}
+
+
+/* Basscss Forms */
+
+.label {
+  font-size: .875rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.input {
+  font-family: inherit;
+  font-size: inherit;
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.select {
+  font-family: inherit;
+  font-size: inherit;
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.textarea {
+  font-family: inherit;
+  font-size: inherit;
+  display: block;
+  width: 100%;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+
+
+/*! Basscss | http://basscss.com | MIT License */.h1{font-size:2rem}.h2{font-size:1.5rem}.h3{font-size:1.25rem}.h4{font-size:1rem}.h5{font-size:.875rem}.h6{font-size:.75rem}.font-family-inherit{font-family:inherit}.font-size-inherit{font-size:inherit}.text-decoration-none{text-decoration:none}.bold{font-weight:700}.regular{font-weight:400}.italic{font-style:italic}.caps{text-transform:uppercase;letter-spacing:.2em}.left-align{text-align:left}.center{text-align:center}.right-align{text-align:right}.justify{text-align:justify}.nowrap{white-space:nowrap}.break-word{word-wrap:break-word}.line-height-1{line-height:1}.line-height-2{line-height:1.125}.line-height-3{line-height:1.25}.line-height-4{line-height:1.5}.list-style-none{list-style:none}.underline{text-decoration:underline}.truncate{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.list-reset{list-style:none;padding-left:0}.inline{display:inline}.block{display:block}.inline-block{display:inline-block}.table{display:table}.table-cell{display:table-cell}.overflow-hidden{overflow:hidden}.overflow-scroll{overflow:scroll}.overflow-auto{overflow:auto}.clearfix:after,.clearfix:before{content:" ";display:table}.clearfix:after{clear:both}.left{float:left}.right{float:right}.fit{max-width:100%}.border-box{box-sizing:border-box}.align-baseline{vertical-align:baseline}.align-top{vertical-align:top}.align-middle{vertical-align:middle}.align-bottom{vertical-align:bottom}.m0{margin:0}.mt0{margin-top:0}.mr0{margin-right:0}.mb0{margin-bottom:0}.ml0,.mx0{margin-left:0}.mx0{margin-right:0}.my0{margin-top:0;margin-bottom:0}.m1{margin:.5rem}.mt1{margin-top:.5rem}.mr1{margin-right:.5rem}.mb1{margin-bottom:.5rem}.ml1,.mx1{margin-left:.5rem}.mx1{margin-right:.5rem}.my1{margin-top:.5rem;margin-bottom:.5rem}.m2{margin:1rem}.mt2{margin-top:1rem}.mr2{margin-right:1rem}.mb2{margin-bottom:1rem}.ml2,.mx2{margin-left:1rem}.mx2{margin-right:1rem}.my2{margin-top:1rem;margin-bottom:1rem}.m3{margin:2rem}.mt3{margin-top:2rem}.mr3{margin-right:2rem}.mb3{margin-bottom:2rem}.ml3,.mx3{margin-left:2rem}.mx3{margin-right:2rem}.my3{margin-top:2rem;margin-bottom:2rem}.m4{margin:4rem}.mt4{margin-top:4rem}.mr4{margin-right:4rem}.mb4{margin-bottom:4rem}.ml4,.mx4{margin-left:4rem}.mx4{margin-right:4rem}.my4{margin-top:4rem;margin-bottom:4rem}.mxn1{margin-left:-.5rem;margin-right:-.5rem}.mxn2{margin-left:-1rem;margin-right:-1rem}.mxn3{margin-left:-2rem;margin-right:-2rem}.mxn4{margin-left:-4rem;margin-right:-4rem}.ml-auto{margin-left:auto}.mr-auto,.mx-auto{margin-right:auto}.mx-auto{margin-left:auto}.p0{padding:0}.pt0{padding-top:0}.pr0{padding-right:0}.pb0{padding-bottom:0}.pl0,.px0{padding-left:0}.px0{padding-right:0}.py0{padding-top:0;padding-bottom:0}.p1{padding:.5rem}.pt1{padding-top:.5rem}.pr1{padding-right:.5rem}.pb1{padding-bottom:.5rem}.pl1{padding-left:.5rem}.py1{padding-top:.5rem;padding-bottom:.5rem}.px1{padding-left:.5rem;padding-right:.5rem}.p2{padding:1rem}.pt2{padding-top:1rem}.pr2{padding-right:1rem}.pb2{padding-bottom:1rem}.pl2{padding-left:1rem}.py2{padding-top:1rem;padding-bottom:1rem}.px2{padding-left:1rem;padding-right:1rem}.p3{padding:2rem}.pt3{padding-top:2rem}.pr3{padding-right:2rem}.pb3{padding-bottom:2rem}.pl3{padding-left:2rem}.py3{padding-top:2rem;padding-bottom:2rem}.px3{padding-left:2rem;padding-right:2rem}.p4{padding:4rem}.pt4{padding-top:4rem}.pr4{padding-right:4rem}.pb4{padding-bottom:4rem}.pl4{padding-left:4rem}.py4{padding-top:4rem;padding-bottom:4rem}.px4{padding-left:4rem;padding-right:4rem}.container{max-width:64rem;margin-left:auto;margin-right:auto}.col{float:left}.col,.col-right{box-sizing:border-box}.col-right{float:right}.col-1{width:8.33333%}.col-2{width:16.66667%}.col-3{width:25%}.col-4{width:33.33333%}.col-5{width:41.66667%}.col-6{width:50%}.col-7{width:58.33333%}.col-8{width:66.66667%}.col-9{width:75%}.col-10{width:83.33333%}.col-11{width:91.66667%}.col-12{width:100%}@media (min-width:40em){.sm-col{float:left;box-sizing:border-box}.sm-col-right{float:right;box-sizing:border-box}.sm-col-1{width:8.33333%}.sm-col-2{width:16.66667%}.sm-col-3{width:25%}.sm-col-4{width:33.33333%}.sm-col-5{width:41.66667%}.sm-col-6{width:50%}.sm-col-7{width:58.33333%}.sm-col-8{width:66.66667%}.sm-col-9{width:75%}.sm-col-10{width:83.33333%}.sm-col-11{width:91.66667%}.sm-col-12{width:100%}}@media (min-width:52em){.md-col{float:left;box-sizing:border-box}.md-col-right{float:right;box-sizing:border-box}.md-col-1{width:8.33333%}.md-col-2{width:16.66667%}.md-col-3{width:25%}.md-col-4{width:33.33333%}.md-col-5{width:41.66667%}.md-col-6{width:50%}.md-col-7{width:58.33333%}.md-col-8{width:66.66667%}.md-col-9{width:75%}.md-col-10{width:83.33333%}.md-col-11{width:91.66667%}.md-col-12{width:100%}}@media (min-width:64em){.lg-col{float:left;box-sizing:border-box}.lg-col-right{float:right;box-sizing:border-box}.lg-col-1{width:8.33333%}.lg-col-2{width:16.66667%}.lg-col-3{width:25%}.lg-col-4{width:33.33333%}.lg-col-5{width:41.66667%}.lg-col-6{width:50%}.lg-col-7{width:58.33333%}.lg-col-8{width:66.66667%}.lg-col-9{width:75%}.lg-col-10{width:83.33333%}.lg-col-11{width:91.66667%}.lg-col-12{width:100%}}.flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}@media (min-width:40em){.sm-flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}}@media (min-width:52em){.md-flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}}@media (min-width:64em){.lg-flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}}.flex-column{-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.flex-wrap{-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}.items-start{-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;-ms-grid-row-align:flex-start;align-items:flex-start}.items-end{-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;-ms-grid-row-align:flex-end;align-items:flex-end}.items-center{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;-ms-grid-row-align:center;align-items:center}.items-baseline{-webkit-box-align:baseline;-webkit-align-items:baseline;-ms-flex-align:baseline;-ms-grid-row-align:baseline;align-items:baseline}.items-stretch{-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;-ms-grid-row-align:stretch;align-items:stretch}.self-start{-webkit-align-self:flex-start;-ms-flex-item-align:start;align-self:flex-start}.self-end{-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end}.self-center{-webkit-align-self:center;-ms-flex-item-align:center;align-self:center}.self-baseline{-webkit-align-self:baseline;-ms-flex-item-align:baseline;align-self:baseline}.self-stretch{-webkit-align-self:stretch;-ms-flex-item-align:stretch;align-self:stretch}.justify-start{-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}.justify-end{-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end}.justify-center{-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.justify-between{-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.justify-around{-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around}.content-start{-webkit-align-content:flex-start;-ms-flex-line-pack:start;align-content:flex-start}.content-end{-webkit-align-content:flex-end;-ms-flex-line-pack:end;align-content:flex-end}.content-center{-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center}.content-between{-webkit-align-content:space-between;-ms-flex-line-pack:justify;align-content:space-between}.content-around{-webkit-align-content:space-around;-ms-flex-line-pack:distribute;align-content:space-around}.content-stretch{-webkit-align-content:stretch;-ms-flex-line-pack:stretch;align-content:stretch}.flex-auto{-webkit-box-flex:1;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;min-width:0;min-height:0}.flex-none{-webkit-box-flex:0;-webkit-flex:none;-ms-flex:none;flex:none}.order-0{-webkit-box-ordinal-group:1;-webkit-order:0;-ms-flex-order:0;order:0}.order-1{-webkit-box-ordinal-group:2;-webkit-order:1;-ms-flex-order:1;order:1}.order-2{-webkit-box-ordinal-group:3;-webkit-order:2;-ms-flex-order:2;order:2}.order-3{-webkit-box-ordinal-group:4;-webkit-order:3;-ms-flex-order:3;order:3}.order-last{-webkit-box-ordinal-group:100000;-webkit-order:99999;-ms-flex-order:99999;order:99999}.relative{position:relative}.absolute{position:absolute}.fixed{position:fixed}.top-0{top:0}.right-0{right:0}.bottom-0{bottom:0}.left-0{left:0}.z1{z-index:1}.z2{z-index:2}.z3{z-index:3}.z4{z-index:4}.border{border-style:solid;border-width:1px}.border-top{border-top-style:solid;border-top-width:1px}.border-right{border-right-style:solid;border-right-width:1px}.border-bottom{border-bottom-style:solid;border-bottom-width:1px}.border-left{border-left-style:solid;border-left-width:1px}.border-none{border:0}.rounded{border-radius:3px}.circle{border-radius:50%}.rounded-top{border-radius:3px 3px 0 0}.rounded-right{border-radius:0 3px 3px 0}.rounded-bottom{border-radius:0 0 3px 3px}.rounded-left{border-radius:3px 0 0 3px}.not-rounded{border-radius:0}.hide{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px)}@media (max-width:40em){.xs-hide{display:none!important}}@media (min-width:40em) and (max-width:52em){.sm-hide{display:none!important}}@media (min-width:52em) and (max-width:64em){.md-hide{display:none!important}}@media (min-width:64em){.lg-hide{display:none!important}}.display-none{display:none!important}
+
+/* debug
+* { outline: 1px solid tomato }
+*/
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover,
+.hover-underline:hover {
+  text-decoration: underline;
+}
+
+code {
+  color: #07c;
+  background-image: linear-gradient(transparent, transparent 87.5%, rgba(0, 119, 204, 0.125) 87.5%);
+}
+
+pre {
+  padding-left: 1rem;
+  border-left: 3px solid rgba(0,0,0,.0625);
+}
+
+.MarkedExample-rendered * {
+  border-color: #ccc;
+}
+
+.palatino {
+  font-family: Palatino, Georgia, serif;
+}
+
+@media screen and (min-width: 64em) {
+  .lg-px4 { padding-left: 4rem; padding-right: 4rem; }
+}
+
+.MarkedExample .fixed {
+  position: relative;
+}
+
+.Prose h2 {
+  margin-top: 3rem;
+}
+
+th, td {
+  border-bottom: 1px solid rgba(0,0,0,.0625);
+}
+
+.color-inherit { color: inherit }
+
+.border-thick { border-width: 3px }
+
+.border-darken { border-color: rgba(0,0,0,.0625) }
+
+.border-gray { border-color: #ccc }
+
+.black  { color: #111 }
+
+.white  { color: #fff }
+
+.blue   { color: #07c }
+
+.gray   { color: #ccc }
+
+.darken { color: rgba(0,0,0,.0625) }
+
+.bg-black  { background-color: #111 }
+
+.bg-white  { background-color: #fff }
+
+.bg-blue   { background-color: #07c }
+
+.bg-gray   { background-color: #ccc }
+
+.bg-darken { background-color: rgba(0,0,0,.0625) }
+
+/* Prototype */
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+th,
+td {
+  padding: .5em 0;
+  line-height: inherit;
+}
+
+th {
+  text-align: left;
+  font-weight: 700;
+  vertical-align: bottom;
+}
+
+td {
+  vertical-align: top;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  height: 2.5em;
+  margin: 0;
+  padding: .5em 1em;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #07c;
+}
+
+
+/* Basscss Highlight */
+
+/*
+
+   COLOR VARIABLES
+
+   - Cool
+   - Warm
+   - Gray Scale
+
+*/
+
+:root {
+
+  /* Cool */
+
+
+  /* Warm */
+
+
+  /* Gray scale */
+
+}
+
+.hljs {
+  -webkit-text-size-adjust: none;
+}
+
+.hljs-comment,
+.diff .hljs-header,
+.hljs-javadoc {
+  color: #aaa;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #111;
+  font-weight: bold;
+}
+
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #3d9970;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.hljs-dartdoc,
+.tex .hljs-formula {
+  color: #0074d9;
+}
+
+.hljs-title,
+.hljs-id,
+.scss .hljs-preprocessor {
+  color: #0074d9;
+  font-weight: bold;
+}
+
+.hljs-list .hljs-keyword,
+.hljs-subst {
+  font-weight: normal;
+}
+
+.hljs-class .hljs-title,
+.hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  color: #001f3f;
+  font-weight: bold;
+}
+
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #001f3f;
+  font-weight: normal;
+}
+
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body {
+  color: #3d9970;
+}
+
+.hljs-regexp {
+  color: #3d9970;
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.clojure .hljs-keyword,
+.scheme .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #b10dc9;
+}
+
+.hljs-built_in {
+  color: #001f3f;
+}
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #aaa;
+  font-weight: bold;
+}
+
+.hljs-deletion {
+  background: #f012be;
+}
+
+.hljs-addition {
+  background: #01ff70;
+}
+
+.diff .hljs-change {
+  background: #001f3f;
+}
+
+.hljs-chunk {
+  color: #ddd;
+}
+
+:root {
+
+  /* Mapped colors */
+}
+
+</style><link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet" type="text/css"/><link rel="icon" href="/images/0cb7a3e04e305ef915e64aa1a921ba05.png"/><link rel="apple-touch-icon-precomposed" href="/images/f48c400f6f1aa4b44cb2b7a8103291b9.png"/></head><body><div class=""><div class="center px3 py2" style="color:#0ac;background-color:#024;"><p class="h5 bold m0">This is a beta release preview. See the <a href="https://github.com/basscss/basscss/pull/157" target="_blank" class="color-inherit">v8 Pull Request</a>. For the previous version see the <a href="/v7" class="color-inherit">v7 docs</a>.</p></div><div class="px3 lg-px4"><header class="py4"><div class="flex flex-wrap items-center py4"><div class="mb4"><svg viewBox="0 0 32 32" width="48" height="48" fill="currentcolor"><path d="M 0.315455101251475 17.607114386689492 L 9.25 8.511067019790897 L 22.75 18.511067019790897 L 31.684544898748523 14.392885613310508 L 22.75 23.488932980209103 L 9.25 13.488932980209103 L 0.315455101251475 17.607114386689492"></path></svg><h1 class="m0">Basscss <span class="h5">v8.0.0-beta4</span></h1><p class="h3 mt1">Low-Level CSS Toolkit</p><a href="#getting-started" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Docs</a><div class="inline-block" style="width:16px;"></div><a href="//github.com/basscss/basscss" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">GitHub</a><div class="inline-block" style="width:16px;"></div><a href="//npmjs.com/package/basscss" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">npm</a></div><div class="flex-auto"></div><div><style> #carbonads {   display: inline-block;   font-size: 14px;   line-height: 1.25;   text-align: left; } #carbonads a, #carbonads a:hover {   text-decoration: none;   color: inherit; } #carbonads span { display: block } #carbonads > span::before, #carbonads > span::after {   content: '';   display: table; } #carbonads > span::after {   clear: both; } .carbon-img {   float: left;   margin-right: .5em; } .carbon-img > img { display: block } .carbon-text { overflow: hidden } .carbon-poweredby {   float: left;   margin-top: .25em;   opacity: 0.5; } @media (min-width: 40em) {   #carbonads {     max-width: 320px;   } } </style><script async="" type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1696&amp;serve=CVYD42T&amp;placement=basscsscom" id="_carbonads_js"></script></div></div><div class="lg-flex justify-between items-center"><div class="order-last"><div class="h6 caps flex flex-wrap mxn2"><div class="px2">2.2 KB</div><div class="px2">244 Rules</div><div class="px2">253 Selectors</div><div class="px2">382 Declarations</div></div></div><div class="flex flex-wrap items-center py2"><div class="my1" style="height:20px;"><a href="https://twitter.com/share" class="twitter-share-button" data-text="Basscss: Low-Level CSS Toolkit" data-url="http://basscss.com" data-via="basscss">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?"http":"https";if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document, "script", "twitter-wjs");</script></div><div class="inline-block" style="width:16px;"></div><iframe src="//ghbtns.com/github-btn.html?user=basscss&amp;repo=basscss&amp;type=star&amp;count=true" class="my1" frameborder="0" scrolling="0" width="96px" height="20px"></iframe><div class="inline-block" style="width:16px;"></div><a href="//npmjs.com/package/basscss" class="my1"><img src="https://badge.fury.io/js/basscss.svg" class="block" alt="npm version"/></a><div class="inline-block" style="width:16px;"></div><a href="https://travis-ci.org/basscss/basscss" class="my1"><img src="https://travis-ci.org/basscss/basscss.svg" class="block" alt="Build Status"/></a></div></div></header><nav id="nav" class="pl2 my2 border-left border-thick border-darken" style="max-width:768px;"><div class="mxn2 flex    flex-wrap "><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#getting-started" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Getting Started</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-type-scale" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Type Scale</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-typography" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Typography</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-layout" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Layout</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-align" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Align</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-margin" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Margin</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-padding" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Padding</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-position" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Position</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-grid" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Grid</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-flexbox" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Flexbox</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-border" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Border</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-hide" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Hide</a></div></div></nav><section id="features" class="py4"><h2 class="h1"><a href="#features" class="color-inherit text-decoration-none hover-underline">Lightning Fast Modular CSS with No Side Effects</a></h2><div class="mxn2 flex    flex-wrap "><div class="px2 col-12 sm-col-6 md-col-4 "><h3>Code with Confidence</h3><p>Using clear, humanized naming conventions, Basscss is quick to internalize and easy to reason about while speeding up development time with more scalable, more readable code.</p></div><div class="px2 col-12 sm-col-6 md-col-4 "><h3>No Side Effects</h3><p>Things behave exactly as expected with immutable utilities and styles that do one thing well to help prevent common pitfalls with CSS.</p></div><div class="px2 col-12 sm-col-6 md-col-4 "><h3>Composable</h3><p>Reusable, interoperable styles work like building blocks to lay the foundation for any stylesheet and can be mixed and matched in any number of combinations.</p></div><div class="px2 col-12 sm-col-6 md-col-4 "><h3>Designed for Design</h3><p>Basscss strikes a balance between consistency and flexibility to allow for rapid prototyping and quick iterative changes when designing in the browser.</p></div><div class="px2 col-12 sm-col-6 md-col-4 "><h3>Responsive by Default</h3><p>Basscss provides lightweight, performant styles and flexible utilities to design for any device and to help reduce boilerplate in stylesheets.</p></div><div class="px2 col-12 sm-col-6 md-col-4 "><h3>Unassuming</h3><p>Modular and customizable typography and layout styles don’t dictate what things should look like and play well with other stylesheets and frameworks.</p></div></div></section><section id="testimonials" class="py4"><div class="mxn2 flex    flex-wrap "><div class="px2 col-12 sm-col-6 md-col-4 "><blockquote class="m0 mb2"><p class="palatino mb0">“Basscss is an atomic class based CSS library... A very good one! But I really hated it at the time. But I don’t hate it anymore!”</p><cite class="h5"><a href="https://medium.com/buzzfeed-design/how-i-learned-to-stop-worrying-and-love-the-atomic-class-98d6ccc45781#.yqnsfkbx2" class="color-inherit text-decoration-none">– Sam Thurman</a></cite></blockquote></div><div class="px2 col-12 sm-col-6 md-col-4 "><blockquote class="m0 mb2"><p class="palatino mb0">“I used Basscss for http://nodeconf.com  and it was such a pleasure to work with. I think I’ll use it for my personal site too!”</p><cite class="h5"><a href="https://twitter.com/fox/status/572441586983936000" class="color-inherit text-decoration-none">– Karolina Szczur</a></cite></blockquote></div><div class="px2 col-12 sm-col-6 md-col-4 "><blockquote class="m0 mb2"><p class="palatino mb0">“Writing CSS is easy. Writing long lived maintainable CSS in a real webapp is hard. Until Jon Gold introduced me to [Basscss]”</p><cite class="h5"><a href="https://twitter.com/joewalnes/status/668126388499574784" class="color-inherit text-decoration-none">– Joe Walnes</a></cite></blockquote></div><div class="px2 col-12 sm-col-6 md-col-4 "><blockquote class="m0 mb2"><p class="palatino mb0">“Basscss is so good it’s worth losing sleep over tonight.”</p><cite class="h5"><a href="https://twitter.com/303/status/622293670583087104" class="color-inherit text-decoration-none">– Justin Maxwell</a></cite></blockquote></div><div class="px2 col-12 sm-col-6 md-col-4 "><blockquote class="m0 mb2"><p class="palatino mb0">“Probably does everything you use Bootstrap for, but in 3.5kb”</p><cite class="h5"><a href="https://twitter.com/problogdesign/status/621730043920785408" class="color-inherit text-decoration-none">– Michael Martin</a></cite></blockquote></div><div class="px2 col-12 sm-col-6 md-col-4 "><blockquote class="m0 mb2"><p class="palatino mb0">“Been using Basscss to rapidly prototype ideas for BuzzFeed. So good.”</p><cite class="h5"><a href="https://twitter.com/cap/status/571511244835840000" class="color-inherit text-decoration-none">– Cap Watkins</a></cite></blockquote></div></div></section><div class="container mb4"><section id="getting-started" class="py4"><h2 class="h1"><a href="#getting-started" class="color-inherit text-decoration-none hover-underline">Getting Started</a></h2><pre>npm install basscss@8.0.0-beta4</pre><p>Or use the <a href="https://npmcdn.com/basscss@8.0.0-beta4/css/basscss.min.css" class="" target="_blank">CDN Link</a></p><pre>&lt;link href=&quot;https://npmcdn.com/basscss@8.0.0-beta4/css/basscss.min.css&quot; rel=&quot;stylesheet&quot;&gt;</pre></section><div class=""><section id="basscss-type-scale" class="py4"><h2 class="h1"><a href="#basscss-type-scale" class="color-inherit text-decoration-none hover-underline">Type Scale</a></h2><div class="Prose"><p>This module provides utilities for adjusting font-size.</p>
+<p>The <code>.h1</code> – <code>.h6</code> font-size utilities can be used to override an element’s default size.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <p class="h1">Pastrami 1</p>
+<p class="h2">Pastrami 2</p>
+<p class="h3">Pastrami 3</p>
+<p class="h4">Pastrami 4</p>
+<p class="h5">Pastrami 5</p>
+<p class="h6">Pastrami 6</p>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"h1"</span>&gt;</span>Pastrami 1<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"h2"</span>&gt;</span>Pastrami 2<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"h3"</span>&gt;</span>Pastrami 3<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"h4"</span>&gt;</span>Pastrami 4<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"h5"</span>&gt;</span>Pastrami 5<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"h6"</span>&gt;</span>Pastrami 6<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></pre>
+</div>
+</div><div class="right-align"><a href="#" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Top</a></div></section><section id="basscss-typography" class="py4"><h2 class="h1"><a href="#basscss-typography" class="color-inherit text-decoration-none hover-underline">Typography</a></h2><div class="Prose"><p>Change typographic weights, styles, and alignment with these utility styles.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <p class="bold">Bold</p>
+<p class="regular">Regular</p>
+<p class="italic">Italic</p>
+<p class="caps">Caps</p>
+<p class="left-align">Left align</p>
+<p class="center">Center</p>
+<p class="right-align">Right align</p>
+<p class="justify">Justify Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.</p>
+<p class="nowrap">No wrap</p>
+<p class="underline">Underline</p>
+<p class="truncate">Truncate</p>
+<p class="font-familiy-inherit">Font Family Inherit</p>
+<p class="font-size-inherit">Font Size Inherit</p>
+<a class="text-decoration-none">Text Decoration None</a>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"bold"</span>&gt;</span>Bold<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"regular"</span>&gt;</span>Regular<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"italic"</span>&gt;</span>Italic<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"caps"</span>&gt;</span>Caps<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left-align"</span>&gt;</span>Left align<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"center"</span>&gt;</span>Center<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"right-align"</span>&gt;</span>Right align<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"justify"</span>&gt;</span>Justify Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"nowrap"</span>&gt;</span>No wrap<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"underline"</span>&gt;</span>Underline<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"truncate"</span>&gt;</span>Truncate<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"font-familiy-inherit"</span>&gt;</span>Font Family Inherit<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"font-size-inherit"</span>&gt;</span>Font Size Inherit<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-decoration-none"</span>&gt;</span>Text Decoration None<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+</div>
+<h2 id="lists">Lists</h2>
+<p>To remove default list styling, use <code>.list-reset</code>.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <ul class="list-reset">
+  <li>List Reset</li>
+  <li>Removes bullets</li>
+  <li>Removes numbers</li>
+  <li>Removes padding</li>
+</ul>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"list-reset"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>List Reset<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Removes bullets<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Removes numbers<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>Removes padding<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+</div>
+<p>To set lists inline, use utilities.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <ul class="list-reset">
+  <li class="inline-block mr1">Half-Smoke</li>
+  <li class="inline-block mr1">Kielbasa</li>
+  <li class="inline-block mr1">Bologna</li>
+  <li class="inline-block mr1">Prosciutto</li>
+</ul>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"list-reset"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"inline-block mr1"</span>&gt;</span>Half-Smoke<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"inline-block mr1"</span>&gt;</span>Kielbasa<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"inline-block mr1"</span>&gt;</span>Bologna<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"inline-block mr1"</span>&gt;</span>Prosciutto<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span></pre>
+</div>
+</div><div class="right-align"><a href="#" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Top</a></div></section><section id="basscss-layout" class="py4"><h2 class="h1"><a href="#basscss-layout" class="color-inherit text-decoration-none hover-underline">Layout</a></h2><div class="Prose"><p>Change the default document flow with these display, float, and other utilities.</p>
+<h2 id="display">Display</h2>
+<p>To adjust the display of an element, use the <code>.block</code>, <code>.inline</code>, <code>.inline-block</code>, <code>.table</code>, and <code>.table-cell</code> utilities.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="inline">inline</div>
+<div class="inline-block">inline-block</div>
+<a href="#" class="block">block</a>
+<div class="table">
+  <div class="table-cell">table-cell</div>
+  <div class="table-cell">table-cell</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"inline"</span>&gt;</span>inline<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"inline-block"</span>&gt;</span>inline-block<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"block"</span>&gt;</span>block<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table-cell"</span>&gt;</span>table-cell<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table-cell"</span>&gt;</span>table-cell<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<h2 id="overflow">Overflow</h2>
+<p>To adjust element overflow, use <code>.overflow-hidden</code>, <code>.overflow-scroll</code>, and <code>.overflow-auto</code>.
+<code>.overflow-hidden</code> can also be used to create a new block formatting context or clear floats.</p>
+<h2 id="floats">Floats</h2>
+<p>Use <code>.clearfix</code>, <code>.left</code>, and <code>.right</code> to clear and set floats.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="clearfix border">
+  <div class="left border">.left</div>
+  <div class="right border">.right</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left border"</span>&gt;</span>.left<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"right border"</span>&gt;</span>.right<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<h2 id="max-width">Max Width</h2>
+<p>Use <code>.fit</code> to set max-width 100%.</p>
+<h2 id="box-sizing-border-box">Box-Sizing Border-Box</h2>
+<p>Use <code>.border-box</code> to set box-sizing border-box per element.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="col-6 p2 border-box border">.border-box</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 p2 border-box border"</span>&gt;</span>.border-box<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<h2 id="media-object">Media Object</h2>
+<p>Create a media object using basic utilities.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="clearfix mb2 border">
+  <div class="left p2 mr1 border">Image</div>
+  <div class="overflow-hidden">
+    <p><b>Body</b> Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.</p>
+  </div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix mb2 border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left p2 mr1 border"</span>&gt;</span>Image<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"overflow-hidden"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>Body<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span> Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<h2 id="double-sided-media-object">Double-Sided Media Object</h2>
+<p>For a container with a flexible center, use a double-sided media object.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="clearfix mb2 border">
+  <div class="left p2 mr1 border">Image</div>
+  <div class="right p2 ml1 border">Image</div>
+  <div class="overflow-hidden">
+    <p><b>Body</b> Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.</p>
+  </div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix mb2 border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"left p2 mr1 border"</span>&gt;</span>Image<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"right p2 ml1 border"</span>&gt;</span>Image<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"overflow-hidden"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>Body<span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span> Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+</div><div class="right-align"><a href="#" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Top</a></div></section><section id="basscss-align" class="py4"><h2 class="h1"><a href="#basscss-align" class="color-inherit text-decoration-none hover-underline">Align</a></h2><div class="Prose"><p>Adjust vertical alignment with these utilities.</p>
+<p>To adjust the alignment of an element, use <code>.align-baseline</code>, <code>.align-top</code>, <code>.align-middle</code> or <code>.align-bottom</code>.
+The vertical-align property only applies to inline or table-cell boxes.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="overflow-auto">
+  <div class="table">
+    <div class="table-cell"><h1>Hamburger</h1></div>
+    <div class="table-cell align-baseline">.align-baseline</div>
+    <div class="table-cell align-top">.align-top</div>
+    <div class="table-cell align-middle">.align-middle</div>
+    <div class="table-cell align-bottom">.align-bottom</div>
+  </div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"overflow-auto"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table-cell"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table-cell align-baseline"</span>&gt;</span>.align-baseline<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table-cell align-top"</span>&gt;</span>.align-top<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table-cell align-middle"</span>&gt;</span>.align-middle<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"table-cell align-bottom"</span>&gt;</span>.align-bottom<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+</div><div class="right-align"><a href="#" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Top</a></div></section><section id="basscss-margin" class="py4"><h2 class="h1"><a href="#basscss-margin" class="color-inherit text-decoration-none hover-underline">Margin</a></h2><div class="Prose"><p>Immutable margin utilities are based on a global white space scale defined with custom properties.
+These can dramatically help reduce the size of large stylesheets and allow for greater flexibility and quicker iteration when designing in the browser.</p>
+<h2 id="naming-convention">Naming Convention</h2>
+<p>Due to the ubiquitous nature of setting margin,
+these utilities use a shorthand naming convention.</p>
+<div class="overflow-scroll">
+  <table class="mb2 table-flush table-light">
+    <thead>
+      <tr> <th>Shorthand</th> <th>Description</th> </tr>
+    </thead>
+    <tbody>
+      <tr> <td>m</td> <td>Margin</td> </tr>
+      <tr> <td>t</td> <td>Top</td> </tr>
+      <tr> <td>r</td> <td>Right</td> </tr>
+      <tr> <td>b</td> <td>Bottom</td> </tr>
+      <tr> <td>l</td> <td>Left</td> </tr>
+      <tr> <td>x</td> <td>X-axis (left and right)</td> </tr>
+      <tr> <td>y</td> <td>Y-axis (top and bottom)</td> </tr>
+      <tr> <td>n</td> <td>Negative</td> </tr>
+      <tr> <td>0</td> <td>0 reset</td> </tr>
+      <tr> <td>1</td> <td>--space-1 (default .5rem)</td> </tr>
+      <tr> <td>2</td> <td>--space-2 (default 1rem)</td> </tr>
+      <tr> <td>3</td> <td>--space-3 (default 2rem)</td> </tr>
+      <tr> <td>4</td> <td>--space-4 (default 4rem)</td> </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Change or reset default margins using the white space scale.
+Negative x-axis margins are used to offset margins and padding of child elements.
+Margin auto is used to horizontally center block-level elements with a set width.</p>
+<pre><span class="hljs-class">.m0</span>  <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value">        <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.mt0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value">    <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.mr0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value">  <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.mb0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.ml0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value">   <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.mx0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value">   <span class="hljs-number">0</span></span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value">  <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.my0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value">    <span class="hljs-number">0</span></span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-number">0</span> </span></span></span>}
+
+<span class="hljs-class">.m1</span>  <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value">        <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.mt1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.mr1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.mb1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.ml1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.mx1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.my1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+
+<span class="hljs-class">.m2</span>  <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value">        <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.mt2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.mr2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.mb2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.ml2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.mx2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.my2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+
+<span class="hljs-class">.m3</span>  <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value">        <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.mt3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.mr3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.mb3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.ml3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.mx3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.my3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+
+<span class="hljs-class">.m4</span>  <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value">        <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.mt4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.mr4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.mb4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.ml4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.mx4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.my4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+
+<span class="hljs-class">.mxn1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> <span class="hljs-function">-var</span>(--space-<span class="hljs-number">1</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value"> <span class="hljs-function">-var</span>(--space-<span class="hljs-number">1</span>)</span></span>; }</span>
+<span class="hljs-class">.mxn2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> <span class="hljs-function">-var</span>(--space-<span class="hljs-number">2</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value"> <span class="hljs-function">-var</span>(--space-<span class="hljs-number">2</span>)</span></span>; }</span>
+<span class="hljs-class">.mxn3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> <span class="hljs-function">-var</span>(--space-<span class="hljs-number">3</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value"> <span class="hljs-function">-var</span>(--space-<span class="hljs-number">3</span>)</span></span>; }</span>
+<span class="hljs-class">.mxn4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> <span class="hljs-function">-var</span>(--space-<span class="hljs-number">4</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value"> <span class="hljs-function">-var</span>(--space-<span class="hljs-number">4</span>)</span></span>; }</span>
+
+<span class="hljs-class">.ml-auto</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> auto </span></span></span>}
+<span class="hljs-class">.mr-auto</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value"> auto </span></span></span>}
+<span class="hljs-class">.mx-auto</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> auto</span></span>; <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value"> auto</span></span>; }</span></pre><h2 id="resetting-margins">Resetting Margins</h2>
+<p>To increase information density and to better align elements, remove default margins from typographic elements
+using the margin utilities.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <h1 class="m0">No margin</h1>
+<h1 class="mt0">No margin top</h1>
+<h1 class="mb0">No margin bottom</h1>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m0"</span>&gt;</span>No margin<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"mt0"</span>&gt;</span>No margin top<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"mb0"</span>&gt;</span>No margin bottom<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span></pre>
+</div>
+<h2 id="add-spacing">Add Spacing</h2>
+<p>Add spacing around elements using a combination of margin utilities.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="mxn1">
+  <div class="m1">Hamburger</div>
+  <div class="m1">Hamburger</div>
+  <div class="m1">Hamburger</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"mxn1"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m1"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m1"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"m1"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p>The negative margin utilities also work with padded children.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="border">
+  <div class="mxn2">
+    <div class="px2 border">Padded div</div>
+  </div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"mxn2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"px2 border"</span>&gt;</span>Padded div<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<h2 id="center-elements">Center Elements</h2>
+<p>Block elements with a set width can be centered with <code>.mx-auto</code>.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
+  width="96"
+  height="96"
+  class="block mx-auto" />
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"</span>
+  <span class="hljs-attribute">width</span>=<span class="hljs-value">"96"</span>
+  <span class="hljs-attribute">height</span>=<span class="hljs-value">"96"</span>
+  <span class="hljs-attribute">class</span>=<span class="hljs-value">"block mx-auto"</span> /&gt;</span></pre>
+</div>
+<h2 id="space-flexbox-items">Space Flexbox Items</h2>
+<p>The <code>.ml-auto</code> and <code>.mr-auto</code> utilities can be used to add spacing around flexbox items.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="flex">
+  <div class="ml-auto">Hamburger</div>
+  <div>Hot Dog</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ml-auto"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p><span class="red">Margins should never be declared outside of these utilities.</span>
+This is meant to help create consistency and avoid magic numbers.
+If, for some reason, the default white space scale does not suit your design,
+customize and extend it before using it.</p>
+</div><div class="right-align"><a href="#" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Top</a></div></section><section id="basscss-padding" class="py4"><h2 class="h1"><a href="#basscss-padding" class="color-inherit text-decoration-none hover-underline">Padding</a></h2><div class="Prose"><p>Immutable padding utilities are based on a global white space scale defined with custom properties.
+These can dramatically help reduce the size of large stylesheets and allow for greater flexibility and quicker iteration when designing in the browser.</p>
+<h2 id="naming-convention">Naming Convention</h2>
+<p>Due to the ubiquitous nature of setting padding,
+these utilities use a shorthand naming convention.</p>
+<div class="overflow-scroll">
+  <table class="mb2 table-flush table-light">
+    <thead>
+      <tr> <th>Shorthand</th> <th>Description</th> </tr>
+    </thead>
+    <tbody>
+      <tr> <td>p</td> <td>Padding</td> </tr>
+      <tr> <td>t</td> <td>Top</td> </tr>
+      <tr> <td>r</td> <td>Right</td> </tr>
+      <tr> <td>b</td> <td>Bottom</td> </tr>
+      <tr> <td>l</td> <td>Left</td> </tr>
+      <tr> <td>x</td> <td>X-axis (left and right)</td> </tr>
+      <tr> <td>y</td> <td>Y-axis (top and bottom)</td> </tr>
+      <tr> <td>n</td> <td>Negative (margin only)</td> </tr>
+      <tr> <td>0</td> <td>0 reset</td> </tr>
+      <tr> <td>1</td> <td>--space-1 (default .5rem)</td> </tr>
+      <tr> <td>2</td> <td>--space-2 (default 1rem)</td> </tr>
+      <tr> <td>3</td> <td>--space-3 (default 2rem)</td> </tr>
+      <tr> <td>4</td> <td>--space-4 (default 4rem)</td> </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Padding utilities are only available in symmetrical orientations.
+This is to normalize the spacing used around elements and maintain a consistent visual rhythm.</p>
+<pre><span class="hljs-class">.p0</span>  <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.pt0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value"> <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.pr0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value"> <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.pb0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.pl0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value"> <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.px0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value">  <span class="hljs-number">0</span> </span></span></span>}
+<span class="hljs-class">.py0</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;  <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-number">0</span> </span></span></span>}
+
+<span class="hljs-class">.p1</span>  <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value">        <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.pt1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.pr1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.pb1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.pl1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.py1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+<span class="hljs-class">.px1</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">1</span>) </span></span></span>}
+
+<span class="hljs-class">.p2</span>  <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value">        <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.pt2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.pr2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.pb2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.pl2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.py2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+<span class="hljs-class">.px2</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">2</span>) </span></span></span>}
+
+<span class="hljs-class">.p3</span>  <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value">        <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.pt3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.pr3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.pb3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.pl3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.py3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+<span class="hljs-class">.px3</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">3</span>) </span></span></span>}
+
+<span class="hljs-class">.p4</span>  <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value">        <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.pt4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.pr4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.pb4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.pl4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.py4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-top</span>:<span class="hljs-value">    <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}
+<span class="hljs-class">.px4</span> <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value">   <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>)</span></span>; <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value">  <span class="hljs-function">var</span>(--space-<span class="hljs-number">4</span>) </span></span></span>}</pre><h2 id="box">Box</h2>
+<p>To create a simple box component, use padding along with color utilities.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="p2 bg-white border rounded">
+  A simple box
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p2 bg-white border rounded"</span>&gt;</span>
+  A simple box
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="overflow-hidden border rounded">
+  <div class="p2 bold white bg-blue">
+    Panel Header
+  </div>
+  <div class="p2">
+    Panel Body
+  </div>
+  <div class="p2 bg-silver">
+    Panel Footer
+  </div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"overflow-hidden border rounded"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p2 bold white bg-blue"</span>&gt;</span>
+    Panel Header
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p2"</span>&gt;</span>
+    Panel Body
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p2 bg-silver"</span>&gt;</span>
+    Panel Footer
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p><span class="red">Padding should never be declared outside of these utilities.</span>
+This is meant to help create consistency and avoid magic numbers.
+If, for some reason, the default white space scale does not suit your design, customize and extend it before use.</p>
+</div><div class="right-align"><a href="#" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Top</a></div></section><section id="basscss-position" class="py4"><h2 class="h1"><a href="#basscss-position" class="color-inherit text-decoration-none hover-underline">Position</a></h2><div class="Prose"><p>This module includes basic positioning utilities to alter the default document flow.</p>
+<p class="red">Use positions with caution. They are often unnecessary and commonly misused.</p>
+
+<p>Use <code>.relative</code> to create a new stacking context.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="relative">
+  <div>Hamburger</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"relative"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p>Use <code>.absolute</code> to move elements out of the default document flow.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="relative mb4">
+  <div>Hamburger</div>
+  <div class="absolute bg-white border rounded">
+    <a href="#" class="block p1">Dropdown Action</a>
+    <a href="#" class="block p1">Action</a>
+  </div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"relative mb4"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"absolute bg-white border rounded"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"block p1"</span>&gt;</span>Dropdown Action<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"block p1"</span>&gt;</span>Action<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p>Use <code>.fixed</code> to position an element relative to the viewport. Fixed positioning is notoriously tricky to use well and can lead to inaccessible content and unwanted side effects. Use fixed positioning with caution.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="fixed">
+  Hamburger
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fixed"</span>&gt;</span>
+  Hamburger
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p><em>Note: fixed positioning has been disabled here for demonstration only.</em></p>
+<p>To anchor to a particular side, use <code>.top-0</code>, <code>.right-0</code>, <code>.bottom-0</code>, or <code>.left-0</code>. Margin and padding utilities can be used to space elements apart.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="fixed top-0 right-0 m2">
+  Hamburger
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fixed top-0 right-0 m2"</span>&gt;</span>
+  Hamburger
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p>To fill an entire width or height, use opposing directions.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="fixed top-0 left-0 right-0 p2 white bg-black">
+  Fixed bar
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fixed top-0 left-0 right-0 p2 white bg-black"</span>&gt;</span>
+  Fixed bar
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p>To ensure the desired stacking order, use z-index utilities.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="fixed z2 top-0 left-0 right-0 p2 white bg-black">
+  Fixed bar
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"fixed z2 top-0 left-0 right-0 p2 white bg-black"</span>&gt;</span>
+  Fixed bar
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+</div><div class="right-align"><a href="#" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Top</a></div></section><section id="basscss-grid" class="py4"><h2 class="h1"><a href="#basscss-grid" class="color-inherit text-decoration-none hover-underline">Grid</a></h2><div class="Prose"><p>This module contains responsive float and width utilities, along with a container style, to create a variety of grid layouts.
+Use this module in combination with layout, white space, and other utilities.</p>
+<p>Start by using a <code>.clearfix</code> container.
+Optionally use a <code>.container</code> to set a max-width.
+To adjust the max-width, set a new value with the <code>--container-width</code> custom property.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="container">
+  <div class="clearfix">
+  </div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p>Float columns using the <code>.col</code> style. This also sets box-sizing border-box for each column.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="clearfix border">
+  <div class="col border">.col</div>
+  <div class="col border">.col</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col border"</span>&gt;</span>.col<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col border"</span>&gt;</span>.col<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p>Add column width utilities. The total column-width number should add up to 12.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="clearfix border">
+  <div class="col col-6 border">.col.col-6</div>
+  <div class="col col-6 border">.col.col-6</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col col-6 border"</span>&gt;</span>.col.col-6<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col col-6 border"</span>&gt;</span>.col.col-6<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<h2 id="responsive-grid">Responsive Grid</h2>
+<p>Use breakpoint-prefixed column utilities to change the grid at different screen widths.</p>
+<p>All breakpoint-based styles in Basscss follow the same naming convention.</p>
+<div class="overflow-auto">
+  <table class="mb2 table-flush table-light">
+    <thead>
+      <tr> <th>Prefix</th> <th>Description</th> </tr>
+    </thead>
+    <tbody>
+      <tr> <td>(no prefix)</td> <td>Not scoped to a breakpoint</td> </tr>
+      <tr> <td>sm-</td> <td>--breakpoint-sm (default: min-width 40em)</td> </tr>
+      <tr> <td>md-</td> <td>--breakpoint-md (default: min-width 52em)</td> </tr>
+      <tr> <td>lg-</td> <td>--breakpoint-lg (default: min-width 64em)</td> </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Apply the grid from the small breakpoint and up with the <code>.sm-col</code> and <code>.sm-col-6</code> utilities.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="clearfix border">
+  <div class="sm-col sm-col-6 border">.sm-col.sm-col-6</div>
+  <div class="sm-col sm-col-6 border">.sm-col.sm-col-6</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sm-col sm-col-6 border"</span>&gt;</span>.sm-col.sm-col-6<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sm-col sm-col-6 border"</span>&gt;</span>.sm-col.sm-col-6<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p>Add width adjustments for larger breakpoints. Resize the viewport width of the browser to see the effect.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="clearfix border">
+  <div class="sm-col sm-col-6 md-col-5 lg-col-4 border">.sm-col.sm-col-6.md-col-5.lg-col-4</div>
+  <div class="sm-col sm-col-6 md-col-7 lg-col-8 border">.sm-col.sm-col-6.md-col-7.lg-col-8</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sm-col sm-col-6 md-col-5 lg-col-4 border"</span>&gt;</span>.sm-col.sm-col-6.md-col-5.lg-col-4<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sm-col sm-col-6 md-col-7 lg-col-8 border"</span>&gt;</span>.sm-col.sm-col-6.md-col-7.lg-col-8<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<h2 id="gutters">Gutters</h2>
+<p>Use padding and negative margin utilities to create gutters based on the white space scale.
+The negative margin ensures content inside each column lines up with content outside of the grid.
+When using negative margin, be sure to compensate for the extra width created
+with a padded parent element or by using overflow hidden.
+Otherwise, horizontal scrolling may occur.</p>
+<p>Create gutters with a width of 2 units using <code>.mxn2</code> and <code>.px2</code>.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="clearfix mxn2 border">
+  <div class="sm-col sm-col-6 md-col-5 lg-col-4 px2"><div class="border">.px2</div></div>
+  <div class="sm-col sm-col-6 md-col-7 lg-col-8 px2"><div class="border">.px2</div></div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix mxn2 border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sm-col sm-col-6 md-col-5 lg-col-4 px2"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>.px2<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sm-col sm-col-6 md-col-7 lg-col-8 px2"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>.px2<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p>For larger or smaller gutters, use any other step on the white space scale.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="clearfix mxn1 border">
+  <div class="col col-6 px1"><div class="border">.px1</div></div>
+  <div class="col col-6 px1"><div class="border">.px1</div></div>
+</div>
+<div class="clearfix mxn3 border">
+  <div class="col col-6 px3"><div class="border">.px3</div></div>
+  <div class="col col-6 px3"><div class="border">.px3</div></div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix mxn1 border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col col-6 px1"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>.px1<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col col-6 px1"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>.px1<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix mxn3 border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col col-6 px3"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>.px3<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col col-6 px3"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>.px3<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<h2 id="nesting">Nesting</h2>
+<p>Nest entire grid structures within columns to created nested grids.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="clearfix mxn2 border">
+  <div class="sm-col sm-col-6 md-col-5 lg-col-4 px2"><div class="border">Unnested</div></div>
+  <div class="sm-col sm-col-6 md-col-7 lg-col-8 px2">
+    <div class="clearfix mxn2">
+      <div class="col col-6 px2"><div class="border">Nested</div></div>
+      <div class="col col-6 px2"><div class="border">Nested</div></div>
+    </div>
+  </div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix mxn2 border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sm-col sm-col-6 md-col-5 lg-col-4 px2"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Unnested<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sm-col sm-col-6 md-col-7 lg-col-8 px2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix mxn2"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col col-6 px2"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Nested<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col col-6 px2"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Nested<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<h2 id="reversed">Reversed</h2>
+<p>To reverse the order of columns, use the <code>.col-right</code> class to float columns right.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="clearfix border">
+  <div class="col-right col-6 border">.col-right.col-6</div>
+  <div class="col col-6 border">.col.col-6</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-right col-6 border"</span>&gt;</span>.col-right.col-6<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col col-6 border"</span>&gt;</span>.col.col-6<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<h2 id="centering-columns">Centering Columns</h2>
+<p>Use the <code>.mx-auto</code> class to center columns within their containers.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="clearfix mxn2 border">
+  <div class="col-8 px2 mx-auto">
+    <div class="border">Centered Column</div>
+  </div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix mxn2 border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-8 px2 mx-auto"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Centered Column<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<h2 id="breakpoint-based-floats">Breakpoint Based Floats</h2>
+<p>Column float utilities can be used independently of width utilities to control floating at different breakpoints.
+This example demonstrates a responsive media object.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="clearfix border">
+  <div class="sm-col p2 border">.sm-col</div>
+  <div class="overflow-hidden border">.overflow-hidden</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"clearfix border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sm-col p2 border"</span>&gt;</span>.sm-col<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"overflow-hidden border"</span>&gt;</span>.overflow-hidden<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<h2 id="width-utilities">Width Utilities</h2>
+<p>Column width utilities can also be used independently to add percentage based widths to any block or inline-block element.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="border">
+  <div class="right sm-col-6 md-col-4 p2 border">.sm-col-6.md-col-4</div>
+  <p>Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin.</p>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"right sm-col-6 md-col-4 p2 border"</span>&gt;</span>.sm-col-6.md-col-4<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Bacon ipsum dolor sit amet chuck prosciutto landjaeger ham hock filet mignon shoulder hamburger pig venison. Ham bacon corned beef, sausage kielbasa flank tongue pig drumstick capicola swine short loin ham hock kevin.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+</div><div class="right-align"><a href="#" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Top</a></div></section><section id="basscss-flexbox" class="py4"><h2 class="h1"><a href="#basscss-flexbox" class="color-inherit text-decoration-none hover-underline">Flexbox</a></h2><div class="Prose"><p>These flexbox-based utilities can replace the need for a grid system in many instances, and provide powerful constraint-based micro-layout solutions.
+To learn more about the flexbox module, see <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">Using CSS flexible boxes</a> and the <a href="https://www.w3.org/TR/css-flexbox-1/">CSS Flexible Box Layout Module Specification</a>.</p>
+<p>To set a container to display flex, add the <code>.flex</code> class.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="flex">
+  <div>Hamburger</div>
+  <div>Hot Dog</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p>To set a container to display flex at certain breakpoints, use the <code>.sm-flex</code>, <code>.md-flex</code>, and <code>.lg-flex</code> styles.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="sm-flex">
+  <div>Hamburger</div>
+  <div>Hot Dog</div>
+</div>
+<div class="md-flex">
+  <div>Hamburger</div>
+  <div>Hot Dog</div>
+</div>
+<div class="lg-flex">
+  <div>Hamburger</div>
+  <div>Hot Dog</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sm-flex"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"md-flex"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"lg-flex"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p>To set a flexbox container to column direction, use <code>.flex-column</code>.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="flex flex-column">
+  <span>Hamburger</span>
+  <span>Hot Dog</span>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex flex-column"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p>To enable wrapping of flexbox containers, use <code>.flex-wrap</code>.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="flex flex-wrap">
+  <div class="col-4">Hamburger</div>
+  <div class="col-4">Hamburger</div>
+  <div class="col-4">Hamburger</div>
+  <div class="col-4">Hamburger</div>
+  <div class="col-4">Hamburger</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex flex-wrap"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-4"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-4"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-4"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-4"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-4"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p>To set a flexbox item to automatically fill the available space, use the <code>flex-auto</code> utility.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="flex border">
+  <div class="flex-auto border">Hamburger</div>
+  <div class="border">Hot Dog</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex-auto border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p>To prevent a flexbox item from growing or shrinking, use the <code>flex-none</code> utility.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="flex border">
+  <div class="flex-none border">Hamburger</div>
+  <div class="border">Hot Dog</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex-none border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p>To control alignment of flexbox items, use the <code>align-items</code> utilities. These styles uses a shorthand naming convention. <code>items</code> for the <code>align-items</code> property and <code>start</code> and <code>end</code> for the <code>flex-start</code> and <code>flex-end</code> values.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="flex items-start border">
+  <h1 class="border">Hamburger</h1>
+  <div class="border">Hot Dog</div>
+</div>
+<div class="flex items-end border">
+  <h1 class="border">Hamburger</h1>
+  <div class="border">Hot Dog</div>
+</div>
+<div class="flex items-center border">
+  <h1 class="border">Hamburger</h1>
+  <div class="border">Hot Dog</div>
+</div>
+<div class="flex items-baseline border">
+  <h1 class="border">Hamburger</h1>
+  <div class="border">Hot Dog</div>
+</div>
+<div class="flex items-stretch border">
+  <h1 class="border">Hamburger</h1>
+  <div class="border">Hot Dog</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex items-start border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex items-end border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex items-center border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex items-baseline border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex items-stretch border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p>To align flexbox items on an item-by-item basis, use the <code>align-self</code> utilities. These override values set by the <code>align-items</code> property. A shorthand naming convention of <code>self</code> for the <code>align-self</code> property is used.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="flex items-center border">
+  <h1 class="align-self-start border">Hamburger</h1>
+  <div class="border">Hot Dog</div>
+</div>
+<div class="flex items-center border">
+  <h1 class="align-self-end border">Hamburger</h1>
+  <div class="border">Hot Dog</div>
+</div>
+<div class="flex items-start border">
+  <h1 class="align-self-center border">Hamburger</h1>
+  <div class="border">Hot Dog</div>
+</div>
+<div class="flex items-center border">
+  <h1 class="align-self-baseline border">Hamburger</h1>
+  <div class="border">Hot Dog</div>
+</div>
+<div class="flex items-center border">
+  <h1 class="align-self-stretch border">Hamburger</h1>
+  <div class="border">Hot Dog</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex items-center border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"align-self-start border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex items-center border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"align-self-end border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex items-start border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"align-self-center border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex items-center border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"align-self-baseline border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex items-center border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"align-self-stretch border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p>To control the spacing for items on the main axis, use the <code>justify-content</code> utilities. These styles use a shorhand naming convention. <code>justify</code> for the <code>justify-content</code> property and <code>around</code> and <code>between</code> for the <code>space-around</code> and <code>space-between</code> values.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="flex justify-start border">
+  <h1 class="border">Hamburger</h1>
+  <div class="border">Hot Dog</div>
+</div>
+<div class="flex justify-end border">
+  <h1 class="border">Hamburger</h1>
+  <div class="border">Hot Dog</div>
+</div>
+<div class="flex justify-center border">
+  <h1 class="border">Hamburger</h1>
+  <div class="border">Hot Dog</div>
+</div>
+<div class="flex justify-between border">
+  <h1 class="border">Hamburger</h1>
+  <div class="border">Hot Dog</div>
+</div>
+<div class="flex justify-around border">
+  <h1 class="border">Hamburger</h1>
+  <div class="border">Hot Dog</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex justify-start border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex justify-end border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex justify-center border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex justify-between border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex justify-around border"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border"</span>&gt;</span>Hot Dog<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p>To align items along the cross-axis, use the <code>align-content</code> utilities. A shorthand naming convention <code>content</code> is used for the <code>align-content</code> property.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="flex flex-wrap content-start border" style="min-height: 128px">
+  <div class="col-6 border">Hamburger</div>
+  <div class="col-6 border">Hamburger</div>
+  <div class="col-6 border">Hamburger</div>
+  <div class="col-6 border">Hamburger</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex flex-wrap content-start border"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"min-height: 128px"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="flex flex-wrap content-end border" style="min-height: 128px">
+  <div class="col-6 border">Hamburger</div>
+  <div class="col-6 border">Hamburger</div>
+  <div class="col-6 border">Hamburger</div>
+  <div class="col-6 border">Hamburger</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex flex-wrap content-end border"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"min-height: 128px"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="flex flex-wrap content-center border" style="min-height: 128px">
+  <div class="col-6 border">Hamburger</div>
+  <div class="col-6 border">Hamburger</div>
+  <div class="col-6 border">Hamburger</div>
+  <div class="col-6 border">Hamburger</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex flex-wrap content-center border"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"min-height: 128px"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="flex flex-wrap content-between border" style="min-height: 128px">
+  <div class="col-6 border">Hamburger</div>
+  <div class="col-6 border">Hamburger</div>
+  <div class="col-6 border">Hamburger</div>
+  <div class="col-6 border">Hamburger</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex flex-wrap content-between border"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"min-height: 128px"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="flex flex-wrap content-around border" style="min-height: 128px">
+  <div class="col-6 border">Hamburger</div>
+  <div class="col-6 border">Hamburger</div>
+  <div class="col-6 border">Hamburger</div>
+  <div class="col-6 border">Hamburger</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex flex-wrap content-around border"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"min-height: 128px"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="flex flex-wrap content-stretch border" style="min-height: 128px">
+  <div class="col-6 border">Hamburger</div>
+  <div class="col-6 border">Hamburger</div>
+  <div class="col-6 border">Hamburger</div>
+  <div class="col-6 border">Hamburger</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex flex-wrap content-stretch border"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"min-height: 128px"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-6 border"</span>&gt;</span>Hamburger<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p>To change the order of flexbox items, use the <code>order</code> utilities.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="flex">
+  <div class="order-2">.order-2</div>
+  <div class="order-1">.order-1</div>
+  <div class="order-last">.order-last</div>
+  <div class="order-3">.order-3</div>
+  <div class="order-0">.order-0</div>
+</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"flex"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"order-2"</span>&gt;</span>.order-2<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"order-1"</span>&gt;</span>.order-1<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"order-last"</span>&gt;</span>.order-last<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"order-3"</span>&gt;</span>.order-3<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"order-0"</span>&gt;</span>.order-0<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+</div><div class="right-align"><a href="#" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Top</a></div></section><section id="basscss-border" class="py4"><h2 class="h1"><a href="#basscss-border" class="color-inherit text-decoration-none hover-underline">Border</a></h2><div class="Prose"><p>This module controls borders and border radii.</p>
+<h2 id="borders">Borders</h2>
+<p>Add borders with these border utilities.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div class="p1 m1 border">.border</div>
+<div class="p1 m1 border-top">.border-top</div>
+<div class="p1 m1 border-right">.border-right</div>
+<div class="p1 m1 border-bottom">.border-bottom</div>
+<div class="p1 m1 border-left">.border-left</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p1 m1 border"</span>&gt;</span>.border<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p1 m1 border-top"</span>&gt;</span>.border-top<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p1 m1 border-right"</span>&gt;</span>.border-right<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p1 m1 border-bottom"</span>&gt;</span>.border-bottom<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"p1 m1 border-left"</span>&gt;</span>.border-left<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+<p>Remove borders with the <code>.border-none</code> utility.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <input type="text" class="border-none" placeholder=".border-none" />
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"border-none"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">".border-none"</span> /&gt;</span></pre>
+</div>
+<h2 id="border-radii">Border Radii</h2>
+<p>Utility styles for border radii can be used to style images and other elements.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <img class="rounded" src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="64" height="64" />
+<img class="circle" src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="64" height="64" />
+<img class="rounded-top" src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="64" height="64" />
+<img class="rounded-right" src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="64" height="64" />
+<img class="rounded-bottom" src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="64" height="64" />
+<img class="rounded-left" src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg" width="64" height="64" />
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"rounded"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"64"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"64"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"circle"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"64"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"64"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"rounded-top"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"64"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"64"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"rounded-right"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"64"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"64"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"rounded-bottom"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"64"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"64"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"rounded-left"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"64"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"64"</span> /&gt;</span></pre>
+</div>
+<p>The <code>.not-rounded</code> utility can be used to override default radii.
+This is useful for things like input and button groups.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <button class="btn not-rounded">Not Rounded</button>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn not-rounded"</span>&gt;</span>Not Rounded<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+</div>
+</div><div class="right-align"><a href="#" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Top</a></div></section><section id="basscss-hide" class="py4"><h2 class="h1"><a href="#basscss-hide" class="color-inherit text-decoration-none hover-underline">Hide</a></h2><div class="Prose"><p>Use these utilities to conditionally hide elements based on viewport width.</p>
+<h2 id="prefix-naming-convention">Prefix Naming Convention</h2>
+<p>Hide utilities differ from other breakpoint-based styles in Basscss. Each hide utility only applies to one breakpoint range.</p>
+<div class="overflow-auto">
+  <table class="mb2 table-flush table-light">
+    <thead>
+      <tr> <th>Prefix</th> <th>Description</th> </tr>
+    </thead>
+    <tbody>
+      <tr> <td>xs-</td> <td>below 40em</td> </tr>
+      <tr> <td>sm-</td> <td>40em – 52em</td> </tr>
+      <tr> <td>md-</td> <td>52em – 64em</td> </tr>
+      <tr> <td>lg-</td> <td>above 64em</td> </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<h2 id="hide-content">Hide content</h2>
+<p>Resize the browser window to see the effect.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <h3 class="xs-hide">Hidden below 40em</h3>
+<h3 class="sm-hide red">Hidden between 40 and 52em</h3>
+<h3 class="md-hide red">Hidden between 52 and 64em</h3>
+<h3 class="lg-hide red">Hidden above 64em</h3>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xs-hide"</span>&gt;</span>Hidden below 40em<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"sm-hide red"</span>&gt;</span>Hidden between 40 and 52em<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"md-hide red"</span>&gt;</span>Hidden between 52 and 64em<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"lg-hide red"</span>&gt;</span>Hidden above 64em<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span></pre>
+</div>
+<h2 id="responsive-line-break">Responsive Line Break</h2>
+<p>Control wrapping at different screen widths.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <h1>
+  Responsive Line Break
+  <br class="xs-hide">
+  To Control Wrapping
+</h1>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>
+  Responsive Line Break
+  <span class="hljs-tag">&lt;<span class="hljs-title">br</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"xs-hide"</span>&gt;</span>
+  To Control Wrapping
+<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span></pre>
+</div>
+<h2 id="accessible-hide">Accessible Hide</h2>
+<p>To visually hide things like form labels in an accessible way, use the <code>.hide</code> utility.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <form>
+  <label for="search" class="hide">Search</label>
+  <input id="search" type="search" class="input">
+</form>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">for</span>=<span class="hljs-value">"search"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"hide"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"search"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"search"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"input"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></pre>
+</div>
+<h2 id="display-none">Display None</h2>
+<p>Set display none with this utility. Use this with caution as it might cause accessibility issues depending on where it’s used.</p>
+<div class="MarkedExample mb2 border border-thick border-darken rounded">
+  <div class="MarkedExample-rendered p2 border-bottom border-thick border-darken">
+    <div>Visible</div>
+<div class="display-none">Hidden</div>
+  </div>
+  <pre class="MarkedExample-code h5 m0 p2 border-none rounded-bottom"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>Visible<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"display-none"</span>&gt;</span>Hidden<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+</div>
+</div><div class="right-align"><a href="#" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Top</a></div></section></div><section id="optionals" class="py4"><h2>Extend Basscss</h2><p>There are several optional modules not included in the core Basscss package, including responsive margin and padding, colors, and button styles. See <a href="https://github.com/basscss/addons" target="_blank">basscss/addons</a> for more.</p></section></div><nav class="pl2 my2 border-left border-thick border-darken" style="max-width:768px;"><div class="mxn2 flex    flex-wrap "><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#getting-started" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Getting Started</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-type-scale" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Type Scale</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-typography" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Typography</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-layout" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Layout</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-align" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Align</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-margin" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Margin</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-padding" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Padding</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-position" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Position</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-grid" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Grid</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-flexbox" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Flexbox</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-border" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Border</a></div><div class="px2 col-6 sm-col-4 md-col-3 "><a href="#basscss-hide" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Hide</a></div></div></nav><footer class="flex flex-wrap items-baseline py4"><a href="#" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Basscss</a><div class="inline-block" style="width:16px;"></div><span class="h6">v8.0.0-beta4</span><div class="inline-block" style="width:16px;"></div><a href="//github.com/basscss/basscss" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">GitHub</a><div class="inline-block" style="width:16px;"></div><a href="//npmjs.com/package/basscss" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">npm</a><div class="flex-auto"></div><a href="//jxnblk.com" class="h6 caps bold inline-block py1 color-inherit text-decoration-none hover-underline">Made by Jxnblk</a></footer></div></div><script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
