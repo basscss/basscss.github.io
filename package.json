@@ -49,5 +49,12 @@
   },
   "dependencies": {
     "basscss": "^8.0.0-beta4"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0",
+      "react"
+    ]
   }
 }
