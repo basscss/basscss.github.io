@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-const Row = ({ sm, md, lg, wrap, items, ...props }) => (
+const Row = ({ sm, md, lg, wrap, items, justify, ...props }) => (
   <div {...props}
     className={[
       'mxn2',
@@ -10,7 +10,8 @@ const Row = ({ sm, md, lg, wrap, items, ...props }) => (
       md ? 'md-flex' : '',
       lg ? 'lg-flex' : '',
       wrap ? 'flex-wrap' : '',
-      items ? `items-${items}` : null
+      items ? `items-${items}` : null,
+      justify ? `justify-${justify}` : null,
     ].join(' ')} />
 )
 
@@ -26,6 +27,13 @@ Row.propTypes = {
     'start',
     'end',
     'stretch',
+  ]),
+  jusitfy: React.PropTypes.oneOf([
+    'start',
+    'end',
+    'center',
+    'between',
+    'around',
   ]),
 }
 

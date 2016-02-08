@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-const Col = ({ x, sm, md, lg, ...props }) => (
+const Col = ({ x, sm, md, lg, max, ...props }) => (
   <div {...props}
     className={[
       'px2',
@@ -9,6 +9,7 @@ const Col = ({ x, sm, md, lg, ...props }) => (
       sm ? `sm-col-${sm}` : '',
       md ? `md-col-${md}` : '',
       lg ? `lg-col-${lg}` : '',
+      max ? `max-width-${max}` : ''
     ].join(' ')} />
 )
 
@@ -18,7 +19,8 @@ Col.propTypes = {
   x: React.PropTypes.oneOf(widths),
   sm: React.PropTypes.oneOf(widths),
   md: React.PropTypes.oneOf(widths),
-  lg: React.PropTypes.oneOf(widths)
+  lg: React.PropTypes.oneOf(widths),
+  max: React.PropTypes.oneOf([1, 2, 3, 4])
 }
 
 export default Col
