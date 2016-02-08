@@ -8,7 +8,7 @@ import GoogleAnalytics from './GoogleAnalytics'
 import basscss from 'basscss/css/basscss.min.css'
 import highlight from 'basscss-highlight/index.css'
 import basic from 'basscss-basic/index.css'
-import forms from '../forms.css'
+import forms from 'basscss-forms/index.css'
 import base from '../base.css'
 
 const css = [

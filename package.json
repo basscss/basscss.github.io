@@ -22,6 +22,7 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
     "basscss-basic": "^1.0.0",
+    "basscss-forms": "^1.0.0",
     "basscss-highlight": "^0.2.0-beta2",
     "basscss-logo": "^1.0.0",
     "css-loader": "^0.23.1",
@@ -47,6 +48,6 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "basscss": "^8.0.0-beta3"
+    "basscss": "^8.0.0-beta4"
   }
 }

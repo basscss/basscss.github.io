@@ -93,7 +93,7 @@ module.exports = {
 
   devServer: {
     historyApiFallback: {
-      index: '/dev'
+      index: '/dev.bundle'
     },
     hot: true
   },

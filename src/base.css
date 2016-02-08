@@ -1,5 +1,5 @@
 
-/*
+/* debug
 * { outline: 1px solid tomato }
 */
 
@@ -64,6 +64,42 @@ th, td {
 .bg-gray   { background-color: var(--gray) }
 .bg-darken { background-color: var(--darken) }
 
+/* Prototype */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+th,
+td {
+  padding: .5em 0;
+  line-height: inherit;
+}
+
+th {
+  text-align: left;
+  font-weight: 700;
+  vertical-align: bottom;
+}
+
+td {
+  vertical-align: top;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  height: 2.5em;
+  margin: 0;
+  padding: .5em 1em;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #07c;
+}
 
 :root {
   --gray: #ccc;

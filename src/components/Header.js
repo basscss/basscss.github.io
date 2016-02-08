@@ -9,7 +9,6 @@ import CarbonAd from './CarbonAd'
 import NavItem from './NavItem'
 import Space from './Space'
 import Stats from './Stats'
-import Nav from './Nav'
 
 const Header = ({ name, version, modules, stats, ...props}) => (
   <header className='py4'>
@@ -21,7 +20,7 @@ const Header = ({ name, version, modules, stats, ...props}) => (
           {' '}
           <span className='h5'>v{version}</span>
         </h1>
-        <p className='h3 mt1 mb0'>Low-Level CSS Toolkit</p>
+        <p className='h3 mt1'>Low-Level CSS Toolkit</p>
         <NavItem href='#getting-started' children='Docs' />
         <Space />
         <NavItem href='//github.com/basscss/basscss' children='GitHub' />
@@ -31,9 +30,6 @@ const Header = ({ name, version, modules, stats, ...props}) => (
       <div className='flex-auto' />
       <CarbonAd />
     </div>
-    {/*
-    <Nav id='nav' modules={modules} />
-    */}
     <div className='lg-flex justify-between items-center'>
       <div className='order-last'>
         <Stats {...stats} />
@@ -45,9 +41,9 @@ const Header = ({ name, version, modules, stats, ...props}) => (
         <Space />
         <GithubBadge />
         <Space />
-        <TravisBadge />
-        <Space />
         <NpmBadge />
+        <Space />
+        <TravisBadge />
       </div>
     </div>
   </header>

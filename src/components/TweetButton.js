@@ -6,13 +6,13 @@ const script = {
 }
 
 const TweetButton = ({ text, url, large, ...props }) => (
-  <div style={{ height: 28 }}>
+  <div className='my1'
+    style={{ height: 20 }}>
     <a href='https://twitter.com/share'
       className='twitter-share-button'
       data-text={text}
       data-url={url}
-      data-via='basscss'
-      data-size='large'>
+      data-via='basscss'>
       Tweet
     </a>
     <script dangerouslySetInnerHTML={script} />
