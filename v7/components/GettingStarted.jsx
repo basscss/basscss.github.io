@@ -9,17 +9,9 @@ import Link from './Link.jsx'
 class GettingStarted extends React.Component {
 
   render () {
-    let cdnLink = [
-      'http://d2v52k3cl9vedd.cloudfront.net/basscss/',
-      this.props.version,
-      '/basscss.min.css'
-    ].join('')
-    let stylesheetLink = [
-      '<link href="',
-      cdnLink,
-      '" rel="stylesheet">'
-    ].join('')
-    let next = this.props.route.next
+    const { version } = this.props
+    const cdnLink = `https://npmcdn.com/basscss@${version}/css/basscss.min.css`
+    const stylesheetLink = `<link href="${cdnLink}" rel="stylesheet">`
 
     return (
       <Page {...this.props.route}>
