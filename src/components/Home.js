@@ -18,7 +18,6 @@ class Home extends React.Component {
 
     return (
       <div className=''>
-        <BetaBanner />
         <div className='px3 lg-px4'>
           <Header {...this.props} />
           <Nav id='nav' items={nav} />
