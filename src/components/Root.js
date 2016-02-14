@@ -14,8 +14,8 @@ import base from '../base.css'
 const css = [
   basic,
   forms,
-  basscss,
   base,
+  basscss,
   highlight,
 ].join('\n')
 
