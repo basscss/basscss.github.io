@@ -6,8 +6,12 @@ const OptionalsPromo = () => (
     <h2>Extend Basscss</h2>
     <p>
       There are several optional modules not included in the core Basscss package, including responsive margin and padding, colors, and button styles.
-      See <a href='https://github.com/basscss/addons' target='_blank'>basscss/addons</a> for more.
     </p>
+    <a href='https://github.com/basscss/addons'
+      className='btn'
+      target='_blank'>
+      basscss/addons
+    </a>
   </section>
 )
 
