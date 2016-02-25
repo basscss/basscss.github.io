@@ -1,6 +1,7 @@
 
 import React from 'react'
 import Logo from 'basscss-logo'
+import filesize from 'filesize'
 import TweetButton from './TweetButton'
 import GithubBadge from './GithubBadge'
 import NpmBadge from './NpmBadge'
@@ -12,39 +13,33 @@ import Stats from './Stats'
 
 const Header = ({ name, version, modules, stats, ...props}) => (
   <header className='py4'>
-    <div className='flex flex-wrap items-center py4'>
-      <div className='mb4'>
+    <div className='flex flex-wrap items-center mt4'>
+      <div className=''>
         <Logo />
         <h1 className='m0'>
           Basscss
           {' '}
           <span className='h5'>v{version}</span>
         </h1>
-        <p className='h3 mt1'>Low-Level CSS Toolkit</p>
-        <NavItem href='#getting-started' children='Docs' />
-        <Space />
-        <NavItem href='//github.com/basscss/basscss' children='GitHub' />
-        <Space />
-        <NavItem href='//npmjs.com/package/basscss' children='npm' />
+        <p className='h3 mt1 mb1'>
+          Low-Level CSS Toolkit
+          {' '}
+          <span className='h6 bold caps'>
+            {filesize(stats.gzipSize)}
+          </span>
+        </p>
+        <div className='flex flex-wrap items-center mb2'>
+          <TravisBadge />
+          <Space />
+          <TweetButton
+            text='Basscss: Low-Level CSS Toolkit'
+            url='http://basscss.com' />
+          <Space />
+          <GithubBadge />
+        </div>
       </div>
       <div className='flex-auto' />
       <CarbonAd />
-    </div>
-    <div className='lg-flex justify-between items-center'>
-      <div className='order-last'>
-        <Stats {...stats} />
-      </div>
-      <div className='flex flex-wrap items-center py2'>
-        <TweetButton
-          text='Basscss: Low-Level CSS Toolkit'
-          url='http://basscss.com' />
-        <Space />
-        <GithubBadge />
-        <Space />
-        <NpmBadge />
-        <Space />
-        <TravisBadge />
-      </div>
     </div>
   </header>
 )
