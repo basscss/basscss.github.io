@@ -49,7 +49,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "basscss": "^8.0.1"
+    "basscss": "^8.0.2"
   },
   "babel": {
     "presets": [
