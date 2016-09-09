@@ -10,7 +10,7 @@ class GettingStarted extends React.Component {
 
   render () {
     const { version } = this.props
-    const cdnLink = `https://npmcdn.com/basscss@${version}/css/basscss.min.css`
+    const cdnLink = `https://unpkg.com/basscss@${version}/css/basscss.min.css`
     const stylesheetLink = `<link href="${cdnLink}" rel="stylesheet">`
 
     return (
