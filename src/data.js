@@ -6,7 +6,7 @@ import cssstats from 'cssstats'
 
 const stats = cssstats(css.toString())
 
-const cdn = `https://npmcdn.com/basscss@${pkg.version}/css/basscss.min.css`
+const cdn = `https://unpkg.com/basscss@${pkg.version}/css/basscss.min.css`
 
 const modules = [
   'type-scale',
